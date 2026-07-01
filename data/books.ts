@@ -27,40 +27,73 @@ const pdf = (classId: number, subject: string, chapter: number) =>
     `/pdfs/class-${classId}/${subject}/chapter-${chapter}.pdf`;
 
 export const classes: ClassData[] = [
-    {
+        {
         id: 1,
         name: "Class 1",
         subjects: [
             {
                 id: "english",
                 name: "English",
-                book: "Marigold",
+                book: "Mridang",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "A Happy Child", pdfUrl: pdf(1, "english", 1) },
-                    { number: 2, title: "Three Little Pigs", pdfUrl: pdf(1, "english", 2) },
-                    { number: 3, title: "The Bubble, the Straw, and the Shoe", pdfUrl: pdf(1, "english", 3) },
+                    { number: 1, title: "Two Little Hands", pdfUrl: pdf(1, "english", 1) },
+                    { number: 2, title: "Greetings", pdfUrl: pdf(1, "english", 2) },
+                    { number: 3, title: "Picture Time", pdfUrl: pdf(1, "english", 3) },
+                    { number: 4, title: "The Cap-seller and the Monkeys", pdfUrl: pdf(1, "english", 4) },
+                    { number: 5, title: "A Farm", pdfUrl: pdf(1, "english", 5) },
+                    { number: 6, title: "Fun with Pictures", pdfUrl: pdf(1, "english", 6) },
+                    { number: 7, title: "The Food We Eat", pdfUrl: pdf(1, "english", 7) },
+                    { number: 8, title: "The Four Seasons", pdfUrl: pdf(1, "english", 8) },
+                    { number: 9, title: "Anandi's Rainbow", pdfUrl: pdf(1, "english", 9) }
                 ]
             },
             {
                 id: "hindi",
                 name: "Hindi",
-                book: "Rimjhim",
+                book: "Sarangi",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "झूला", pdfUrl: pdf(1, "hindi", 1) },
-                    { number: 2, title: "आम की कहानी", pdfUrl: pdf(1, "hindi", 2) },
+                    { number: 1, title: "मीना का परिवार", pdfUrl: pdf(1, "hindi", 1) },
+                    { number: 2, title: "दादा-दादी", pdfUrl: pdf(1, "hindi", 2) },
+                    { number: 3, title: "रीना का दिन", pdfUrl: pdf(1, "hindi", 3) },
+                    { number: 4, title: "रानी भी", pdfUrl: pdf(1, "hindi", 4) },
+                    { number: 5, title: "मिठाई", pdfUrl: pdf(1, "hindi", 5) },
+                    { number: 6, title: "तीन साथी", pdfUrl: pdf(1, "hindi", 6) },
+                    { number: 7, title: "वाह, मेरे घोड़े!", pdfUrl: pdf(1, "hindi", 7) },
+                    { number: 8, title: "खतरे में साँप", pdfUrl: pdf(1, "hindi", 8) },
+                    { number: 9, title: "आलू की सड़क", pdfUrl: pdf(1, "hindi", 9) },
+                    { number: 10, title: "झूलम-झूली", pdfUrl: pdf(1, "hindi", 10) },
+                    { number: 11, title: "भुट्टे", pdfUrl: pdf(1, "hindi", 11) },
+                    { number: 12, title: "फूली रोटी", pdfUrl: pdf(1, "hindi", 12) },
+                    { number: 13, title: "मेला", pdfUrl: pdf(1, "hindi", 13) },
+                    { number: 14, title: "बरखा और मेघा", pdfUrl: pdf(1, "hindi", 14) },
+                    { number: 15, title: "होली", pdfUrl: pdf(1, "hindi", 15) },
+                    { number: 16, title: "जन्मदिवस पर पेड़ जगाओ", pdfUrl: pdf(1, "hindi", 16) },
+                    { number: 17, title: "हवा", pdfUrl: pdf(1, "hindi", 17) },
+                    { number: 18, title: "कितनी प्यारी है ये दुनिया", pdfUrl: pdf(1, "hindi", 18) },
+                    { number: 19, title: "चाँद का बच्चा", pdfUrl: pdf(1, "hindi", 19) }
                 ]
             },
             {
                 id: "math",
                 name: "Mathematics",
-                book: "Math Magic",
+                book: "Joyful Mathematics",
                 icon: "🔢",
                 chapters: [
-                    { number: 1, title: "Shapes and Space", pdfUrl: pdf(1, "math", 1) },
-                    { number: 2, title: "Numbers from One to Nine", pdfUrl: pdf(1, "math", 2) },
-                    { number: 3, title: "Addition", pdfUrl: pdf(1, "math", 3) },
+                    { number: 1, title: "Finding the Furry Cat!", pdfUrl: pdf(1, "math", 1) },
+                    { number: 2, title: "What is Long? What is Round?", pdfUrl: pdf(1, "math", 2) },
+                    { number: 3, title: "Mango Treat", pdfUrl: pdf(1, "math", 3) },
+                    { number: 4, title: "Making 10", pdfUrl: pdf(1, "math", 4) },
+                    { number: 5, title: "How Many?", pdfUrl: pdf(1, "math", 5) },
+                    { number: 6, title: "Vegetable Farm", pdfUrl: pdf(1, "math", 6) },
+                    { number: 7, title: "Lina's Family", pdfUrl: pdf(1, "math", 7) },
+                    { number: 8, title: "Fun with Numbers", pdfUrl: pdf(1, "math", 8) },
+                    { number: 9, title: "Utsav", pdfUrl: pdf(1, "math", 9) },
+                    { number: 10, title: "How do I Spend my Day?", pdfUrl: pdf(1, "math", 10) },
+                    { number: 11, title: "How Many Times?", pdfUrl: pdf(1, "math", 11) },
+                    { number: 12, title: "How Much Can We Spend?", pdfUrl: pdf(1, "math", 12) },
+                    { number: 13, title: "So Many Toys", pdfUrl: pdf(1, "math", 13) }
                 ]
             }
         ]
@@ -72,31 +105,75 @@ export const classes: ClassData[] = [
             {
                 id: "english",
                 name: "English",
-                book: "Marigold",
+                book: "Mridang",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "First Day at School", pdfUrl: pdf(2, "english", 1) },
-                    { number: 2, title: "Haldi's Adventure", pdfUrl: pdf(2, "english", 2) },
+                    { number: 1, title: "My Bicycle", pdfUrl: pdf(2, "english", 1) },
+                    { number: 2, title: "Picture Reading", pdfUrl: pdf(2, "english", 2) },
+                    { number: 3, title: "It is Fun", pdfUrl: pdf(2, "english", 3) },
+                    { number: 4, title: "Seeing without Seeing", pdfUrl: pdf(2, "english", 4) },
+                    { number: 5, title: "Come Back Soon", pdfUrl: pdf(2, "english", 5) },
+                    { number: 6, title: "Between Home and School", pdfUrl: pdf(2, "english", 6) },
+                    { number: 7, title: "This is My Town", pdfUrl: pdf(2, "english", 7) },
+                    { number: 8, title: "Show a Little Kindness", pdfUrl: pdf(2, "english", 8) },
+                    { number: 9, title: "The Mouse", pdfUrl: pdf(2, "english", 9) },
+                    { number: 10, title: "Little Drops of Water", pdfUrl: pdf(2, "english", 10) },
+                    { number: 11, title: "Storm in the Garden", pdfUrl: pdf(2, "english", 11) },
+                    { number: 12, title: "A Wee Little Frog", pdfUrl: pdf(2, "english", 12) },
+                    { number: 13, title: "Off to School", pdfUrl: pdf(2, "english", 13) },
                 ]
             },
             {
                 id: "hindi",
                 name: "Hindi",
-                book: "Rimjhim",
+                book: "Sarangi",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "ऊँट चला", pdfUrl: pdf(2, "hindi", 1) },
-                    { number: 2, title: "भालू ने खेली फुटबॉल", pdfUrl: pdf(2, "hindi", 2) },
+                    { number: 1, title: "परिवार (चित्र और बातचीत)", pdfUrl: pdf(2, "hindi", 1) },
+                    { number: 2, title: "पापा, क्यों अच्छा लगता है", pdfUrl: pdf(2, "hindi", 2) },
+                    { number: 3, title: "माला की चाँदी की पायल", pdfUrl: pdf(2, "hindi", 3) },
+                    { number: 4, title: "माँ", pdfUrl: pdf(2, "hindi", 4) },
+                    { number: 5, title: "थाथू और मैं", pdfUrl: pdf(2, "hindi", 5) },
+                    { number: 6, title: "चींटा", pdfUrl: pdf(2, "hindi", 6) },
+                    { number: 7, title: "स्कूल गए", pdfUrl: pdf(2, "hindi", 7) },
+                    { number: 8, title: "तीन दोस्त", pdfUrl: pdf(2, "hindi", 8) },
+                    { number: 9, title: "दुनिया रंग-बिरंगी", pdfUrl: pdf(2, "hindi", 9) },
+                    { number: 10, title: "कौन", pdfUrl: pdf(2, "hindi", 10) },
+                    { number: 11, title: "बैंगनी जोजो", pdfUrl: pdf(2, "hindi", 11) },
+                    { number: 12, title: "तोसिया का सपना", pdfUrl: pdf(2, "hindi", 12) },
+                    { number: 13, title: "तालाब", pdfUrl: pdf(2, "hindi", 13) },
+                    { number: 14, title: "बीज", pdfUrl: pdf(2, "hindi", 14) },
+                    { number: 15, title: "किसान", pdfUrl: pdf(2, "hindi", 15) },
+                    { number: 16, title: "मूली", pdfUrl: pdf(2, "hindi", 16) },
+                    { number: 17, title: "बरसात और मेंढक", pdfUrl: pdf(2, "hindi", 17) },
+                    { number: 18, title: "शेर और चूहे की दोस्ती", pdfUrl: pdf(2, "hindi", 18) },
+                    { number: 19, title: "आउट", pdfUrl: pdf(2, "hindi", 19) },
+                    { number: 20, title: "छुपन-छुपाई", pdfUrl: pdf(2, "hindi", 20) },
+                    { number: 21, title: "हाथी साइकिल चला रहा है", pdfUrl: pdf(2, "hindi", 21) },
+                    { number: 22, title: "चार दिशाएँ", pdfUrl: pdf(2, "hindi", 22) },
+                    { number: 23, title: "चंदा मामा", pdfUrl: pdf(2, "hindi", 23) },
+                    { number: 24, title: "गिरे ताल में चंदा मामा", pdfUrl: pdf(2, "hindi", 24) },
+                    { number: 25, title: "सबसे बड़ा छाता", pdfUrl: pdf(2, "hindi", 25) },
+                    { number: 26, title: "बादल", pdfUrl: pdf(2, "hindi", 26) },
                 ]
             },
             {
                 id: "math",
                 name: "Mathematics",
-                book: "Math Magic",
-                icon: "🔢",
+                book: "Joyful Mathematics",
+                icon: "📐",
                 chapters: [
-                    { number: 1, title: "What is Long, What is Round?", pdfUrl: pdf(2, "math", 1) },
-                    { number: 2, title: "Counting in Groups", pdfUrl: pdf(2, "math", 2) },
+                    { number: 1, title: "A Day at the Beach", pdfUrl: pdf(2, "math", 1) },
+                    { number: 2, title: "Shapes Around us", pdfUrl: pdf(2, "math", 2) },
+                    { number: 3, title: "Fun with Numbers", pdfUrl: pdf(2, "math", 3) },
+                    { number: 4, title: "Shadow Story", pdfUrl: pdf(2, "math", 4) },
+                    { number: 5, title: "Playing with Lines", pdfUrl: pdf(2, "math", 5) },
+                    { number: 6, title: "Decoration for Festival", pdfUrl: pdf(2, "math", 6) },
+                    { number: 7, title: "Rani's Gift", pdfUrl: pdf(2, "math", 7) },
+                    { number: 8, title: "Grouping and Sharing", pdfUrl: pdf(2, "math", 8) },
+                    { number: 9, title: "Which Season is it?", pdfUrl: pdf(2, "math", 9) },
+                    { number: 10, title: "Fun at the Fair", pdfUrl: pdf(2, "math", 10) },
+                    { number: 11, title: "Data Handling", pdfUrl: pdf(2, "math", 11) },
                 ]
             }
         ]
@@ -108,41 +185,89 @@ export const classes: ClassData[] = [
             {
                 id: "english",
                 name: "English",
-                book: "Marigold",
+                book: "Santoor",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "Good Morning", pdfUrl: pdf(3, "english", 1) },
-                    { number: 2, title: "The Magic Garden", pdfUrl: pdf(3, "english", 2) },
+                    { number: 1, title: "Fun with Friends", pdfUrl: pdf(3, "english", 1) },
+                    { number: 2, title: "Badal and Moti", pdfUrl: pdf(3, "english", 2) },
+                    { number: 3, title: "Best Friends", pdfUrl: pdf(3, "english", 3) },
+                    { number: 4, title: "Toys and Games", pdfUrl: pdf(3, "english", 4) },
+                    { number: 5, title: "Talking Toys", pdfUrl: pdf(3, "english", 5) },
+                    { number: 6, title: "Paper Boats", pdfUrl: pdf(3, "english", 6) },
+                    { number: 7, title: "Good Food", pdfUrl: pdf(3, "english", 7) },
+                    { number: 8, title: "Thank God!", pdfUrl: pdf(3, "english", 8) },
+                    { number: 9, title: "Madhu's Wish", pdfUrl: pdf(3, "english", 9) },
+                    { number: 10, title: "The Sky", pdfUrl: pdf(3, "english", 10) },
+                    { number: 11, title: "Chanda Mama Counts the Stars", pdfUrl: pdf(3, "english", 11) },
+                    { number: 12, title: "Chandrayaan", pdfUrl: pdf(3, "english", 12) },
                 ]
             },
             {
                 id: "hindi",
                 name: "Hindi",
-                book: "Rimjhim",
+                book: "Veena",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "कक्कू", pdfUrl: pdf(3, "hindi", 1) },
-                    { number: 2, title: "शेखीबाज़ मक्खी", pdfUrl: pdf(3, "hindi", 2) },
+                    { number: 1, title: "सीखो", pdfUrl: pdf(3, "hindi", 1) },
+                    { number: 2, title: "चींटी", pdfUrl: pdf(3, "hindi", 2) },
+                    { number: 3, title: "कितने पैर?", pdfUrl: pdf(3, "hindi", 3) },
+                    { number: 4, title: "बया हमारी", pdfUrl: pdf(3, "hindi", 4) },
+                    { number: 5, title: "आम का पेड़", pdfUrl: pdf(3, "hindi", 5) },
+                    { number: 6, title: "बीरबल की खिचड़ी", pdfUrl: pdf(3, "hindi", 6) },
+                    { number: 7, title: "मित्र को पत्र", pdfUrl: pdf(3, "hindi", 7) },
+                    { number: 8, title: "चतुर चूहा", pdfUrl: pdf(3, "hindi", 8) },
+                    { number: 9, title: "फूलदेई", pdfUrl: pdf(3, "hindi", 9) },
+                    { number: 10, title: "सुनो भई गप्प", pdfUrl: pdf(3, "hindi", 10) },
+                    { number: 11, title: "एक जादुई लपटारा", pdfUrl: pdf(3, "hindi", 11) },
+                    { number: 12, title: "अपना-अपना काम", pdfUrl: pdf(3, "hindi", 12) },
+                    { number: 13, title: "पेड़ों की अम्मा", pdfUrl: pdf(3, "hindi", 13) },
+                    { number: 14, title: "किसान की होशियारी", pdfUrl: pdf(3, "hindi", 14) },
+                    { number: 15, title: "भारत", pdfUrl: pdf(3, "hindi", 15) },
+                    { number: 16, title: "चंद्रयान", pdfUrl: pdf(3, "hindi", 16) },
+                    { number: 17, title: "बोलने वाली माँद", pdfUrl: pdf(3, "hindi", 17) },
+                    { number: 18, title: "हम अनेक किंतु एक", pdfUrl: pdf(3, "hindi", 18) },
                 ]
             },
             {
                 id: "math",
                 name: "Mathematics",
-                book: "Math Magic",
-                icon: "🔢",
+                book: "Maths Mela",
+                icon: "📐",
                 chapters: [
-                    { number: 1, title: "Where to Look From", pdfUrl: pdf(3, "math", 1) },
-                    { number: 2, title: "Fun with Numbers", pdfUrl: pdf(3, "math", 2) },
+                    { number: 1, title: "What's in a Name?", pdfUrl: pdf(3, "math", 1) },
+                    { number: 2, title: "Toy Joy", pdfUrl: pdf(3, "math", 2) },
+                    { number: 3, title: "Double Century", pdfUrl: pdf(3, "math", 3) },
+                    { number: 4, title: "Vacation with My Nani Maa", pdfUrl: pdf(3, "math", 4) },
+                    { number: 5, title: "Fun with Shapes", pdfUrl: pdf(3, "math", 5) },
+                    { number: 6, title: "House of Hundreds - I", pdfUrl: pdf(3, "math", 6) },
+                    { number: 7, title: "Raksha Bandhan", pdfUrl: pdf(3, "math", 7) },
+                    { number: 8, title: "Fair Share", pdfUrl: pdf(3, "math", 8) },
+                    { number: 9, title: "House of Hundreds - II", pdfUrl: pdf(3, "math", 9) },
+                    { number: 10, title: "Fun at Class Party!", pdfUrl: pdf(3, "math", 10) },
+                    { number: 11, title: "Filling and Lifting", pdfUrl: pdf(3, "math", 11) },
+                    { number: 12, title: "Give and Take", pdfUrl: pdf(3, "math", 12) },
+                    { number: 13, title: "Time Goes On", pdfUrl: pdf(3, "math", 13) },
+                    { number: 14, title: "The Surajkund Fair", pdfUrl: pdf(3, "math", 14) },
                 ]
             },
             {
                 id: "evs",
                 name: "EVS",
-                book: "Looking Around",
+                book: "Our Wondrous World",
                 icon: "🌍",
                 chapters: [
-                    { number: 1, title: "Poonam's Day Out", pdfUrl: pdf(3, "evs", 1) },
-                    { number: 2, title: "The Plant Fairy", pdfUrl: pdf(3, "evs", 2) },
+                    { number: 1, title: "Our Families and Communities", pdfUrl: pdf(3, "evs", 1) },
+                    { number: 2, title: "Going to the Mela", pdfUrl: pdf(3, "evs", 2) },
+                    { number: 3, title: "Celebrating Festivals", pdfUrl: pdf(3, "evs", 3) },
+                    { number: 4, title: "Life Around Us", pdfUrl: pdf(3, "evs", 4) },
+                    { number: 5, title: "Plants and Animals Live Together", pdfUrl: pdf(3, "evs", 5) },
+                    { number: 6, title: "Living in Harmony", pdfUrl: pdf(3, "evs", 6) },
+                    { number: 7, title: "Gifts of Nature", pdfUrl: pdf(3, "evs", 7) },
+                    { number: 8, title: "Food We Eat", pdfUrl: pdf(3, "evs", 8) },
+                    { number: 9, title: "Staying Healthy and Happy", pdfUrl: pdf(3, "evs", 9) },
+                    { number: 10, title: "Things Around Us", pdfUrl: pdf(3, "evs", 10) },
+                    { number: 11, title: "Making Things", pdfUrl: pdf(3, "evs", 11) },
+                    { number: 12, title: "Taking Charge of Waste", pdfUrl: pdf(3, "evs", 12) },
                 ]
             }
         ]
@@ -154,41 +279,82 @@ export const classes: ClassData[] = [
             {
                 id: "english",
                 name: "English",
-                book: "Marigold",
+                book: "Santoor",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "Wake Up!", pdfUrl: pdf(4, "english", 1) },
-                    { number: 2, title: "Neha's Alarm Clock", pdfUrl: pdf(4, "english", 2) },
+                    { number: 1, title: "Together We Can", pdfUrl: pdf(4, "english", 1) },
+                    { number: 2, title: "The Tinkling Bells", pdfUrl: pdf(4, "english", 2) },
+                    { number: 3, title: "Be Smart, Be Safe", pdfUrl: pdf(4, "english", 3) },
+                    { number: 4, title: "One Thing at a Time", pdfUrl: pdf(4, "english", 4) },
+                    { number: 5, title: "The Old Stag", pdfUrl: pdf(4, "english", 5) },
+                    { number: 6, title: "Braille", pdfUrl: pdf(4, "english", 6) },
+                    { number: 7, title: "Fit Body, Fit Mind, Fit Nation", pdfUrl: pdf(4, "english", 7) },
+                    { number: 8, title: "The Lagori Champions", pdfUrl: pdf(4, "english", 8) },
+                    { number: 9, title: "Hekko", pdfUrl: pdf(4, "english", 9) },
+                    { number: 10, title: "The Swing", pdfUrl: pdf(4, "english", 10) },
+                    { number: 11, title: "A Journey to the Magical Mountains", pdfUrl: pdf(4, "english", 11) },
+                    { number: 12, title: "Maheshwar", pdfUrl: pdf(4, "english", 12) },
                 ]
             },
             {
                 id: "hindi",
                 name: "Hindi",
-                book: "Rimjhim",
+                book: "Veena",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "मन के भोले-भाले बादल", pdfUrl: pdf(4, "hindi", 1) },
-                    { number: 2, title: "जैसा सवाल वैसा जवाब", pdfUrl: pdf(4, "hindi", 2) },
+                    { number: 1, title: "चिड़िया का गीत", pdfUrl: pdf(4, "hindi", 1) },
+                    { number: 2, title: "बगीचे का घोंघा", pdfUrl: pdf(4, "hindi", 2) },
+                    { number: 3, title: "नीम", pdfUrl: pdf(4, "hindi", 3) },
+                    { number: 4, title: "हमारा आहार", pdfUrl: pdf(4, "hindi", 4) },
+                    { number: 5, title: "आसमान गिरा", pdfUrl: pdf(4, "hindi", 5) },
+                    { number: 6, title: "जयपुर से पत्र", pdfUrl: pdf(4, "hindi", 6) },
+                    { number: 7, title: "नकली हीरे", pdfUrl: pdf(4, "hindi", 7) },
+                    { number: 8, title: "ओणम के रंग", pdfUrl: pdf(4, "hindi", 8) },
+                    { number: 9, title: "मिठाइयों का सम्मेलन", pdfUrl: pdf(4, "hindi", 9) },
+                    { number: 10, title: "कैमरा", pdfUrl: pdf(4, "hindi", 10) },
+                    { number: 11, title: "कविता का कमाल", pdfUrl: pdf(4, "hindi", 11) },
+                    { number: 12, title: "शतरंज में मात", pdfUrl: pdf(4, "hindi", 12) },
+                    { number: 13, title: "हमारा आदित्य", pdfUrl: pdf(4, "hindi", 13) },
                 ]
             },
             {
                 id: "math",
                 name: "Mathematics",
-                book: "Math Magic",
-                icon: "🔢",
+                book: "Maths Mela",
+                icon: "📐",
                 chapters: [
-                    { number: 1, title: "Building with Bricks", pdfUrl: pdf(4, "math", 1) },
-                    { number: 2, title: "Long and Short", pdfUrl: pdf(4, "math", 2) },
+                    { number: 1, title: "Shapes Around Us", pdfUrl: pdf(4, "math", 1) },
+                    { number: 2, title: "Hide and Seek", pdfUrl: pdf(4, "math", 2) },
+                    { number: 3, title: "Pattern Around Us", pdfUrl: pdf(4, "math", 3) },
+                    { number: 4, title: "Thousands Around Us", pdfUrl: pdf(4, "math", 4) },
+                    { number: 5, title: "Sharing and Measuring", pdfUrl: pdf(4, "math", 5) },
+                    { number: 6, title: "Measuring Length", pdfUrl: pdf(4, "math", 6) },
+                    { number: 7, title: "The Cleanest Village", pdfUrl: pdf(4, "math", 7) },
+                    { number: 8, title: "Weigh it, Pour it", pdfUrl: pdf(4, "math", 8) },
+                    { number: 9, title: "Equal Groups", pdfUrl: pdf(4, "math", 9) },
+                    { number: 10, title: "Elephants, Tigers, and Leopards", pdfUrl: pdf(4, "math", 10) },
+                    { number: 11, title: "Fun with Symmetry", pdfUrl: pdf(4, "math", 11) },
+                    { number: 12, title: "Ticking Clocks and Turning Calendar", pdfUrl: pdf(4, "math", 12) },
+                    { number: 13, title: "The Transport Museum", pdfUrl: pdf(4, "math", 13) },
+                    { number: 14, title: "Data Handling", pdfUrl: pdf(4, "math", 14) },
                 ]
             },
             {
                 id: "evs",
                 name: "EVS",
-                book: "Looking Around",
+                book: "Our Wondrous World",
                 icon: "🌍",
                 chapters: [
-                    { number: 1, title: "Going to School", pdfUrl: pdf(4, "evs", 1) },
-                    { number: 2, title: "Ear to Ear", pdfUrl: pdf(4, "evs", 2) },
+                    { number: 1, title: "Living Together", pdfUrl: pdf(4, "evs", 1) },
+                    { number: 2, title: "Exploring Our Neighbourhood", pdfUrl: pdf(4, "evs", 2) },
+                    { number: 3, title: "Nature Trail", pdfUrl: pdf(4, "evs", 3) },
+                    { number: 4, title: "Growing up with Nature", pdfUrl: pdf(4, "evs", 4) },
+                    { number: 5, title: "Food for Health", pdfUrl: pdf(4, "evs", 5) },
+                    { number: 6, title: "Happy and Healthy Living", pdfUrl: pdf(4, "evs", 6) },
+                    { number: 7, title: "How Things Work", pdfUrl: pdf(4, "evs", 7) },
+                    { number: 8, title: "How Things are Made", pdfUrl: pdf(4, "evs", 8) },
+                    { number: 9, title: "Different Lands, Different Lives", pdfUrl: pdf(4, "evs", 9) },
+                    { number: 10, title: "Our Sky", pdfUrl: pdf(4, "evs", 10) },
                 ]
             }
         ]
@@ -200,41 +366,80 @@ export const classes: ClassData[] = [
             {
                 id: "english",
                 name: "English",
-                book: "Marigold",
+                book: "Santoor",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "Wonderful Waste!", pdfUrl: pdf(5, "english", 1) },
-                    { number: 2, title: "Flying Together", pdfUrl: pdf(5, "english", 2) },
+                    { number: 1, title: "Papa's Spectacles", pdfUrl: pdf(5, "english", 1) },
+                    { number: 2, title: "Gone with the Scooter", pdfUrl: pdf(5, "english", 2) },
+                    { number: 3, title: "The Rainbow", pdfUrl: pdf(5, "english", 3) },
+                    { number: 4, title: "The Wise Parrot", pdfUrl: pdf(5, "english", 4) },
+                    { number: 5, title: "The Frog", pdfUrl: pdf(5, "english", 5) },
+                    { number: 6, title: "What a Tank", pdfUrl: pdf(5, "english", 6) },
+                    { number: 7, title: "Gilli Danda", pdfUrl: pdf(5, "english", 7) },
+                    { number: 8, title: "The Decision of the Panchayat", pdfUrl: pdf(5, "english", 8) },
+                    { number: 9, title: "Vocation", pdfUrl: pdf(5, "english", 9) },
+                    { number: 10, title: "Glass Bangles", pdfUrl: pdf(5, "english", 10) },
                 ]
             },
             {
                 id: "hindi",
                 name: "Hindi",
-                book: "Rimjhim",
+                book: "Veena",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "राख की रस्सी", pdfUrl: pdf(5, "hindi", 1) },
-                    { number: 2, title: "फ़सलों के त्योहार", pdfUrl: pdf(5, "hindi", 2) },
+                    { number: 1, title: "किरन", pdfUrl: pdf(5, "hindi", 1) },
+                    { number: 2, title: "न्याय की कुर्सी", pdfUrl: pdf(5, "hindi", 2) },
+                    { number: 3, title: "चाँद का कुर्ता", pdfUrl: pdf(5, "hindi", 3) },
+                    { number: 4, title: "साङकेन", pdfUrl: pdf(5, "hindi", 4) },
+                    { number: 5, title: "सुंदरिया", pdfUrl: pdf(5, "hindi", 5) },
+                    { number: 6, title: "चतुर चित्रकार", pdfUrl: pdf(5, "hindi", 6) },
+                    { number: 7, title: "मेरा बचपन", pdfUrl: pdf(5, "hindi", 7) },
+                    { number: 8, title: "काजीरंगा राष्ट्रीय उद्यान की यात्रा", pdfUrl: pdf(5, "hindi", 8) },
+                    { number: 9, title: "न्याय", pdfUrl: pdf(5, "hindi", 9) },
+                    { number: 10, title: "तीन मछलियाँ", pdfUrl: pdf(5, "hindi", 10) },
+                    { number: 11, title: "हमारे ये कलामंदिर", pdfUrl: pdf(5, "hindi", 11) },
+                    { number: 12, title: "गंगा की कहानी", pdfUrl: pdf(5, "hindi", 12) },
                 ]
             },
             {
                 id: "math",
                 name: "Mathematics",
-                book: "Math Magic",
-                icon: "🔢",
+                book: "Maths Mela",
+                icon: "📐",
                 chapters: [
-                    { number: 1, title: "The Fish Tale", pdfUrl: pdf(5, "math", 1) },
-                    { number: 2, title: "Shapes and Angles", pdfUrl: pdf(5, "math", 2) },
+                    { number: 1, title: "We the Travellers—I", pdfUrl: pdf(5, "math", 1) },
+                    { number: 2, title: "Fractions", pdfUrl: pdf(5, "math", 2) },
+                    { number: 3, title: "Angles as Turns", pdfUrl: pdf(5, "math", 3) },
+                    { number: 4, title: "We the Travellers—II", pdfUrl: pdf(5, "math", 4) },
+                    { number: 5, title: "Far and Near", pdfUrl: pdf(5, "math", 5) },
+                    { number: 6, title: "The Dairy Farm", pdfUrl: pdf(5, "math", 6) },
+                    { number: 7, title: "Shapes and Patterns", pdfUrl: pdf(5, "math", 7) },
+                    { number: 8, title: "Weight and Capacity", pdfUrl: pdf(5, "math", 8) },
+                    { number: 9, title: "Coconut Farm", pdfUrl: pdf(5, "math", 9) },
+                    { number: 10, title: "Symmetrical Designs", pdfUrl: pdf(5, "math", 10) },
+                    { number: 11, title: "Grandmother's Quilt", pdfUrl: pdf(5, "math", 11) },
+                    { number: 12, title: "Racing Seconds", pdfUrl: pdf(5, "math", 12) },
+                    { number: 13, title: "Animal Jumps", pdfUrl: pdf(5, "math", 13) },
+                    { number: 14, title: "Maps and Locations", pdfUrl: pdf(5, "math", 14) },
+                    { number: 15, title: "Data Through Pictures", pdfUrl: pdf(5, "math", 15) },
                 ]
             },
             {
                 id: "evs",
                 name: "EVS",
-                book: "Looking Around",
+                book: "Our Wondrous World",
                 icon: "🌍",
                 chapters: [
-                    { number: 1, title: "Super Senses", pdfUrl: pdf(5, "evs", 1) },
-                    { number: 2, title: "A Snake Charmer's Story", pdfUrl: pdf(5, "evs", 2) },
+                    { number: 1, title: "Water—The Essence of Life", pdfUrl: pdf(5, "evs", 1) },
+                    { number: 2, title: "Journey of a River", pdfUrl: pdf(5, "evs", 2) },
+                    { number: 3, title: "The Mystery of Food", pdfUrl: pdf(5, "evs", 3) },
+                    { number: 4, title: "Our School—A Happy Place", pdfUrl: pdf(5, "evs", 4) },
+                    { number: 5, title: "Our Vibrant Country", pdfUrl: pdf(5, "evs", 5) },
+                    { number: 6, title: "Some Unique Places", pdfUrl: pdf(5, "evs", 6) },
+                    { number: 7, title: "Energy—How Things Work", pdfUrl: pdf(5, "evs", 7) },
+                    { number: 8, title: "Clothes—How Things are Made", pdfUrl: pdf(5, "evs", 8) },
+                    { number: 9, title: "Rhythms of Nature", pdfUrl: pdf(5, "evs", 9) },
+                    { number: 10, title: "Earth—Our Shared Home", pdfUrl: pdf(5, "evs", 10) },
                 ]
             }
         ]
@@ -246,26 +451,39 @@ export const classes: ClassData[] = [
             {
                 id: "english",
                 name: "English",
-                book: "Honeysuckle",
+                book: "Poorvi",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "Who Did Patrick's Homework?", pdfUrl: pdf(6, "english", 1) },
-                    { number: 2, title: "How the Dog Found Himself a New Master!", pdfUrl: pdf(6, "english", 2) },
-                    { number: 3, title: "Taro's Reward", pdfUrl: pdf(6, "english", 3) },
-                    { number: 4, title: "An Indian-American Woman in Space", pdfUrl: pdf(6, "english", 4) },
-                    { number: 5, title: "A Different Kind of School", pdfUrl: pdf(6, "english", 5) },
+                    { number: 1, title: "Fables", pdfUrl: pdf(6, "english", 1) },
+                    { number: 2, title: "A Dog Loves Cake", pdfUrl: pdf(6, "english", 2) },
+                    { number: 3, title: "The New House", pdfUrl: pdf(6, "english", 3) },
+                    { number: 4, title: "A Rupee Goes a Long Way", pdfUrl: pdf(6, "english", 4) },
+                    { number: 5, title: "Folk Tales", pdfUrl: pdf(6, "english", 5) },
+                    { number: 6, title: "A Test of Strength", pdfUrl: pdf(6, "english", 6) },
+                    { number: 7, title: "A Hemraj", pdfUrl: pdf(6, "english", 7) },
+                    { number: 8, title: "The Wind and the Sun", pdfUrl: pdf(6, "english", 8) },
+                    { number: 9, title: "My Shadow", pdfUrl: pdf(6, "english", 9) },
+                    { number: 10, title: "The Banyan Tree", pdfUrl: pdf(6, "english", 10) },
                 ]
             },
             {
                 id: "hindi",
                 name: "Hindi",
-                book: "Vasant",
+                book: "Malhar",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "वह चिड़िया जो", pdfUrl: pdf(6, "hindi", 1) },
-                    { number: 2, title: "बचपन", pdfUrl: pdf(6, "hindi", 2) },
-                    { number: 3, title: "नादान दोस्त", pdfUrl: pdf(6, "hindi", 3) },
-                    { number: 4, title: "चाँद से थोड़ी सी गप्पें", pdfUrl: pdf(6, "hindi", 4) },
+                    { number: 1, title: "मातृभूमि", pdfUrl: pdf(6, "hindi", 1) },
+                    { number: 2, title: "गोल", pdfUrl: pdf(6, "hindi", 2) },
+                    { number: 3, title: "एक और एक ग्यारह", pdfUrl: pdf(6, "hindi", 3) },
+                    { number: 4, title: "पेड़ की महिमा", pdfUrl: pdf(6, "hindi", 4) },
+                    { number: 5, title: "हार की जीत", pdfUrl: pdf(6, "hindi", 5) },
+                    { number: 6, title: "सबसे बड़ा मूर्ख", pdfUrl: pdf(6, "hindi", 6) },
+                    { number: 7, title: "चिड़िया की आँख", pdfUrl: pdf(6, "hindi", 7) },
+                    { number: 8, title: "अनोखा उपहार", pdfUrl: pdf(6, "hindi", 8) },
+                    { number: 9, title: "मैं भी", pdfUrl: pdf(6, "hindi", 9) },
+                    { number: 10, title: "नदी", pdfUrl: pdf(6, "hindi", 10) },
+                    { number: 11, title: "एक दिन की बादशाहत", pdfUrl: pdf(6, "hindi", 11) },
+                    { number: 12, title: "स्वदेश प्रेम", pdfUrl: pdf(6, "hindi", 12) },
                 ]
             },
             {
@@ -274,53 +492,58 @@ export const classes: ClassData[] = [
                 book: "Mathematics",
                 icon: "📐",
                 chapters: [
-                    { number: 1, title: "Knowing Our Numbers", pdfUrl: pdf(6, "math", 1) },
-                    { number: 2, title: "Whole Numbers", pdfUrl: pdf(6, "math", 2) },
-                    { number: 3, title: "Playing with Numbers", pdfUrl: pdf(6, "math", 3) },
-                    { number: 4, title: "Basic Geometrical Ideas", pdfUrl: pdf(6, "math", 4) },
-                    { number: 5, title: "Understanding Elementary Shapes", pdfUrl: pdf(6, "math", 5) },
+                    { number: 1, title: "Patterns in Mathematics", pdfUrl: pdf(6, "math", 1) },
+                    { number: 2, title: "Lines and Angles", pdfUrl: pdf(6, "math", 2) },
+                    { number: 3, title: "Number Play", pdfUrl: pdf(6, "math", 3) },
+                    { number: 4, title: "Data Handling and Presentation", pdfUrl: pdf(6, "math", 4) },
+                    { number: 5, title: "Prime Time", pdfUrl: pdf(6, "math", 5) },
+                    { number: 6, title: "Perimeter and Area", pdfUrl: pdf(6, "math", 6) },
+                    { number: 7, title: "Fractions", pdfUrl: pdf(6, "math", 7) },
+                    { number: 8, title: "Playing with Constructions", pdfUrl: pdf(6, "math", 8) },
+                    { number: 9, title: "Symmetry", pdfUrl: pdf(6, "math", 9) },
+                    { number: 10, title: "The Other Side of Zero", pdfUrl: pdf(6, "math", 10) },
                 ]
             },
             {
                 id: "science",
                 name: "Science",
-                book: "Science",
+                book: "Curiosity",
                 icon: "🔬",
                 chapters: [
-                    { number: 1, title: "Food: Where Does It Come From?", pdfUrl: pdf(6, "science", 1) },
-                    { number: 2, title: "Components of Food", pdfUrl: pdf(6, "science", 2) },
-                    { number: 3, title: "Fibre to Fabric", pdfUrl: pdf(6, "science", 3) },
-                    { number: 4, title: "Sorting Materials into Groups", pdfUrl: pdf(6, "science", 4) },
+                    { number: 1, title: "The Wonderful World of Science", pdfUrl: pdf(6, "science", 1) },
+                    { number: 2, title: "Diversity in the Living World", pdfUrl: pdf(6, "science", 2) },
+                    { number: 3, title: "Mindful Eating", pdfUrl: pdf(6, "science", 3) },
+                    { number: 4, title: "Exploring Magnets", pdfUrl: pdf(6, "science", 4) },
+                    { number: 5, title: "Measurement of Length and Motion", pdfUrl: pdf(6, "science", 5) },
+                    { number: 6, title: "Materials Around Us", pdfUrl: pdf(6, "science", 6) },
+                    { number: 7, title: "Temperature and its Measurement", pdfUrl: pdf(6, "science", 7) },
+                    { number: 8, title: "A Journey through States of Water", pdfUrl: pdf(6, "science", 8) },
+                    { number: 9, title: "Methods of Separation in Everyday Life", pdfUrl: pdf(6, "science", 9) },
+                    { number: 10, title: "Living Creatures", pdfUrl: pdf(6, "science", 10) },
+                    { number: 11, title: "Nature's Treasures", pdfUrl: pdf(6, "science", 11) },
+                    { number: 12, title: "Beyond Earth", pdfUrl: pdf(6, "science", 12) },
                 ]
             },
             {
-                id: "history",
-                name: "History",
-                book: "Our Pasts I",
-                icon: "🏛️",
-                chapters: [
-                    { number: 1, title: "What, Where, How and When?", pdfUrl: pdf(6, "history", 1) },
-                    { number: 2, title: "From Hunting–Gathering to Growing Food", pdfUrl: pdf(6, "history", 2) },
-                ]
-            },
-            {
-                id: "geography",
-                name: "Geography",
-                book: "The Earth: Our Habitat",
+                id: "social_science",
+                name: "Social Science",
+                book: "Exploring Society",
                 icon: "🌍",
                 chapters: [
-                    { number: 1, title: "The Earth in the Solar System", pdfUrl: pdf(6, "geography", 1) },
-                    { number: 2, title: "Globe: Latitudes and Longitudes", pdfUrl: pdf(6, "geography", 2) },
-                ]
-            },
-            {
-                id: "civics",
-                name: "Political Science",
-                book: "Social and Political Life I",
-                icon: "⚖️",
-                chapters: [
-                    { number: 1, title: "Understanding Diversity", pdfUrl: pdf(6, "civics", 1) },
-                    { number: 2, title: "Diversity and Discrimination", pdfUrl: pdf(6, "civics", 2) },
+                    { number: 1, title: "Locating Places on the Earth", pdfUrl: pdf(6, "social_science", 1) },
+                    { number: 2, title: "Oceans and Continents", pdfUrl: pdf(6, "social_science", 2) },
+                    { number: 3, title: "Landforms and Life", pdfUrl: pdf(6, "social_science", 3) },
+                    { number: 4, title: "Understanding Society and Culture", pdfUrl: pdf(6, "social_science", 4) },
+                    { number: 5, title: "India: A Cultural Tapestry", pdfUrl: pdf(6, "social_science", 5) },
+                    { number: 6, title: "India: Our Country", pdfUrl: pdf(6, "social_science", 6) },
+                    { number: 7, title: "Our Environment", pdfUrl: pdf(6, "social_science", 7) },
+                    { number: 8, title: "Economic Life Around Us", pdfUrl: pdf(6, "social_science", 8) },
+                    { number: 9, title: "Governing Ourselves", pdfUrl: pdf(6, "social_science", 9) },
+                    { number: 10, title: "Local Government", pdfUrl: pdf(6, "social_science", 10) },
+                    { number: 11, title: "India's Cultural Roots", pdfUrl: pdf(6, "social_science", 11) },
+                    { number: 12, title: "New Ideas and Religions", pdfUrl: pdf(6, "social_science", 12) },
+                    { number: 13, title: "Empires and their Legacies", pdfUrl: pdf(6, "social_science", 13) },
+                    { number: 14, title: "India and the World", pdfUrl: pdf(6, "social_science", 14) },
                 ]
             }
         ]
@@ -332,24 +555,32 @@ export const classes: ClassData[] = [
             {
                 id: "english",
                 name: "English",
-                book: "Honeycomb",
+                book: "Poorvi",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "Three Questions", pdfUrl: pdf(7, "english", 1) },
-                    { number: 2, title: "A Gift of Chappals", pdfUrl: pdf(7, "english", 2) },
-                    { number: 3, title: "Gopal and the Hilsa Fish", pdfUrl: pdf(7, "english", 3) },
-                    { number: 4, title: "The Ashes That Made Trees Bloom", pdfUrl: pdf(7, "english", 4) },
+                    { number: 1, title: "Learning Together", pdfUrl: pdf(7, "english", 1) },
+                    { number: 2, title: "Wit and Humour", pdfUrl: pdf(7, "english", 2) },
+                    { number: 3, title: "Dreams and Discoveries", pdfUrl: pdf(7, "english", 3) },
+                    { number: 4, title: "Travel and Adventure", pdfUrl: pdf(7, "english", 4) },
+                    { number: 5, title: "Bravehearts", pdfUrl: pdf(7, "english", 5) },
                 ]
             },
             {
                 id: "hindi",
                 name: "Hindi",
-                book: "Vasant",
+                book: "Malhar",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "हम पंछी उन्मुक्त गगन के", pdfUrl: pdf(7, "hindi", 1) },
-                    { number: 2, title: "दादी माँ", pdfUrl: pdf(7, "hindi", 2) },
-                    { number: 3, title: "हिमालय की बेटियाँ", pdfUrl: pdf(7, "hindi", 3) },
+                    { number: 1, title: "माँ, कह एक कहानी", pdfUrl: pdf(7, "hindi", 1) },
+                    { number: 2, title: "तीन बुद्धिमान", pdfUrl: pdf(7, "hindi", 2) },
+                    { number: 3, title: "फूल और काँटा", pdfUrl: pdf(7, "hindi", 3) },
+                    { number: 4, title: "पानी रे पानी", pdfUrl: pdf(7, "hindi", 4) },
+                    { number: 5, title: "नहीं होना बीमार", pdfUrl: pdf(7, "hindi", 5) },
+                    { number: 6, title: "गिरिधर कविराय की कुंडलिया", pdfUrl: pdf(7, "hindi", 6) },
+                    { number: 7, title: "वर्षा-बहार", pdfUrl: pdf(7, "hindi", 7) },
+                    { number: 8, title: "बिरजू महाराज से साक्षात्कार", pdfUrl: pdf(7, "hindi", 8) },
+                    { number: 9, title: "चिड़िया", pdfUrl: pdf(7, "hindi", 9) },
+                    { number: 10, title: "मीरा के पद", pdfUrl: pdf(7, "hindi", 10) },
                 ]
             },
             {
@@ -358,54 +589,71 @@ export const classes: ClassData[] = [
                 book: "Mathematics",
                 icon: "📐",
                 chapters: [
-                    { number: 1, title: "Integers", pdfUrl: pdf(7, "math", 1) },
-                    { number: 2, title: "Fractions and Decimals", pdfUrl: pdf(7, "math", 2) },
-                    { number: 3, title: "Data Handling", pdfUrl: pdf(7, "math", 3) },
-                    { number: 4, title: "Simple Equations", pdfUrl: pdf(7, "math", 4) },
+                    { number: 1, title: "Large Numbers Around Us", pdfUrl: pdf(7, "math", 1) },
+                    { number: 2, title: "Arithmetic Expressions", pdfUrl: pdf(7, "math", 2) },
+                    { number: 3, title: "A Peek Beyond the Point", pdfUrl: pdf(7, "math", 3) },
+                    { number: 4, title: "Using Letter-Numbers", pdfUrl: pdf(7, "math", 4) },
+                    { number: 5, title: "Parallel and Intersecting Lines", pdfUrl: pdf(7, "math", 5) },
+                    { number: 6, title: "Number Play", pdfUrl: pdf(7, "math", 6) },
+                    { number: 7, title: "A Tale of Three Intersecting Lines", pdfUrl: pdf(7, "math", 7) },
+                    { number: 8, title: "Working with Fractions", pdfUrl: pdf(7, "math", 8) },
+                    { number: 9, title: "Geometric Twins", pdfUrl: pdf(7, "math", 9) },
+                    { number: 10, title: "Operations with Integers", pdfUrl: pdf(7, "math", 10) },
+                    { number: 11, title: "Finding Common Ground", pdfUrl: pdf(7, "math", 11) },
+                    { number: 12, title: "Another Peek Beyond the Point", pdfUrl: pdf(7, "math", 12) },
+                    { number: 13, title: "Connecting the Dots...", pdfUrl: pdf(7, "math", 13) },
+                    { number: 14, title: "Constructions and Tilings", pdfUrl: pdf(7, "math", 14) },
+                    { number: 15, title: "Finding the Unknown", pdfUrl: pdf(7, "math", 15) },
                 ]
             },
             {
                 id: "science",
                 name: "Science",
-                book: "Science",
+                book: "Curiosity",
                 icon: "🔬",
                 chapters: [
-                    { number: 1, title: "Nutrition in Plants", pdfUrl: pdf(7, "science", 1) },
-                    { number: 2, title: "Nutrition in Animals", pdfUrl: pdf(7, "science", 2) },
-                    { number: 3, title: "Fibre to Fabric", pdfUrl: pdf(7, "science", 3) },
-                    { number: 4, title: "Heat", pdfUrl: pdf(7, "science", 4) },
+                    { number: 1, title: "The Ever-Evolving World of Science", pdfUrl: pdf(7, "science", 1) },
+                    { number: 2, title: "Exploring Substances: Acidic, Basic, and Neutral", pdfUrl: pdf(7, "science", 2) },
+                    { number: 3, title: "Electricity: Circuits and their Components", pdfUrl: pdf(7, "science", 3) },
+                    { number: 4, title: "The World of Metals and Non-metals", pdfUrl: pdf(7, "science", 4) },
+                    { number: 5, title: "Changes Around Us: Physical and Chemical", pdfUrl: pdf(7, "science", 5) },
+                    { number: 6, title: "Adolescence: A Stage of Growth and Change", pdfUrl: pdf(7, "science", 6) },
+                    { number: 7, title: "Heat Transfer in Nature", pdfUrl: pdf(7, "science", 7) },
+                    { number: 8, title: "Measurement of Time and Motion", pdfUrl: pdf(7, "science", 8) },
+                    { number: 9, title: "Life Processes in Animals", pdfUrl: pdf(7, "science", 9) },
+                    { number: 10, title: "Life Processes in Plants", pdfUrl: pdf(7, "science", 10) },
+                    { number: 11, title: "Light: Shadows and Reflections", pdfUrl: pdf(7, "science", 11) },
+                    { number: 12, title: "Earth, Moon, and the Sun", pdfUrl: pdf(7, "science", 12) },
                 ]
             },
             {
-                id: "history",
-                name: "History",
-                book: "Our Pasts II",
-                icon: "🏛️",
-                chapters: [
-                    { number: 1, title: "Tracing Changes Through a Thousand Years", pdfUrl: pdf(7, "history", 1) },
-                    { number: 2, title: "New Kings and Kingdoms", pdfUrl: pdf(7, "history", 2) },
-                ]
-            },
-            {
-                id: "geography",
-                name: "Geography",
-                book: "Our Environment",
+                id: "social-science",
+                name: "Social Science",
+                book: "Exploring Society",
                 icon: "🌍",
                 chapters: [
-                    { number: 1, title: "Environment", pdfUrl: pdf(7, "geography", 1) },
-                    { number: 2, title: "Inside Our Earth", pdfUrl: pdf(7, "geography", 2) },
+                    { number: 1, title: "Geographical Diversity of India", pdfUrl: pdf(7, "social-science", 1) },
+                    { number: 2, title: "Understanding the Weather", pdfUrl: pdf(7, "social-science", 2) },
+                    { number: 3, title: "Climates of India", pdfUrl: pdf(7, "social-science", 3) },
+                    { number: 4, title: "New Beginnings: Cities and States", pdfUrl: pdf(7, "social-science", 4) },
+                    { number: 5, title: "The Rise of Empires", pdfUrl: pdf(7, "social-science", 5) },
+                    { number: 6, title: "The Age of Reorganisation", pdfUrl: pdf(7, "social-science", 6) },
+                    { number: 7, title: "The Gupta Era: An Age of Tireless Creativity", pdfUrl: pdf(7, "social-science", 7) },
+                    { number: 8, title: "How the Land Becomes Sacred", pdfUrl: pdf(7, "social-science", 8) },
+                    { number: 9, title: "From the Rulers to the Ruled: Types of Governments", pdfUrl: pdf(7, "social-science", 9) },
+                    { number: 10, title: "The Constitution of India — An Introduction", pdfUrl: pdf(7, "social-science", 10) },
+                    { number: 11, title: "From Barter to Money", pdfUrl: pdf(7, "social-science", 11) },
+                    { number: 12, title: "Understanding Markets", pdfUrl: pdf(7, "social-science", 12) },
+                    { number: 13, title: "The Story of Indian Farming", pdfUrl: pdf(7, "social-science", 13) },
+                    { number: 14, title: "India and Her Neighbours", pdfUrl: pdf(7, "social-science", 14) },
+                    { number: 15, title: "Empires and Kingdoms: 6th to 10th Centuries", pdfUrl: pdf(7, "social-science", 15) },
+                    { number: 16, title: "Turning Tides: 11th and 12th Centuries", pdfUrl: pdf(7, "social-science", 16) },
+                    { number: 17, title: "India, a Home to Many", pdfUrl: pdf(7, "social-science", 17) },
+                    { number: 18, title: "The State, the Government, and You", pdfUrl: pdf(7, "social-science", 18) },
+                    { number: 19, title: "Infrastructure: Engine of India's Development", pdfUrl: pdf(7, "social-science", 19) },
+                    { number: 20, title: "Banks and the Magic of Finance", pdfUrl: pdf(7, "social-science", 20) },
                 ]
             },
-            {
-                id: "civics",
-                name: "Political Science",
-                book: "Social and Political Life II",
-                icon: "⚖️",
-                chapters: [
-                    { number: 1, title: "On Equality", pdfUrl: pdf(7, "civics", 1) },
-                    { number: 2, title: "Role of the Government in Health", pdfUrl: pdf(7, "civics", 2) },
-                ]
-            }
         ]
     },
     {
@@ -418,10 +666,11 @@ export const classes: ClassData[] = [
                 book: "Honeydew",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "The Best Christmas Present in the World", pdfUrl: pdf(8, "english", 1) },
-                    { number: 2, title: "The Tsunami", pdfUrl: pdf(8, "english", 2) },
-                    { number: 3, title: "Glimpses of the Past", pdfUrl: pdf(8, "english", 3) },
-                    { number: 4, title: "Bepin Choudhury's Lapse of Memory", pdfUrl: pdf(8, "english", 4) },
+                    { number: 1, title: "Wit and Wisdom", pdfUrl: pdf(8, "english", 1) },
+                    { number: 2, title: "Values and Dispositions", pdfUrl: pdf(8, "english", 2) },
+                    { number: 3, title: "Mystery and Magic", pdfUrl: pdf(8, "english", 3) },
+                    { number: 4, title: "Environment", pdfUrl: pdf(8, "english", 4) },
+                    { number: 5, title: "Science and Curiosity", pdfUrl: pdf(8, "english", 5) },
                 ]
             },
             {
@@ -430,9 +679,16 @@ export const classes: ClassData[] = [
                 book: "Vasant",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "ध्वनि", pdfUrl: pdf(8, "hindi", 1) },
-                    { number: 2, title: "लाख की चूड़ियाँ", pdfUrl: pdf(8, "hindi", 2) },
-                    { number: 3, title: "बस की यात्रा", pdfUrl: pdf(8, "hindi", 3) },
+                    { number: 1, title: "स्वदेश", pdfUrl: pdf(8, "hindi", 1) },
+                    { number: 2, title: "दो गौरैया", pdfUrl: pdf(8, "hindi", 2) },
+                    { number: 3, title: "एक आशीर्वाद", pdfUrl: pdf(8, "hindi", 3) },
+                    { number: 4, title: "हरिद्वार", pdfUrl: pdf(8, "hindi", 4) },
+                    { number: 5, title: "कबीर के दोहे", pdfUrl: pdf(8, "hindi", 5) },
+                    { number: 6, title: "एक टोकरी भर मिट्टी", pdfUrl: pdf(8, "hindi", 6) },
+                    { number: 7, title: "मत बाँधो इन सपनों के पंख", pdfUrl: pdf(8, "hindi", 7) },
+                    { number: 8, title: "नए मेहमान", pdfUrl: pdf(8, "hindi", 8) },
+                    { number: 9, title: "आदमी का अनुपात", pdfUrl: pdf(8, "hindi", 9) },
+                    { number: 10, title: "तरुण के स्वप्न", pdfUrl: pdf(8, "hindi", 10) },
                 ]
             },
             {
@@ -441,54 +697,58 @@ export const classes: ClassData[] = [
                 book: "Mathematics",
                 icon: "📐",
                 chapters: [
-                    { number: 1, title: "Rational Numbers", pdfUrl: pdf(8, "math", 1) },
-                    { number: 2, title: "Linear Equations in One Variable", pdfUrl: pdf(8, "math", 2) },
-                    { number: 3, title: "Understanding Quadrilaterals", pdfUrl: pdf(8, "math", 3) },
-                    { number: 4, title: "Practical Geometry", pdfUrl: pdf(8, "math", 4) },
+                    { number: 1, title: "A Square and a Cube", pdfUrl: pdf(8, "math", 1) },
+                    { number: 2, title: "Power Play", pdfUrl: pdf(8, "math", 2) },
+                    { number: 3, title: "A Story of Numbers", pdfUrl: pdf(8, "math", 3) },
+                    { number: 4, title: "Quadrilaterals", pdfUrl: pdf(8, "math", 4) },
+                    { number: 5, title: "Number Play", pdfUrl: pdf(8, "math", 5) },
+                    { number: 6, title: "We Distribute, Yet Things Multiply", pdfUrl: pdf(8, "math", 6) },
+                    { number: 7, title: "Proportional Reasoning-1", pdfUrl: pdf(8, "math", 7) },
+                    { number: 8, title: "Fractions in Disguise", pdfUrl: pdf(8, "math", 8) },
+                    { number: 9, title: "The Baudhayana-Pythagoras Theorem", pdfUrl: pdf(8, "math", 9) },
+                    { number: 10, title: "Proportional Reasoning-2", pdfUrl: pdf(8, "math", 10) },
+                    { number: 11, title: "Exploring Some Geometric Themes", pdfUrl: pdf(8, "math", 11) },
+                    { number: 12, title: "Tales by Dots and Lines", pdfUrl: pdf(8, "math", 12) },
+                    { number: 13, title: "Algebra Play", pdfUrl: pdf(8, "math", 13) },
+                    { number: 14, title: "Area", pdfUrl: pdf(8, "math", 14) },
                 ]
             },
             {
                 id: "science",
                 name: "Science",
-                book: "Science",
+                book: "Curiosity",
                 icon: "🔬",
                 chapters: [
-                    { number: 1, title: "Crop Production and Management", pdfUrl: pdf(8, "science", 1) },
-                    { number: 2, title: "Microorganisms: Friend and Foe", pdfUrl: pdf(8, "science", 2) },
-                    { number: 3, title: "Synthetic Fibres and Plastics", pdfUrl: pdf(8, "science", 3) },
-                    { number: 4, title: "Materials: Metals and Non-metals", pdfUrl: pdf(8, "science", 4) },
+                    { number: 1, title: "Exploring the Investigative World of Science", pdfUrl: pdf(8, "science", 1) },
+                    { number: 2, title: "The Invisible Living World: Beyond Our Naked Eye", pdfUrl: pdf(8, "science", 2) },
+                    { number: 3, title: "Health: The Ultimate Treasure", pdfUrl: pdf(8, "science", 3) },
+                    { number: 4, title: "Electricity: Magnetic and Heating Effects", pdfUrl: pdf(8, "science", 4) },
+                    { number: 5, title: "Exploring Forces", pdfUrl: pdf(8, "science", 5) },
+                    { number: 6, title: "Pressure, Winds, Storms, and Cyclones", pdfUrl: pdf(8, "science", 6) },
+                    { number: 7, title: "Particulate Nature of Matter", pdfUrl: pdf(8, "science", 7) },
+                    { number: 8, title: "Nature of Matter: Elements, Compounds, and Mixtures", pdfUrl: pdf(8, "science", 8) },
+                    { number: 9, title: "The Amazing World of Solutes, Solvents, and Solutions", pdfUrl: pdf(8, "science", 9) },
+                    { number: 10, title: "Light: Mirrors and Lenses", pdfUrl: pdf(8, "science", 10) },
+                    { number: 11, title: "Keeping Time with the Skies", pdfUrl: pdf(8, "science", 11) },
+                    { number: 12, title: "How Nature Works in Harmony", pdfUrl: pdf(8, "science", 12) },
+                    { number: 13, title: "Our Home: Earth, a Unique Life Sustaining Planet", pdfUrl: pdf(8, "science", 13) },
                 ]
             },
             {
-                id: "history",
-                name: "History",
-                book: "Our Pasts III",
-                icon: "🏛️",
-                chapters: [
-                    { number: 1, title: "How, When and Where", pdfUrl: pdf(8, "history", 1) },
-                    { number: 2, title: "From Trade to Territory", pdfUrl: pdf(8, "history", 2) },
-                ]
-            },
-            {
-                id: "geography",
-                name: "Geography",
-                book: "Resources and Development",
+                id: "social-science",
+                name: "Social Science",
+                book: "Social Science",
                 icon: "🌍",
                 chapters: [
-                    { number: 1, title: "Resources", pdfUrl: pdf(8, "geography", 1) },
-                    { number: 2, title: "Land, Soil, Water, Natural Vegetation and Wildlife Resources", pdfUrl: pdf(8, "geography", 2) },
+                    { number: 1, title: "Natural Resources and Their Use", pdfUrl: pdf(8, "social-science", 1) },
+                    { number: 2, title: "Reshaping India's Political Map", pdfUrl: pdf(8, "social-science", 2) },
+                    { number: 3, title: "The Rise of the Marathas", pdfUrl: pdf(8, "social-science", 3) },
+                    { number: 4, title: "The Colonial Era in India", pdfUrl: pdf(8, "social-science", 4) },
+                    { number: 5, title: "Universal Franchise and India's Electoral System", pdfUrl: pdf(8, "social-science", 5) },
+                    { number: 6, title: "The Parliamentary System: Legislature and Executive", pdfUrl: pdf(8, "social-science", 6) },
+                    { number: 7, title: "Factors of Production", pdfUrl: pdf(8, "social-science", 7) },
                 ]
             },
-            {
-                id: "civics",
-                name: "Political Science",
-                book: "Social and Political Life III",
-                icon: "⚖️",
-                chapters: [
-                    { number: 1, title: "The Indian Constitution", pdfUrl: pdf(8, "civics", 1) },
-                    { number: 2, title: "Understanding Secularism", pdfUrl: pdf(8, "civics", 2) },
-                ]
-            }
         ]
     },
     {
@@ -501,18 +761,14 @@ export const classes: ClassData[] = [
                 book: "Mathematics",
                 icon: "📐",
                 chapters: [
-                    { number: 1, title: "Number Systems", pdfUrl: pdf(9, "math", 1) },
-                    { number: 2, title: "Polynomials", pdfUrl: pdf(9, "math", 2) },
-                    { number: 3, title: "Coordinate Geometry", pdfUrl: pdf(9, "math", 3) },
-                    { number: 4, title: "Linear Equations in Two Variables", pdfUrl: pdf(9, "math", 4) },
-                    { number: 5, title: "Introduction to Euclid's Geometry", pdfUrl: pdf(9, "math", 5) },
-                    { number: 6, title: "Lines And Angles", pdfUrl: pdf(9, "math", 6) },
-                    { number: 7, title: "Triangles", pdfUrl: pdf(9, "math", 7) },
-                    { number: 8, title: "Quadrilaterals", pdfUrl: pdf(9, "math", 8) },
-                    { number: 9, title: "Circles", pdfUrl: pdf(9, "math", 9) },
-                    { number: 10, title: "Heron's Formula", pdfUrl: pdf(9, "math", 10) },
-                    { number: 11, title: "Surface Area And Volumes", pdfUrl: pdf(9, "math", 11) },
-                    { number: 12, title: "Statistics", pdfUrl: pdf(9, "math", 12) },
+                    { number: 1, title: "Orienting Yourself: The Use of Coordinates", pdfUrl: pdf(9, "math", 1) },
+                    { number: 2, title: "Introduction to Linear Polynomials", pdfUrl: pdf(9, "math", 2) },
+                    { number: 3, title: "The World of Numbers", pdfUrl: pdf(9, "math", 3) },
+                    { number: 4, title: "Exploring Algebraic Identities", pdfUrl: pdf(9, "math", 4) },
+                    { number: 5, title: "I'm Up and Down, and Round and Round", pdfUrl: pdf(9, "math", 5) },
+                    { number: 6, title: "Measuring Space: Perimeter and Area", pdfUrl: pdf(9, "math", 6) },
+                    { number: 7, title: "The Mathematics of Maybe: Introduction to Probability", pdfUrl: pdf(9, "math", 7) },
+                    { number: 8, title: "Predicting What Comes Next: Exploring Sequences and Progressions", pdfUrl: pdf(9, "math", 8) },
                 ]
             },
             {
@@ -521,62 +777,112 @@ export const classes: ClassData[] = [
                 book: "Science",
                 icon: "🔬",
                 chapters: [
-                    { number: 1, title: "Matter in Our Surroundings", pdfUrl: pdf(9, "science", 1) },
-                    { number: 2, title: "Is Matter Around Us Pure", pdfUrl: pdf(9, "science", 2) },
-                    { number: 3, title: "Atoms And Molecules", pdfUrl: pdf(9, "science", 3) },
-                    { number: 4, title: "Structure of The Atom", pdfUrl: pdf(9, "science", 4) },
-                    { number: 5, title: "The Fundamental Unit of Life", pdfUrl: pdf(9, "science", 5) },
-                    { number: 6, title: "Tissues", pdfUrl: pdf(9, "science", 6) },
-                    { number: 7, title: "Motion", pdfUrl: pdf(9, "science", 7) },
-                    { number: 8, title: "Force And Laws of Motion", pdfUrl: pdf(9, "science", 8) },
-                    { number: 9, title: "Gravitation", pdfUrl: pdf(9, "science", 9) },
-                    { number: 10, title: "Work And Energy", pdfUrl: pdf(9, "science", 10) },
-                    { number: 11, title: "Sound", pdfUrl: pdf(9, "science", 11) },
-                    { number: 12, title: "Improvement in Food Resources", pdfUrl: pdf(9, "science", 12) },
+                    { number: 1, title: "Exploration: Entering the World of Secondary Science", pdfUrl: pdf(9, "science", 1) },
+                    { number: 2, title: "Cell: The Building Block of Life", pdfUrl: pdf(9, "science", 2) },
+                    { number: 3, title: "Tissues in Action", pdfUrl: pdf(9, "science", 3) },
+                    { number: 4, title: "Describing Motion Around Us", pdfUrl: pdf(9, "science", 4) },
+                    { number: 5, title: "Exploring Mixtures and their Separation", pdfUrl: pdf(9, "science", 5) },
+                    { number: 6, title: "How Forces Affect Motion", pdfUrl: pdf(9, "science", 6) },
+                    { number: 7, title: "Work, Energy, and Simple Machines", pdfUrl: pdf(9, "science", 7) },
+                    { number: 8, title: "Journey Inside the Atom", pdfUrl: pdf(9, "science", 8) },
+                    { number: 9, title: "Atomic Foundations of Matter", pdfUrl: pdf(9, "science", 9) },
+                    { number: 10, title: "Sound Waves: Characteristics and Applications", pdfUrl: pdf(9, "science", 10) },
+                    { number: 11, title: "Reproduction: How Life Continues", pdfUrl: pdf(9, "science", 11) },
+                    { number: 12, title: "Patterns in Life: Diversity and Classification", pdfUrl: pdf(9, "science", 12) },
+                    { number: 13, title: "Earth as a System: Energy, Matter, and Life", pdfUrl: pdf(9, "science", 13) },
                 ]
             },
             {
-                id: "english",
-                name: "English",
-                book: "Beehive",
-                icon: "📖",
+                id: "pe",
+                name: "Physical Education",
+                book: "Health and Physical Education",
+                icon: "🏃",
                 chapters: [
-                    { number: 1, title: "The Fun They Had", pdfUrl: pdf(9, "english", 1) },
-                    { number: 2, title: "The Sound of Music", pdfUrl: pdf(9, "english", 2) },
-                    { number: 3, title: "The Little Girl", pdfUrl: pdf(9, "english", 3) },
-                    { number: 4, title: "A Truly Beautiful Mind", pdfUrl: pdf(9, "english", 4) },
-                    { number: 5, title: "The Snake and the Mirror", pdfUrl: pdf(9, "english", 5) },
-                    { number: 6, title: "My Childhood", pdfUrl: pdf(9, "english", 6) },
-                    { number: 7, title: "Reach for the Top", pdfUrl: pdf(9, "english", 7) },
-                    { number: 8, title: "Kathmandu", pdfUrl: pdf(9, "english", 8) },
-                    { number: 9, title: "If I were you", pdfUrl: pdf(9, "english", 9) },
+                    { number: 1, title: "Evolution of Physical Education and Well-being", pdfUrl: pdf(9, "pe", 1) },
+                    { number: 2, title: "Science and Sports", pdfUrl: pdf(9, "pe", 2) },
+                    { number: 3, title: "Olympism", pdfUrl: pdf(9, "pe", 3) },
+                    { number: 4, title: "Sports for All", pdfUrl: pdf(9, "pe", 4) },
+                    { number: 5, title: "Sports", pdfUrl: pdf(9, "pe", 5) },
+                    { number: 6, title: "Yoga for Holistic Health and Personal Excellence", pdfUrl: pdf(9, "pe", 6) },
                 ]
             },
             {
-                id: "english-supplementary",
-                name: "English - Supplementary",
-                book: "Moments",
-                icon: "📚",
-                chapters: [
-                    { number: 1, title: "The Lost Child", pdfUrl: pdf(9, "english-supplementary", 1) },
-                    { number: 2, title: "The Adventures of Toto", pdfUrl: pdf(9, "english-supplementary", 2) },
-                    { number: 3, title: "Iswaran the Storyteller", pdfUrl: pdf(9, "english-supplementary", 3) },
-                    { number: 4, title: "In the Kingdom of Fools", pdfUrl: pdf(9, "english-supplementary", 4) },
-                    { number: 5, title: "The Happy Prince", pdfUrl: pdf(9, "english-supplementary", 5) },
-                    { number: 6, title: "Weathering the Storm in Ersama", pdfUrl: pdf(9, "english-supplementary", 6) },
-                    { number: 7, title: "The Last Leaf", pdfUrl: pdf(9, "english-supplementary", 7) },
-                    { number: 8, title: "A House Is Not a Home", pdfUrl: pdf(9, "english-supplementary", 8) },
-                    { number: 9, title: "The Beggar", pdfUrl: pdf(9, "english-supplementary", 9) },
-                ]
-            },
+                id: "english-kaveri",
+                  name: "English",
+                  book: "Kaveri",
+                  icon: "📖",
+                  chapters: [
+                      { number: 1, title: "How I Taught My Grandmother to Read & Bharat Our Land", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-1.pdf" },
+                      { number: 2, title: "The Pot Maker & Gifts of Grace: Honouring Our Vocations", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-2.pdf" },
+                      { number: 3, title: "Winds of Change & Canvas of Soil", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-3.pdf" },
+                      { number: 4, title: "Vitamin-M & I Cannot Remember My Mother", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-4.pdf" },
+                      { number: 5, title: "The World of Limitless Possibilities & Nine Gold Medals", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-5.pdf" },
+                      { number: 6, title: "Twin Melodies & A Friend Found in Music", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-6.pdf" },
+                      { number: 7, title: "Carrier of Words & Words", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-7.pdf" },
+                      { number: 8, title: "Follow That Dream & Believe in Yourself", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-8.pdf" },
+                      { number: 9, title: "Appendix", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-11.pdf" },
+                  ]
+              },
             {
-                id: "hindi",
+                id: "hindi-ganga",
                 name: "Hindi",
-                book: "Kshitij & Kritika",
+                book: "Ganga",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "दो बैलों की कथा", pdfUrl: pdf(9, "hindi", 1) },
-                    { number: 2, title: "ल्हासा की ओर", pdfUrl: pdf(9, "hindi", 2) },
+                    { number: 1, title: "Chp-1", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-1.pdf" },
+                    { number: 2, title: "Chp-2", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-2.pdf" },
+                    { number: 3, title: "Chp-3", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-3.pdf" },
+                    { number: 4, title: "Chp-4", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-4.pdf" },
+                    { number: 5, title: "Chp-5", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-5.pdf" },
+                    { number: 6, title: "Chp-6", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-6.pdf" },
+                    { number: 7, title: "Chp-7", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-7.pdf" },
+                    { number: 8, title: "Chp-8", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-8.pdf" },
+                    { number: 9, title: "Chp-9", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-9.pdf" },
+                    { number: 10, title: "Chp-10", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-10.pdf" },
+                    { number: 11, title: "Chp-11", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-11.pdf" },
+                    { number: 12, title: "Chp-12", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-12.pdf" },
+                ]
+            },
+            {
+                id: "hindi-reva",
+                name: "Hindi",
+                book: "Reva",
+                icon: "हिं",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-1.pdf" },
+                    { number: 2, title: "Chp-2", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-2.pdf" },
+                    { number: 3, title: "Chp-3", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-3.pdf" },
+                    { number: 4, title: "Chp-4", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-4.pdf" },
+                    { number: 5, title: "Chp-5", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-5.pdf" },
+                    { number: 6, title: "Chp-6", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-6.pdf" },
+                    { number: 7, title: "Chp-7", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-7.pdf" },
+                    { number: 8, title: "Chp-8", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-8.pdf" },
+                    { number: 9, title: "Chp-9", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-9.pdf" },
+                    { number: 10, title: "Chp-10", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-10.pdf" },
+                ]
+            },
+            {
+                id: "sanskrit",
+                name: "Sanskrit",
+                book: "Sharada",
+                icon: "📜",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(9, "sanskrit", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(9, "sanskrit", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(9, "sanskrit", 3) },
+                    { number: 4, title: "Chp-4", pdfUrl: pdf(9, "sanskrit", 4) },
+                    { number: 5, title: "Chp-5", pdfUrl: pdf(9, "sanskrit", 5) },
+                    { number: 6, title: "Chp-6", pdfUrl: pdf(9, "sanskrit", 6) },
+                    { number: 7, title: "Chp-7", pdfUrl: pdf(9, "sanskrit", 7) },
+                    { number: 8, title: "Chp-8", pdfUrl: pdf(9, "sanskrit", 8) },
+                    { number: 9, title: "Chp-9", pdfUrl: pdf(9, "sanskrit", 9) },
+                    { number: 10, title: "Chp-10", pdfUrl: pdf(9, "sanskrit", 10) },
+                    { number: 11, title: "Chp-11", pdfUrl: pdf(9, "sanskrit", 11) },
+                    { number: 12, title: "Chp-12", pdfUrl: pdf(9, "sanskrit", 12) },
+                    { number: 13, title: "Chp-13", pdfUrl: pdf(9, "sanskrit", 13) },
+                    { number: 14, title: "Chp-14", pdfUrl: pdf(9, "sanskrit", 14) },
+                    { number: 15, title: "Chp-15", pdfUrl: pdf(9, "sanskrit", 15) },
+                    { number: 16, title: "Chp-16", pdfUrl: pdf(9, "sanskrit", 16) },
                 ]
             },
             {
@@ -631,24 +937,6 @@ export const classes: ClassData[] = [
                     { number: 4, title: "Food Security in India", pdfUrl: pdf(9, "economics", 4) },
                 ]
             },
-            {
-                id: "sanskrit",
-                name: "Sanskrit",
-                book: "Shemushi",
-                icon: "📜",
-                chapters: [
-                    { number: 1, title: "भारतीवसन्तगीतिः", pdfUrl: pdf(9, "sanskrit", 1) },
-                    { number: 2, title: "स्वर्णकाकः", pdfUrl: pdf(9, "sanskrit", 2) },
-                    { number: 3, title: "गोदोहनम्", pdfUrl: pdf(9, "sanskrit", 3) },
-                    { number: 4, title: "सूक्तिमौक्तिकम्", pdfUrl: pdf(9, "sanskrit", 4) },
-                    { number: 5, title: "भ्रान्तो बालः", pdfUrl: pdf(9, "sanskrit", 5) },
-                    { number: 6, title: "लौहतुला", pdfUrl: pdf(9, "sanskrit", 6) },
-                    { number: 7, title: "सिकतासेतुः", pdfUrl: pdf(9, "sanskrit", 7) },
-                    { number: 8, title: "जटायोः शौर्यम्", pdfUrl: pdf(9, "sanskrit", 8) },
-                    { number: 9, title: "पर्यावरणम्", pdfUrl: pdf(9, "sanskrit", 9) },
-                    { number: 10, title: "वाङ्मनः प्राणस्वरूपम्", pdfUrl: pdf(9, "sanskrit", 10) },
-                ]
-            }
         ]
     },
     {
@@ -689,7 +977,7 @@ export const classes: ClassData[] = [
                     { number: 4, title: "Carbon and its Compounds", pdfUrl: pdf(10, "science", 4) },
                     { number: 5, title: "Life Processes", pdfUrl: pdf(10, "science", 5) },
                     { number: 6, title: "Control and Coordination", pdfUrl: pdf(10, "science", 6) },
-                    { number: 7, title: "How do Organisms Reproduce?", pdfUrl: pdf(10, "science", 7) },
+                    { number: 7, title: "How do Organisms Reproduce", pdfUrl: pdf(10, "science", 7) },
                     { number: 8, title: "Heredity", pdfUrl: pdf(10, "science", 8) },
                     { number: 9, title: "Light – Reflection and Refraction", pdfUrl: pdf(10, "science", 9) },
                     { number: 10, title: "The Human Eye and the Colourful World", pdfUrl: pdf(10, "science", 10) },
@@ -719,7 +1007,7 @@ export const classes: ClassData[] = [
                 id: "english-supplementary",
                 name: "English - Supplementary",
                 book: "Footprints without Feet",
-                icon: "📚",
+                icon: "📖",
                 chapters: [
                     { number: 1, title: "A Triumph of Surgery", pdfUrl: pdf(10, "english-supplementary", 1) },
                     { number: 2, title: "The Thief's Story", pdfUrl: pdf(10, "english-supplementary", 2) },
@@ -733,13 +1021,130 @@ export const classes: ClassData[] = [
                 ]
             },
             {
-                id: "hindi",
+                id: "hindi-kritika",
                 name: "Hindi",
-                book: "Kshitij & Kritika",
+                book: "Kritika",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "सूरदास के पद", pdfUrl: pdf(10, "hindi", 1) },
-                    { number: 2, title: "राम-लक्ष्मण-परशुराम संवाद", pdfUrl: pdf(10, "hindi", 2) },
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(10, "hindi-kritika", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(10, "hindi-kritika", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(10, "hindi-kritika", 3) },
+                ]
+            },
+            {
+                id: "hindi-sanchayan",
+                name: "Hindi",
+                book: "Sanchayan",
+                icon: "हिं",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(10, "hindi-sanchayan", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(10, "hindi-sanchayan", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(10, "hindi-sanchayan", 3) },
+                ]
+            },
+            {
+                id: "hindi-kshitij",
+                name: "Hindi",
+                book: "Kshitij",
+                icon: "हिं",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(10, "hindi-kshitij", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(10, "hindi-kshitij", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(10, "hindi-kshitij", 3) },
+                    { number: 4, title: "Chp-4", pdfUrl: pdf(10, "hindi-kshitij", 4) },
+                    { number: 5, title: "Chp-5", pdfUrl: pdf(10, "hindi-kshitij", 5) },
+                    { number: 6, title: "Chp-6", pdfUrl: pdf(10, "hindi-kshitij", 6) },
+                    { number: 7, title: "Chp-7", pdfUrl: pdf(10, "hindi-kshitij", 7) },
+                    { number: 8, title: "Chp-8", pdfUrl: pdf(10, "hindi-kshitij", 8) },
+                    { number: 9, title: "Chp-9", pdfUrl: pdf(10, "hindi-kshitij", 9) },
+                    { number: 10, title: "Chp-10", pdfUrl: pdf(10, "hindi-kshitij", 10) },
+                    { number: 11, title: "Chp-11", pdfUrl: pdf(10, "hindi-kshitij", 11) },
+                    { number: 12, title: "Chp-12", pdfUrl: pdf(10, "hindi-kshitij", 12) },
+                ]
+            },
+            {
+                id: "hindi-sparsh",
+                name: "Hindi",
+                book: "Sparsh",
+                icon: "हिं",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(10, "hindi-sparsh", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(10, "hindi-sparsh", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(10, "hindi-sparsh", 3) },
+                    { number: 4, title: "Chp-4", pdfUrl: pdf(10, "hindi-sparsh", 4) },
+                    { number: 5, title: "Chp-5", pdfUrl: pdf(10, "hindi-sparsh", 5) },
+                    { number: 6, title: "Chp-6", pdfUrl: pdf(10, "hindi-sparsh", 6) },
+                    { number: 7, title: "Chp-7", pdfUrl: pdf(10, "hindi-sparsh", 7) },
+                    { number: 8, title: "Chp-8", pdfUrl: pdf(10, "hindi-sparsh", 8) },
+                    { number: 9, title: "Chp-9", pdfUrl: pdf(10, "hindi-sparsh", 9) },
+                    { number: 10, title: "Chp-10", pdfUrl: pdf(10, "hindi-sparsh", 10) },
+                    { number: 11, title: "Chp-11", pdfUrl: pdf(10, "hindi-sparsh", 11) },
+                    { number: 12, title: "Chp-12", pdfUrl: pdf(10, "hindi-sparsh", 12) },
+                    { number: 13, title: "Chp-13", pdfUrl: pdf(10, "hindi-sparsh", 13) },
+                    { number: 14, title: "Chp-14", pdfUrl: pdf(10, "hindi-sparsh", 14) },
+                ]
+            },
+            {
+                id: "sanskrit",
+                name: "Sanskrit",
+                book: "Shemushi",
+                icon: "📜",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(10, "sanskrit", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(10, "sanskrit", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(10, "sanskrit", 3) },
+                    { number: 4, title: "Chp-4", pdfUrl: pdf(10, "sanskrit", 4) },
+                    { number: 5, title: "Chp-5", pdfUrl: pdf(10, "sanskrit", 5) },
+                    { number: 6, title: "Chp-6", pdfUrl: pdf(10, "sanskrit", 6) },
+                    { number: 7, title: "Chp-7", pdfUrl: pdf(10, "sanskrit", 7) },
+                    { number: 8, title: "Chp-8", pdfUrl: pdf(10, "sanskrit", 8) },
+                    { number: 9, title: "Chp-9", pdfUrl: pdf(10, "sanskrit", 9) },
+                    { number: 10, title: "Chp-10", pdfUrl: pdf(10, "sanskrit", 10) },
+                ]
+            },
+            {
+                id: "sanskrit-abhyaswaan",
+                name: "Sanskrit",
+                book: "Abhyaswaan Bhav II",
+                icon: "📜",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 3) },
+                    { number: 4, title: "Chp-4", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 4) },
+                    { number: 5, title: "Chp-5", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 5) },
+                    { number: 6, title: "Chp-6", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 6) },
+                    { number: 7, title: "Chp-7", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 7) },
+                    { number: 8, title: "Chp-8", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 8) },
+                    { number: 9, title: "Chp-9", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 9) },
+                    { number: 10, title: "Chp-10", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 10) },
+                    { number: 11, title: "Chp-11", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 11) },
+                    { number: 12, title: "Chp-12", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 12) },
+                    { number: 13, title: "Chp-13", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 13) },
+                    { number: 14, title: "Chp-14", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 14) },
+                    { number: 15, title: "Chp-15", pdfUrl: pdf(10, "sanskrit-abhyaswaan", 15) },
+                ]
+            },
+            {
+                id: "sanskrit-vyakaranavithi",
+                name: "Sanskrit",
+                book: "Vyakaranavithi",
+                icon: "📜",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 3) },
+                    { number: 4, title: "Chp-4", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 4) },
+                    { number: 5, title: "Chp-5", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 5) },
+                    { number: 6, title: "Chp-6", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 6) },
+                    { number: 7, title: "Chp-7", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 7) },
+                    { number: 8, title: "Chp-8", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 8) },
+                    { number: 9, title: "Chp-9", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 9) },
+                    { number: 10, title: "Chp-10", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 10) },
+                    { number: 11, title: "Chp-11", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 11) },
+                    { number: 12, title: "Chp-12", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 12) },
+                    { number: 13, title: "Chp-13", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 13) },
+                    { number: 14, title: "Chp-14", pdfUrl: pdf(10, "sanskrit-vyakaranavithi", 14) },
                 ]
             },
             {
@@ -796,24 +1201,6 @@ export const classes: ClassData[] = [
                     { number: 5, title: "Consumer Rights", pdfUrl: pdf(10, "economics", 5) },
                 ]
             },
-            {
-                id: "sanskrit",
-                name: "Sanskrit",
-                book: "Shemushi",
-                icon: "📜",
-                chapters: [
-                    { number: 1, title: "शुचिपर्यावरणम्", pdfUrl: pdf(10, "sanskrit", 1) },
-                    { number: 2, title: "बुद्धिर्बलवती सदा", pdfUrl: pdf(10, "sanskrit", 2) },
-                    { number: 3, title: "शिशुलालनम्", pdfUrl: pdf(10, "sanskrit", 3) },
-                    { number: 4, title: "जननी तुल्यवत्सला", pdfUrl: pdf(10, "sanskrit", 4) },
-                    { number: 5, title: "सुभाषितानि", pdfUrl: pdf(10, "sanskrit", 5) },
-                    { number: 6, title: "सौहार्दं प्रकृतेः शोभा", pdfUrl: pdf(10, "sanskrit", 6) },
-                    { number: 7, title: "विचित्रः साक्षी", pdfUrl: pdf(10, "sanskrit", 7) },
-                    { number: 8, title: "सूक्तयः", pdfUrl: pdf(10, "sanskrit", 8) },
-                    { number: 9, title: "भूकंपविभीषिका", pdfUrl: pdf(10, "sanskrit", 9) },
-                    { number: 10, title: "अन्योक्तयः", pdfUrl: pdf(10, "sanskrit", 10) },
-                ]
-            }
         ]
     },
     {
@@ -826,21 +1213,20 @@ export const classes: ClassData[] = [
                 book: "Physics Part I & II",
                 icon: "⚛️",
                 chapters: [
-                    { number: 1, title: "Physical World", pdfUrl: pdf(11, "physics", 1) },
-                    { number: 2, title: "Units and Measurements", pdfUrl: pdf(11, "physics", 2) },
-                    { number: 3, title: "Motion in a Straight Line", pdfUrl: pdf(11, "physics", 3) },
-                    { number: 4, title: "Motion in a Plane", pdfUrl: pdf(11, "physics", 4) },
-                    { number: 5, title: "Laws of Motion", pdfUrl: pdf(11, "physics", 5) },
-                    { number: 6, title: "Work, Energy and Power", pdfUrl: pdf(11, "physics", 6) },
-                    { number: 7, title: "System of Particles and Rotational Motion", pdfUrl: pdf(11, "physics", 7) },
-                    { number: 8, title: "Gravitation", pdfUrl: pdf(11, "physics", 8) },
-                    { number: 9, title: "Mechanical Properties of Solids", pdfUrl: pdf(11, "physics", 9) },
-                    { number: 10, title: "Mechanical Properties of Fluids", pdfUrl: pdf(11, "physics", 10) },
-                    { number: 11, title: "Thermal Properties of Matter", pdfUrl: pdf(11, "physics", 11) },
-                    { number: 12, title: "Thermodynamics", pdfUrl: pdf(11, "physics", 12) },
-                    { number: 13, title: "Kinetic Theory", pdfUrl: pdf(11, "physics", 13) },
-                    { number: 14, title: "Oscillations", pdfUrl: pdf(11, "physics", 14) },
-                    { number: 15, title: "Waves", pdfUrl: pdf(11, "physics", 15) },
+                    { number: 1, title: "Units and Measurements", pdfUrl: pdf(11, "physics", 1) },
+                    { number: 2, title: "Motion in a Straight Line", pdfUrl: pdf(11, "physics", 2) },
+                    { number: 3, title: "Motion in a Plane", pdfUrl: pdf(11, "physics", 3) },
+                    { number: 4, title: "Laws of Motion", pdfUrl: pdf(11, "physics", 4) },
+                    { number: 5, title: "Work, Energy and Power", pdfUrl: pdf(11, "physics", 5) },
+                    { number: 6, title: "System of Particles and Rotational Motion", pdfUrl: pdf(11, "physics", 6) },
+                    { number: 7, title: "Gravitation", pdfUrl: pdf(11, "physics", 7) },
+                    { number: 8, title: "Mechanical Properties of Solids", pdfUrl: pdf(11, "physics", 8) },
+                    { number: 9, title: "Mechanical Properties of Fluids", pdfUrl: pdf(11, "physics", 9) },
+                    { number: 10, title: "Thermal Properties of Matter", pdfUrl: pdf(11, "physics", 10) },
+                    { number: 11, title: "Thermodynamics", pdfUrl: pdf(11, "physics", 11) },
+                    { number: 12, title: "Kinetic Theory", pdfUrl: pdf(11, "physics", 12) },
+                    { number: 13, title: "Oscillations", pdfUrl: pdf(11, "physics", 13) },
+                    { number: 14, title: "Waves", pdfUrl: pdf(11, "physics", 14) }
                 ]
             },
             {
@@ -853,16 +1239,11 @@ export const classes: ClassData[] = [
                     { number: 2, title: "Structure of Atom", pdfUrl: pdf(11, "chemistry", 2) },
                     { number: 3, title: "Classification of Elements and Periodicity in Properties", pdfUrl: pdf(11, "chemistry", 3) },
                     { number: 4, title: "Chemical Bonding and Molecular Structure", pdfUrl: pdf(11, "chemistry", 4) },
-                    { number: 5, title: "States of Matter", pdfUrl: pdf(11, "chemistry", 5) },
-                    { number: 6, title: "Thermodynamics", pdfUrl: pdf(11, "chemistry", 6) },
-                    { number: 7, title: "Equilibrium", pdfUrl: pdf(11, "chemistry", 7) },
-                    { number: 8, title: "Redox Reactions", pdfUrl: pdf(11, "chemistry", 8) },
-                    { number: 9, title: "Hydrogen", pdfUrl: pdf(11, "chemistry", 9) },
-                    { number: 10, title: "The s-Block Elements", pdfUrl: pdf(11, "chemistry", 10) },
-                    { number: 11, title: "The p-Block Elements", pdfUrl: pdf(11, "chemistry", 11) },
-                    { number: 12, title: "Organic Chemistry - Some Basic Principles and Techniques", pdfUrl: pdf(11, "chemistry", 12) },
-                    { number: 13, title: "Hydrocarbons", pdfUrl: pdf(11, "chemistry", 13) },
-                    { number: 14, title: "Environmental Chemistry", pdfUrl: pdf(11, "chemistry", 14) },
+                    { number: 5, title: "Thermodynamics", pdfUrl: pdf(11, "chemistry", 5) },
+                    { number: 6, title: "Equilibrium", pdfUrl: pdf(11, "chemistry", 6) },
+                    { number: 7, title: "Redox Reactions", pdfUrl: pdf(11, "chemistry", 7) },
+                    { number: 8, title: "Organic Chemistry - Some Basic Principles and Techniques", pdfUrl: pdf(11, "chemistry", 8) },
+                    { number: 9, title: "Hydrocarbons", pdfUrl: pdf(11, "chemistry", 9) }
                 ]
             },
             {
@@ -930,108 +1311,1130 @@ export const classes: ClassData[] = [
                     { number: 3, title: "Discovering Tut: the Saga Continues", pdfUrl: pdf(11, "english", 3) },
                 ]
             }
+        ,
+            {
+                id: "accountancy-keac1dd",
+                name: "Accountancy",
+                book: "Financial Accounting - I",
+                icon: "📊",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-7.pdf"
+          }
+]
+            },
+            {
+                id: "accountancy-keac2dd",
+                name: "Accountancy",
+                book: "Financial Accounting - II",
+                icon: "📊",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-ii/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-ii/chapter-2.pdf"
+          }
+]
+            },
+            {
+                id: "geography-kegy1dd",
+                name: "Geography",
+                book: "Fundamentals of Physical Geography",
+                icon: "🌍",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-6.pdf"
+          }
+]
+            },
+            {
+                id: "geography-kegy2dd",
+                name: "Geography",
+                book: "India Physical Environment",
+                icon: "🌍",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-8.pdf"
+          },
+          {
+                    number: 9,
+                    title: "Chapter 9",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-9.pdf"
+          },
+          {
+                    number: 10,
+                    title: "Chapter 10",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-10.pdf"
+          },
+          {
+                    number: 11,
+                    title: "Chapter 11",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-11.pdf"
+          },
+          {
+                    number: 12,
+                    title: "Chapter 12",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-12.pdf"
+          },
+          {
+                    number: 13,
+                    title: "Chapter 13",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-13.pdf"
+          },
+          {
+                    number: 14,
+                    title: "Chapter 14",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-14.pdf"
+          },
+          {
+                    number: 15,
+                    title: "Chapter 15",
+                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-15.pdf"
+          }
+]
+            },
+            {
+                id: "geography-kegy3dd",
+                name: "Geography",
+                book: "Practical Work in Geography",
+                icon: "🌍",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-6.pdf"
+          }
+]
+            },
+            {
+                id: "psychology-kepy1dd",
+                name: "Psychology",
+                book: "Psychology",
+                icon: "🧠",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-8.pdf"
+          },
+          {
+                    number: 9,
+                    title: "Chapter 9",
+                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-9.pdf"
+          }
+]
+            },
+            {
+                id: "sociology-kesy1dd",
+                name: "Sociology",
+                book: "Introducing Sociology",
+                icon: "🤝",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-5.pdf"
+          }
+]
+            },
+            {
+                id: "sociology-kesy2dd",
+                name: "Sociology",
+                book: "Understanding Society",
+                icon: "🤝",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-5.pdf"
+          }
+]
+            },
+            {
+                id: "fine-arts-khan1dd",
+                name: "Fine Arts",
+                book: "An Introduction to Indian Art Part I",
+                icon: "🎨",
+                chapters: []
+            },
+            {
+                id: "hindi-aroh-khar1dd",
+                name: "Hindi (Core)",
+                book: "Aroh",
+                icon: "📙",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-8.pdf"
+          },
+          {
+                    number: 9,
+                    title: "Chapter 9",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-9.pdf"
+          },
+          {
+                    number: 10,
+                    title: "Chapter 10",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-10.pdf"
+          },
+          {
+                    number: 11,
+                    title: "Chapter 11",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-11.pdf"
+          },
+          {
+                    number: 12,
+                    title: "Chapter 12",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-12.pdf"
+          },
+          {
+                    number: 13,
+                    title: "Chapter 13",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-13.pdf"
+          },
+          {
+                    number: 14,
+                    title: "Chapter 14",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-14.pdf"
+          },
+          {
+                    number: 15,
+                    title: "Chapter 15",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-15.pdf"
+          },
+          {
+                    number: 16,
+                    title: "Chapter 16",
+                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-16.pdf"
+          }
+]
+            },
+            {
+                id: "hindi-vitan-khvt1dd",
+                name: "Hindi (Core)",
+                book: "Vitan",
+                icon: "📙",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-5.pdf"
+          }
+]
+            },
+            {
+                id: "hindi-antra-khat1dd",
+                name: "Hindi (Elective)",
+                book: "Antra",
+                icon: "📙",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-8.pdf"
+          },
+          {
+                    number: 9,
+                    title: "Chapter 9",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-9.pdf"
+          },
+          {
+                    number: 10,
+                    title: "Chapter 10",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-10.pdf"
+          },
+          {
+                    number: 11,
+                    title: "Chapter 11",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-11.pdf"
+          },
+          {
+                    number: 12,
+                    title: "Chapter 12",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-12.pdf"
+          },
+          {
+                    number: 13,
+                    title: "Chapter 13",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-13.pdf"
+          },
+          {
+                    number: 14,
+                    title: "Chapter 14",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-14.pdf"
+          },
+          {
+                    number: 15,
+                    title: "Chapter 15",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-15.pdf"
+          },
+          {
+                    number: 16,
+                    title: "Chapter 16",
+                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-16.pdf"
+          }
+]
+            }
+        ,
+            {
+                id: "physical-education-kehp1dd",
+                name: "Physical Education",
+                book: "Health and Physical Education",
+                icon: "🏃‍♂️",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-8.pdf"
+          },
+          {
+                    number: 9,
+                    title: "Chapter 9",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-9.pdf"
+          },
+          {
+                    number: 10,
+                    title: "Chapter 10",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-10.pdf"
+          },
+          {
+                    number: 11,
+                    title: "Chapter 11",
+                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-11.pdf"
+          }
+]
+            },
+            {
+                id: "informatics-practices-keip1dd",
+                name: "Informatics Practices",
+                book: "Informatics Practices",
+                icon: "💻",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-8.pdf"
+          }
+]
+            },
+            {
+                id: "business-studies-kebs1dd",
+                name: "Business Studies",
+                book: "Business Studies",
+                icon: "💼",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-8.pdf"
+          },
+          {
+                    number: 9,
+                    title: "Chapter 9",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-9.pdf"
+          },
+          {
+                    number: 10,
+                    title: "Chapter 10",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-10.pdf"
+          },
+          {
+                    number: 11,
+                    title: "Chapter 11",
+                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-11.pdf"
+          }
+]
+            },
+            {
+                id: "economics-statistics-kest1dd",
+                name: "Economics",
+                book: "Statistics for Economics",
+                icon: "📈",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-8.pdf"
+          }
+]
+            },
+            {
+                id: "economics-indian-keec1dd",
+                name: "Economics",
+                book: "Indian Economic Development",
+                icon: "📈",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-8.pdf"
+          }
+]
+            },
+            {
+                id: "history-kehs1dd",
+                name: "History",
+                book: "Themes in World History",
+                icon: "🏛️",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-7.pdf"
+          }
+]
+            },
+            {
+                id: "political-science-theory-keps1dd",
+                name: "Political Science",
+                book: "Political Theory",
+                icon: "⚖️",
+                chapters: []
+            },
+            {
+                id: "political-science-constitution-keps2dd",
+                name: "Political Science",
+                book: "Indian Constitution at Work",
+                icon: "⚖️",
+                chapters: []
+            },
+            {
+                id: "english-snapshots-kesp1dd",
+                name: "English",
+                book: "Snapshots",
+                icon: "📖",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-5.pdf"
+          }
+]
+            },
+            {
+                id: "fine-arts-extra-kefa1dd",
+                name: "Fine Arts",
+                book: "Fine Arts Extra",
+                icon: "🎨",
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-8.pdf"
+          }
+]
+            }
         ]
     },
+
     {
         id: 12,
         name: "Class 12",
         subjects: [
-            {
-                id: "math",
-                name: "Mathematics",
-                book: "Mathematics Part I & II",
-                icon: "📐",
-                chapters: [
-                    { number: 1, title: "Relations and Functions", pdfUrl: pdf(12, "math", 1) },
-                    { number: 2, title: "Inverse Trigonometric Functions", pdfUrl: pdf(12, "math", 2) },
-                    { number: 3, title: "Matrices", pdfUrl: pdf(12, "math", 3) },
-                    { number: 4, title: "Determinants", pdfUrl: pdf(12, "math", 4) },
-                    { number: 5, title: "Continuity and Differentiability", pdfUrl: pdf(12, "math", 5) },
-                    { number: 6, title: "Application of Derivatives", pdfUrl: pdf(12, "math", 6) },
-                    { number: 7, title: "Integrals", pdfUrl: pdf(12, "math", 7) },
-                    { number: 8, title: "Application of Integrals", pdfUrl: pdf(12, "math", 8) },
-                    { number: 9, title: "Differential Equations", pdfUrl: pdf(12, "math", 9) },
-                    { number: 10, title: "Vector Algebra", pdfUrl: pdf(12, "math", 10) },
-                    { number: 11, title: "Three Dimensional Geometry", pdfUrl: pdf(12, "math", 11) },
-                    { number: 12, title: "Linear Programming", pdfUrl: pdf(12, "math", 12) },
-                    { number: 13, title: "Probability", pdfUrl: pdf(12, "math", 13) },
-                ]
-            },
-            {
-                id: "physics",
-                name: "Physics",
-                book: "Physics Part I & II",
-                icon: "⚛️",
-                chapters: [
-                    { number: 1, title: "Electric Charges and Fields", pdfUrl: pdf(12, "physics", 1) },
-                    { number: 2, title: "Electrostatic Potential and Capacitance", pdfUrl: pdf(12, "physics", 2) },
-                    { number: 3, title: "Current Electricity", pdfUrl: pdf(12, "physics", 3) },
-                    { number: 4, title: "Moving Charges and Magnetism", pdfUrl: pdf(12, "physics", 4) },
-                    { number: 5, title: "Magnetism and Matter", pdfUrl: pdf(12, "physics", 5) },
-                    { number: 6, title: "Electromagnetic Induction", pdfUrl: pdf(12, "physics", 6) },
-                    { number: 7, title: "Alternating Current", pdfUrl: pdf(12, "physics", 7) },
-                    { number: 8, title: "Electromagnetic Waves", pdfUrl: pdf(12, "physics", 8) },
-                    { number: 9, title: "Ray Optics and Optical Instruments", pdfUrl: pdf(12, "physics", 9) },
-                    { number: 10, title: "Wave Optics", pdfUrl: pdf(12, "physics", 10) },
-                    { number: 11, title: "Dual Nature of Radiation and Matter", pdfUrl: pdf(12, "physics", 11) },
-                    { number: 12, title: "Atoms", pdfUrl: pdf(12, "physics", 12) },
-                    { number: 13, title: "Nuclei", pdfUrl: pdf(12, "physics", 13) },
-                    { number: 14, title: "Semiconductor Electronics", pdfUrl: pdf(12, "physics", 14) },
-                ]
-            },
-            {
-                id: "chemistry",
-                name: "Chemistry",
-                book: "Chemistry Part I & II",
-                icon: "🧪",
-                chapters: [
-                    { number: 1, title: "Solutions", pdfUrl: pdf(12, "chemistry", 1) },
-                    { number: 2, title: "Electrochemistry", pdfUrl: pdf(12, "chemistry", 2) },
-                    { number: 3, title: "Chemical Kinetics", pdfUrl: pdf(12, "chemistry", 3) },
-                    { number: 4, title: "The d-and f-Block Elements", pdfUrl: pdf(12, "chemistry", 4) },
-                    { number: 5, title: "Coordination Compounds", pdfUrl: pdf(12, "chemistry", 5) },
-                    { number: 6, title: "Haloalkanes and Haloarenes", pdfUrl: pdf(12, "chemistry", 6) },
-                    { number: 7, title: "Alcohols, Phenols and Ethers", pdfUrl: pdf(12, "chemistry", 7) },
-                    { number: 8, title: "Aldehydes, Ketones and Carboxylic Acids", pdfUrl: pdf(12, "chemistry", 8) },
-                    { number: 9, title: "Amines", pdfUrl: pdf(12, "chemistry", 9) },
-                    { number: 10, title: "Biomolecules", pdfUrl: pdf(12, "chemistry", 10) },
-                ]
-            },
             {
                 id: "biology",
                 name: "Biology",
                 book: "Biology",
                 icon: "🧬",
                 chapters: [
-                    { number: 1, title: "Sexual Reproduction in Flowering Plants", pdfUrl: pdf(12, "biology", 1) },
-                    { number: 2, title: "Human Reproduction", pdfUrl: pdf(12, "biology", 2) },
-                    { number: 3, title: "Reproductive Health", pdfUrl: pdf(12, "biology", 3) },
-                    { number: 4, title: "Principles of Inheritance and Variation", pdfUrl: pdf(12, "biology", 4) },
-                    { number: 5, title: "Molecular Basis of Inheritance", pdfUrl: pdf(12, "biology", 5) },
-                    { number: 6, title: "Evolution", pdfUrl: pdf(12, "biology", 6) },
-                    { number: 7, title: "Human Health and Disease", pdfUrl: pdf(12, "biology", 7) },
-                    { number: 8, title: "Microbes in Human Welfare", pdfUrl: pdf(12, "biology", 8) },
-                    { number: 9, title: "Biotechnology: Principles and Processes", pdfUrl: pdf(12, "biology", 9) },
-                    { number: 10, title: "Biotechnology and its Applications", pdfUrl: pdf(12, "biology", 10) },
-                    { number: 11, title: "Organisms and Populations", pdfUrl: pdf(12, "biology", 11) },
-                    { number: 12, title: "Ecosystem", pdfUrl: pdf(12, "biology", 12) },
-                    { number: 13, title: "Biodiversity and Conservation", pdfUrl: pdf(12, "biology", 13) },
+                    { number: 1, title: "Chapter 1 Biology in essence is the story of life on earth W", pdfUrl: pdf(12, "biology", 1) },
+                    { number: 2, title: "CHAPTER 2 HUMAN REPRODUCTION As you are aware humans are 21 ", pdfUrl: pdf(12, "biology", 2) },
+                    { number: 3, title: "CHAPTER 3 REPRODUCTIVE HEALTH You have learnt about human 31", pdfUrl: pdf(12, "biology", 3) },
+                    { number: 4, title: "Chapter 4 The work of Mendel and others who followed him gav", pdfUrl: pdf(12, "biology", 4) },
+                    { number: 5, title: "CHAPTER 5 MOLECULAR BASIS OF INHERITANCE In the previous cha", pdfUrl: pdf(12, "biology", 5) },
+                    { number: 6, title: "CHAPTER 6 EVOLUTION 61 O L 110 The origin of life is conside", pdfUrl: pdf(12, "biology", 6) },
+                    { number: 7, title: "Chapter 7 Biology is the youngest of the formalised discipli", pdfUrl: pdf(12, "biology", 7) },
+                    { number: 8, title: "CHAPTER 8 MICROBES IN HUMAN WELFARE on nutritive media to fo", pdfUrl: pdf(12, "biology", 8) },
+                    { number: 9, title: "Ever since the days of Rene Descartes the French philosopher", pdfUrl: pdf(12, "biology", 9) },
+                    { number: 10, title: "CHAPTER 10 BIOTECHNOLOGY AND ITS APPLICATIONS Biotechnology ", pdfUrl: pdf(12, "biology", 10) },
+                    { number: 11, title: "Diversity is not only a characteristic of living organisms b", pdfUrl: pdf(12, "biology", 11) },
+                    { number: 12, title: "CHAPTER 12 ECOSYSTEM An ecosystem can be visualised as a fun", pdfUrl: pdf(12, "biology", 12) },
+                    { number: 13, title: "CHAPTER 13 BIODIVERSITY AND CONSERVATION Did such great dive", pdfUrl: pdf(12, "biology", 13) },
+                ]
+            },
+            {
+                id: "chemistry",
+                name: "Chemistry",
+                book: "Chemistry",
+                icon: "⚗️",
+                chapters: [
+                    { number: 1, title: "1 1 UUUUUnnnnniiiiittttt SSoolluuttiioonnss Objectives In no", pdfUrl: pdf(12, "chemistry", 1) },
+                    { number: 2, title: "2 2 UUUUUnnnnniiiiittttt Electrochemistry Electrochemistry O", pdfUrl: pdf(12, "chemistry", 2) },
+                    { number: 3, title: "3 3 UUUUUnnnnniiiiittttt Chemical Chemical Kinetics Kinetics", pdfUrl: pdf(12, "chemistry", 3) },
+                    { number: 4, title: "4 4 d f The and d f The  and  Block Block Elements", pdfUrl: pdf(12, "chemistry", 4) },
+                    { number: 5, title: "5 5 UUUUUnnnnniiiiittttt Coordination Coordination Objective", pdfUrl: pdf(12, "chemistry", 5) },
+                    { number: 6, title: "6 6 UUUUUnnnnniiiiittttt HHHHHHHHHHaaaaaaaaaallllllllllooooo", pdfUrl: pdf(12, "chemistry", 6) },
+                    { number: 7, title: "7 7 UUUUUnnnnniiiiittttt PPPPPPPPPPhhhhhhhhhheeeeeeeeeennnnn", pdfUrl: pdf(12, "chemistry", 7) },
+                    { number: 8, title: "8 8 UUUUUnnnnniiiiittttt KKKKKKKKKKeeeeeeeeeettttttttttooooo", pdfUrl: pdf(12, "chemistry", 8) },
+                    { number: 9, title: "9 9 UUUUUnnnnniiiiittttt AAAAAmmmmmiiiiinnnnneeeeesssss AAAA", pdfUrl: pdf(12, "chemistry", 9) },
+                    { number: 10, title: "10 10 UUUUUnnnnniiiiittttt BBBBBBBBBBiiiiiiiiiioooooooooommm", pdfUrl: pdf(12, "chemistry", 10) },
+                ]
+            },
+            {
+                id: "computer-science",
+                name: "Computer Science",
+                book: "Computer Science",
+                icon: "💻",
+                chapters: [
+                    { number: 1, title: "p t a e h r C Exception Handling 1 in Python In this Chapter", pdfUrl: pdf(12, "computer-science", 1) },
+                    { number: 2, title: "p t a e h r C File Handling in 2 Python In this Chapter", pdfUrl: pdf(12, "computer-science", 2) },
+                    { number: 3, title: "p t a e h r C 3 Stack Were going to In this Chapter", pdfUrl: pdf(12, "computer-science", 3) },
+                    { number: 4, title: "p t a e h r C 4 Queue We could say In this Chapter", pdfUrl: pdf(12, "computer-science", 4) },
+                    { number: 5, title: "p t a e h r C 5 Sorting Every one of In this Chapter", pdfUrl: pdf(12, "computer-science", 5) },
+                    { number: 6, title: "p t a e h r C Searching 6  Brian Kernighan In this Chapter", pdfUrl: pdf(12, "computer-science", 6) },
+                    { number: 7, title: "p t a e h r C 7 Understanding Data Data is not information I", pdfUrl: pdf(12, "computer-science", 7) },
+                    { number: 8, title: "p t a e h r C 8 Database Concepts Inconsistency of your mind", pdfUrl: pdf(12, "computer-science", 8) },
+                    { number: 9, title: "p t a e h r C Structured Query 9 Language SQL In this Chapte", pdfUrl: pdf(12, "computer-science", 9) },
+                    { number: 10, title: "p t a e h r C Computer Networks 10 Hoaxes use In this Chapte", pdfUrl: pdf(12, "computer-science", 10) },
+                    { number: 11, title: "p t a e h r C Data Communication 11 In this Chapter 111 C", pdfUrl: pdf(12, "computer-science", 11) },
+                    { number: 12, title: "p t a e h r C 12 Security Aspects Treat your password like y", pdfUrl: pdf(12, "computer-science", 12) },
+                    { number: 13, title: "p t a e h r C Project Based 13 Learning An idea that is", pdfUrl: pdf(12, "computer-science", 13) },
                 ]
             },
             {
                 id: "english",
                 name: "English",
-                book: "Flamingo & Vistas",
+                book: "Flamingo",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "The Last Lesson", pdfUrl: pdf(12, "english", 1) },
-                    { number: 2, title: "Lost Spring", pdfUrl: pdf(12, "english", 2) },
-                    { number: 3, title: "Deep Water", pdfUrl: pdf(12, "english", 3) },
                 ]
-            }
+            },
+            {
+                id: "math",
+                name: "Mathematics",
+                book: "Mathematics",
+                icon: "📐",
+                chapters: [
+                    { number: 1, title: "1 Chapter RELATIONS AND FUNCTIONS v There is no permanent pl", pdfUrl: pdf(12, "math", 1) },
+                    { number: 2, title: "2 Chapter INVERSE TRIGONOMETRIC FUNCTIONS v v 21 Introductio", pdfUrl: pdf(12, "math", 2) },
+                    { number: 3, title: "3 Chapter MATRICES v v The essence of Mathematics lies in 31", pdfUrl: pdf(12, "math", 3) },
+                    { number: 4, title: "4 Chapter DETERMINANTS v v All 41 Introduction a b  a b 42 D", pdfUrl: pdf(12, "math", 4) },
+                    { number: 5, title: "5 Chapter CONTINUITY AND DIFFERENTIABILITY v The whole v 51 ", pdfUrl: pdf(12, "math", 5) },
+                    { number: 6, title: "6 Chapter APPLICATION OF DERIVATIVES v v 61 Introduction 62 ", pdfUrl: pdf(12, "math", 6) },
+                    { number: 7, title: "7 Chapter INTEGRALS v Just as a mountaineer climbs a mountai", pdfUrl: pdf(12, "math", 7) },
+                    { number: 8, title: "8 Chapter APPLICATION OF INTEGRALS v One v 81 Introduction 8", pdfUrl: pdf(12, "math", 8) },
+                    { number: 9, title: "9 Chapter DIFFERENTIAL EQUATIONS v v 91 Introduction dy dx 9", pdfUrl: pdf(12, "math", 9) },
+                    { number: 10, title: "10 Chapter VECTOR ALGEBRA v In most sciences v 101 Introduct", pdfUrl: pdf(12, "math", 10) },
+                    { number: 11, title: "11 Chapter THREE DIMENSIONAL GEOMETRY v v 111 Introduction 1", pdfUrl: pdf(12, "math", 11) },
+                    { number: 12, title: "12 Chapter LINEAR PROGRAMMING v The mathematical experience ", pdfUrl: pdf(12, "math", 12) },
+                    { number: 13, title: "13 Chapter PROBABILITY v The theory of probabilities is v 13", pdfUrl: pdf(12, "math", 13) },
+                ]
+            },
+            {
+                id: "physics",
+                name: "Physics",
+                book: "Physics",
+                icon: "⚛️",
+                chapters: [
+                    { number: 1, title: "Chapter One ELECTRIC CHARGES AND FIELDS 11 I NTRODUCTION All", pdfUrl: pdf(12, "physics", 1) },
+                    { number: 2, title: "Chapter Two ELECTROSTATIC POTENTIAL AND CAPACITANCE 22222111", pdfUrl: pdf(12, "physics", 2) },
+                    { number: 3, title: "Chapter Three CURRENT ELECTRICITY 31 I NTRODUCTION In Chapte", pdfUrl: pdf(12, "physics", 3) },
+                    { number: 4, title: "Chapter Four MOVING CHARGES AND MAGNETISM 41 I NTRODUCTION t", pdfUrl: pdf(12, "physics", 4) },
+                    { number: 5, title: "Physics Chapter Five MAGNETISM AND MATTER 51 I NTRODUCTION M", pdfUrl: pdf(12, "physics", 5) },
+                    { number: 6, title: "Physics Chapter Six ELECTROMAGNETIC INDUCTION 61 I NTRODUCTI", pdfUrl: pdf(12, "physics", 6) },
+                    { number: 7, title: "Chapter Seven ALTERNATING CURRENT 71 I NTRODUCTION We have s", pdfUrl: pdf(12, "physics", 7) },
+                    { number: 8, title: "Chapter Eight ELECTROMAGNETIC WAVES 81 I NTRODUCTION In Chap", pdfUrl: pdf(12, "physics", 8) },
+                    { number: 9, title: "Chapter Nine RAY OPTICS AND OPTICAL INSTRUMENTS 91 I NTRODUC", pdfUrl: pdf(12, "physics", 9) },
+                    { number: 10, title: "Wave Optics Chapter Ten WAVE OPTICS 101 I NTRODUCTION predic", pdfUrl: pdf(12, "physics", 10) },
+                    { number: 11, title: "Physics Chapter Eleven DUAL NATURE OF RADIATION AND MATTER 1", pdfUrl: pdf(12, "physics", 11) },
+                    { number: 12, title: "Physics Chapter Twelve ATOMS 121 I NTRODUCTION subsequent st", pdfUrl: pdf(12, "physics", 12) },
+                    { number: 13, title: "Physics Chapter Thirteen NUCLEI 131 I NTRODUCTION a 132 A M ", pdfUrl: pdf(12, "physics", 13) },
+                    { number: 14, title: "Chapter Fourteen SEMICONDUCTOR ELECTRONICS MATERIALS DEVICES", pdfUrl: pdf(12, "physics", 14) },
+                ]
+            },
+            {
+                id: "sanskrit-bhaswati",
+                name: "Sanskrit",
+                book: "Bhaswati",
+                icon: "📜",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(12, "sanskrit-bhaswati", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(12, "sanskrit-bhaswati", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(12, "sanskrit-bhaswati", 3) },
+                    { number: 4, title: "Chp-4", pdfUrl: pdf(12, "sanskrit-bhaswati", 4) },
+                    { number: 5, title: "Chp-5", pdfUrl: pdf(12, "sanskrit-bhaswati", 5) },
+                    { number: 6, title: "Chp-6", pdfUrl: pdf(12, "sanskrit-bhaswati", 6) },
+                    { number: 7, title: "Chp-7", pdfUrl: pdf(12, "sanskrit-bhaswati", 7) },
+                    { number: 8, title: "Chp-8", pdfUrl: pdf(12, "sanskrit-bhaswati", 8) },
+                    { number: 9, title: "Chp-9", pdfUrl: pdf(12, "sanskrit-bhaswati", 9) },
+                    { number: 10, title: "Chp-10", pdfUrl: pdf(12, "sanskrit-bhaswati", 10) },
+                ]
+            },
+            {
+                id: "sanskrit-shashwati",
+                name: "Sanskrit",
+                book: "Shashwati",
+                icon: "📜",
+                chapters: [
+                    { number: 1, title: "Chp-1", pdfUrl: pdf(12, "sanskrit-shashwati", 1) },
+                    { number: 2, title: "Chp-2", pdfUrl: pdf(12, "sanskrit-shashwati", 2) },
+                    { number: 3, title: "Chp-3", pdfUrl: pdf(12, "sanskrit-shashwati", 3) },
+                    { number: 4, title: "Chp-4", pdfUrl: pdf(12, "sanskrit-shashwati", 4) },
+                    { number: 5, title: "Chp-5", pdfUrl: pdf(12, "sanskrit-shashwati", 5) },
+                    { number: 6, title: "Chp-6", pdfUrl: pdf(12, "sanskrit-shashwati", 6) },
+                    { number: 7, title: "Chp-7", pdfUrl: pdf(12, "sanskrit-shashwati", 7) },
+                    { number: 8, title: "Chp-8", pdfUrl: pdf(12, "sanskrit-shashwati", 8) },
+                    { number: 9, title: "Chp-9", pdfUrl: pdf(12, "sanskrit-shashwati", 9) },
+                    { number: 10, title: "Chp-10", pdfUrl: pdf(12, "sanskrit-shashwati", 10) },
+                    { number: 11, title: "Chp-11", pdfUrl: pdf(12, "sanskrit-shashwati", 11) },
+                ]
+            },
         ]
     }
 ];
+
 
 // Helper function to get class by ID
 export function getClassById(id: number): ClassData | undefined {
