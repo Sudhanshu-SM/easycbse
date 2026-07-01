@@ -2230,42 +2230,42 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Political Theory: An Introduction",
                     pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Freedom",
                     pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Equality",
                     pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Social Justice",
                     pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Rights",
                     pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Citizenship",
                     pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Nationalism",
                     pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-7.pdf"
           },
           {
                     number: 8,
-                    title: "Chapter 8",
+                    title: "Secularism",
                     pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-8.pdf"
           }
                 ]
@@ -2278,52 +2278,52 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Constitution: Why and How?",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Rights in the Indian Constitution",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Election and Representation",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Executive",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Legislature",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Judiciary",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Federalism",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-7.pdf"
           },
           {
                     number: 8,
-                    title: "Chapter 8",
+                    title: "Local Governments",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-8.pdf"
           },
           {
                     number: 9,
-                    title: "Chapter 9",
+                    title: "Constitution as a Living Document",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-9.pdf"
           },
           {
                     number: 10,
-                    title: "Chapter 10",
+                    title: "The Philosophy of the Constitution",
                     pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-10.pdf"
           }
                 ]
