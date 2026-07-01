@@ -81,19 +81,19 @@ export const classes: ClassData[] = [
                 book: "Joyful Mathematics",
                 icon: "🔢",
                 chapters: [
-                    { number: 1, title: "Finding the Furry Cat!", pdfUrl: pdf(1, "math", 1) },
-                    { number: 2, title: "What is Long? What is Round?", pdfUrl: pdf(1, "math", 2) },
-                    { number: 3, title: "Mango Treat", pdfUrl: pdf(1, "math", 3) },
-                    { number: 4, title: "Making 10", pdfUrl: pdf(1, "math", 4) },
-                    { number: 5, title: "How Many?", pdfUrl: pdf(1, "math", 5) },
-                    { number: 6, title: "Vegetable Farm", pdfUrl: pdf(1, "math", 6) },
-                    { number: 7, title: "Lina's Family", pdfUrl: pdf(1, "math", 7) },
-                    { number: 8, title: "Fun with Numbers", pdfUrl: pdf(1, "math", 8) },
-                    { number: 9, title: "Utsav", pdfUrl: pdf(1, "math", 9) },
-                    { number: 10, title: "How do I Spend my Day?", pdfUrl: pdf(1, "math", 10) },
-                    { number: 11, title: "How Many Times?", pdfUrl: pdf(1, "math", 11) },
-                    { number: 12, title: "How Much Can We Spend?", pdfUrl: pdf(1, "math", 12) },
-                    { number: 13, title: "So Many Toys", pdfUrl: pdf(1, "math", 13) }
+                    { number: 1, title: "Relations and Functions", pdfUrl: pdf(1, "math", 1) },
+                    { number: 2, title: "Inverse Trigonometric Functions", pdfUrl: pdf(1, "math", 2) },
+                    { number: 3, title: "Matrices", pdfUrl: pdf(1, "math", 3) },
+                    { number: 4, title: "Determinants", pdfUrl: pdf(1, "math", 4) },
+                    { number: 5, title: "Continuity and Differentiability", pdfUrl: pdf(1, "math", 5) },
+                    { number: 6, title: "Application of Derivatives", pdfUrl: pdf(1, "math", 6) },
+                    { number: 7, title: "Integrals", pdfUrl: pdf(1, "math", 7) },
+                    { number: 8, title: "Application of Integrals", pdfUrl: pdf(1, "math", 8) },
+                    { number: 9, title: "Differential Equations", pdfUrl: pdf(1, "math", 9) },
+                    { number: 10, title: "Vector Algebra", pdfUrl: pdf(1, "math", 10) },
+                    { number: 11, title: "Three Dimensional Geometry", pdfUrl: pdf(1, "math", 11) },
+                    { number: 12, title: "Linear Programming", pdfUrl: pdf(1, "math", 12) },
+                    { number: 13, title: "Probability", pdfUrl: pdf(1, "math", 13) }
                 ]
             }
         ]
@@ -1211,7 +1211,7 @@ export const classes: ClassData[] = [
                 id: "physics",
                 name: "Physics",
                 book: "Physics Part I & II",
-                icon: "⚛️",
+                icon: "ΓÜ¢∩╕Å",
                 chapters: [
                     { number: 1, title: "Units and Measurements", pdfUrl: pdf(11, "physics", 1) },
                     { number: 2, title: "Motion in a Straight Line", pdfUrl: pdf(11, "physics", 2) },
@@ -1250,7 +1250,7 @@ export const classes: ClassData[] = [
                 id: "biology",
                 name: "Biology",
                 book: "Biology",
-                icon: "🧬",
+                icon: "≡ƒº¼",
                 chapters: [
                     { number: 1, title: "The Living World", pdfUrl: pdf(11, "biology", 1) },
                     { number: 2, title: "Biological Classification", pdfUrl: pdf(11, "biology", 2) },
@@ -1280,7 +1280,7 @@ export const classes: ClassData[] = [
                 id: "math",
                 name: "Mathematics",
                 book: "Mathematics",
-                icon: "📐",
+                icon: "≡ƒôÉ",
                 chapters: [
                     { number: 1, title: "Sets", pdfUrl: pdf(11, "math", 1) },
                     { number: 2, title: "Relations and Functions", pdfUrl: pdf(11, "math", 2) },
@@ -1320,37 +1320,37 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Introduction to Accounting",
                     pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Theory Base of Accounting",
                     pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Recording of Transactions - I",
                     pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Recording of Transactions - II",
                     pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Bank Reconciliation Statement",
                     pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Trial Balance and Rectification of Errors",
                     pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Depreciation, Provisions and Reserves",
                     pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-7.pdf"
           }
 ]
@@ -1363,12 +1363,12 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Financial Statements - I",
                     pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-ii/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Financial Statements - II",
                     pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-ii/chapter-2.pdf"
           }
 ]
@@ -1381,35 +1381,80 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Geography as a Discipline",
                     pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "The Origin and Evolution of the Earth",
                     pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Interior of the Earth",
                     pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Distribution of Oceans and Continents",
                     pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Minerals and Rocks",
                     pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Geomorphic Processes",
                     pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Landforms and their Evolution",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Composition and Structure of Atmosphere",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-8.pdf"
+          },
+          {
+                    number: 9,
+                    title: "Solar Radiation, Heat Balance and Temperature",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-9.pdf"
+          },
+          {
+                    number: 10,
+                    title: "Atmospheric Circulation and Weather Systems",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-10.pdf"
+          },
+          {
+                    number: 11,
+                    title: "Water in the Atmosphere",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-11.pdf"
+          },
+          {
+                    number: 12,
+                    title: "World Climate and Climate Change",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-12.pdf"
+          },
+          {
+                    number: 13,
+                    title: "Water (Oceans)",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-13.pdf"
+          },
+          {
+                    number: 14,
+                    title: "Movements of Ocean Water",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-14.pdf"
+          },
+          {
+                    number: 15,
+                    title: "Glossary",
+                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-15.pdf"
           }
-]
+                ]
             },
             {
                 id: "geography-kegy2dd",
@@ -1419,80 +1464,35 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "India - Location",
                     pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Structure and Physiography",
                     pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Drainage System",
                     pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Climate",
                     pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Natural Vegetation",
                     pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Natural Hazards and Disasters",
                     pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Chapter 7",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Chapter 8",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-8.pdf"
-          },
-          {
-                    number: 9,
-                    title: "Chapter 9",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-9.pdf"
-          },
-          {
-                    number: 10,
-                    title: "Chapter 10",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-10.pdf"
-          },
-          {
-                    number: 11,
-                    title: "Chapter 11",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-11.pdf"
-          },
-          {
-                    number: 12,
-                    title: "Chapter 12",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-12.pdf"
-          },
-          {
-                    number: 13,
-                    title: "Chapter 13",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-13.pdf"
-          },
-          {
-                    number: 14,
-                    title: "Chapter 14",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-14.pdf"
-          },
-          {
-                    number: 15,
-                    title: "Chapter 15",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-15.pdf"
           }
-]
+                ]
             },
             {
                 id: "geography-kegy3dd",
@@ -1502,35 +1502,35 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Introduction to Maps",
                     pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Map Scale",
                     pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Latitude, Longitude and Time",
                     pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Map Projections",
                     pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Topographical Maps",
                     pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Introduction To Remote Sensing",
                     pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-6.pdf"
           }
-]
+                ]
             },
             {
                 id: "psychology-kepy1dd",
@@ -1540,47 +1540,47 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "What is Psychology?",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Methods of Enquiry in Psychology",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Human Development",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Sensory, Attentional and Perceptual Processes",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Learning",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Human Memory",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Thinking",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-7.pdf"
           },
           {
                     number: 8,
-                    title: "Chapter 8",
+                    title: "Motivation and Emotion",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-8.pdf"
           },
           {
                     number: 9,
-                    title: "Chapter 9",
+                    title: "Developing Psychological Skills",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-9.pdf"
           }
 ]
@@ -1593,27 +1593,27 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Sociology and Society",
                     pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Terms, Concepts and their use in Sociology",
                     pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Understanding Social Institutions",
                     pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Culture and Socialisation",
                     pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Doing Sociology: Research Methods",
                     pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-5.pdf"
           }
 ]
@@ -1626,27 +1626,27 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Social Structure, Stratification and Social Processes in Society",
                     pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Social Change and Social Order in Rural and Urban Society",
                     pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Environment and Society",
                     pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Introducing Western Sociologists",
                     pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Indian Sociologists",
                     pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-5.pdf"
           }
 ]
@@ -1659,42 +1659,42 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Prehistoric Rock Paintings",
                     pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Arts of the Indus Valley",
                     pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Arts of the Mauryan Period",
                     pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Post-Mauryan Trends in Indian Art and Architecture",
                     pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Later Mural Traditions",
                     pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Temple Architecture and Sculpture",
                     pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Indian Bronze Sculpture",
                     pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-7.pdf"
           },
           {
                     number: 8,
-                    title: "Chapter 8",
+                    title: "Some Aspects of Indo-Islamic Architecture",
                     pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-8.pdf"
           }
 ]
@@ -1917,57 +1917,57 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Physical Education",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Understanding Health",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Physical and Physiological Aspects of Physical Education and Sports",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Individual Games",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Team Games",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Yoga and Its Relevance in the Modern Time",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Safety and Security",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-7.pdf"
           },
           {
                     number: 8,
-                    title: "Chapter 8",
+                    title: "Health Related Physical Fitness",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-8.pdf"
           },
           {
                     number: 9,
-                    title: "Chapter 9",
+                    title: "Measurements and Evaluation",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-9.pdf"
           },
           {
                     number: 10,
-                    title: "Chapter 10",
+                    title: "Tournaments and Competitions",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-10.pdf"
           },
           {
                     number: 11,
-                    title: "Chapter 11",
+                    title: "Adventure Sports",
                     pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-11.pdf"
           }
 ]
@@ -1980,42 +1980,42 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Computer System",
                     pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Emerging Trends",
                     pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Brief Overview of Python",
                     pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Working with Lists and Dictionaries",
                     pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Understanding Data",
                     pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Introduction to NumPy",
                     pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Database Concepts",
                     pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-7.pdf"
           },
           {
                     number: 8,
-                    title: "Chapter 8",
+                    title: "Introduction to Structured Query Language (SQL)",
                     pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-8.pdf"
           }
 ]
@@ -2028,57 +2028,57 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Business, Trade and Commerce",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Forms of Business Organisation",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Private, Public and Global Enterprises",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Business Services",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Emerging Modes of Business",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Social Responsibilities of Business and Business Ethics",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Formation of a Company",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-7.pdf"
           },
           {
                     number: 8,
-                    title: "Chapter 8",
+                    title: "Sources of Business Finance",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-8.pdf"
           },
           {
                     number: 9,
-                    title: "Chapter 9",
+                    title: "Small Business and Entrepreneurship",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-9.pdf"
           },
           {
                     number: 10,
-                    title: "Chapter 10",
+                    title: "Internal Trade",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-10.pdf"
           },
           {
                     number: 11,
-                    title: "Chapter 11",
+                    title: "International Business",
                     pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-11.pdf"
           }
 ]
@@ -2091,42 +2091,42 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Introduction to Statistics",
                     pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Collection of Data",
                     pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Organisation of Data",
                     pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Presentation of Data",
                     pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Measures of Central Tendency",
                     pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Measures of Dispersion",
                     pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Correlation",
                     pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-7.pdf"
           },
           {
                     number: 8,
-                    title: "Chapter 8",
+                    title: "Index Numbers",
                     pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-8.pdf"
           }
 ]
@@ -2139,42 +2139,42 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Indian Economy on the Eve of Independence",
                     pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "Indian Economy (1950-1990)",
                     pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Liberalisation, Privatisation and Globalisation: An Appraisal",
                     pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Human Capital Formation in India",
                     pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Rural Development",
                     pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Employment: Growth, Informalisation and Other Issues",
                     pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Environment and Sustainable Development",
                     pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-7.pdf"
           },
           {
                     number: 8,
-                    title: "Chapter 8",
+                    title: "Comparative Development Experiences of India and its Neighbours",
                     pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-8.pdf"
           }
 ]
@@ -2187,37 +2187,37 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "Writing and City Life",
                     pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "An Empire Across Three Continents",
                     pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Nomadic Empires",
                     pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "The Three Orders",
                     pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "Changing Cultural Traditions",
                     pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-5.pdf"
           },
           {
                     number: 6,
-                    title: "Chapter 6",
+                    title: "Displacing Indigenous Peoples",
                     pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-6.pdf"
           },
           {
                     number: 7,
-                    title: "Chapter 7",
+                    title: "Paths to Modernisation",
                     pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-7.pdf"
           }
 ]
@@ -2336,27 +2336,27 @@ export const classes: ClassData[] = [
                 chapters: [
           {
                     number: 1,
-                    title: "Chapter 1",
+                    title: "The Summer of the Beautiful White Horse",
                     pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-1.pdf"
           },
           {
                     number: 2,
-                    title: "Chapter 2",
+                    title: "The Address",
                     pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-2.pdf"
           },
           {
                     number: 3,
-                    title: "Chapter 3",
+                    title: "Mother's Day",
                     pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-3.pdf"
           },
           {
                     number: 4,
-                    title: "Chapter 4",
+                    title: "Birth",
                     pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-4.pdf"
           },
           {
                     number: 5,
-                    title: "Chapter 5",
+                    title: "The Tale of Melon City",
                     pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-5.pdf"
           }
 ]
@@ -2375,19 +2375,19 @@ export const classes: ClassData[] = [
                 book: "Biology",
                 icon: "🧬",
                 chapters: [
-                    { number: 1, title: "Chapter 1 Biology in essence is the story of life on earth W", pdfUrl: pdf(12, "biology", 1) },
-                    { number: 2, title: "CHAPTER 2 HUMAN REPRODUCTION As you are aware humans are 21 ", pdfUrl: pdf(12, "biology", 2) },
-                    { number: 3, title: "CHAPTER 3 REPRODUCTIVE HEALTH You have learnt about human 31", pdfUrl: pdf(12, "biology", 3) },
-                    { number: 4, title: "Chapter 4 The work of Mendel and others who followed him gav", pdfUrl: pdf(12, "biology", 4) },
-                    { number: 5, title: "CHAPTER 5 MOLECULAR BASIS OF INHERITANCE In the previous cha", pdfUrl: pdf(12, "biology", 5) },
-                    { number: 6, title: "CHAPTER 6 EVOLUTION 61 O L 110 The origin of life is conside", pdfUrl: pdf(12, "biology", 6) },
-                    { number: 7, title: "Chapter 7 Biology is the youngest of the formalised discipli", pdfUrl: pdf(12, "biology", 7) },
-                    { number: 8, title: "CHAPTER 8 MICROBES IN HUMAN WELFARE on nutritive media to fo", pdfUrl: pdf(12, "biology", 8) },
-                    { number: 9, title: "Ever since the days of Rene Descartes the French philosopher", pdfUrl: pdf(12, "biology", 9) },
-                    { number: 10, title: "CHAPTER 10 BIOTECHNOLOGY AND ITS APPLICATIONS Biotechnology ", pdfUrl: pdf(12, "biology", 10) },
-                    { number: 11, title: "Diversity is not only a characteristic of living organisms b", pdfUrl: pdf(12, "biology", 11) },
-                    { number: 12, title: "CHAPTER 12 ECOSYSTEM An ecosystem can be visualised as a fun", pdfUrl: pdf(12, "biology", 12) },
-                    { number: 13, title: "CHAPTER 13 BIODIVERSITY AND CONSERVATION Did such great dive", pdfUrl: pdf(12, "biology", 13) },
+                    { number: 1, title: "Sexual Reproduction in Flowering Plants", pdfUrl: pdf(12, "biology", 1) },
+                    { number: 2, title: "Human Reproduction", pdfUrl: pdf(12, "biology", 2) },
+                    { number: 3, title: "Reproductive Health", pdfUrl: pdf(12, "biology", 3) },
+                    { number: 4, title: "Principles of Inheritance and Variation", pdfUrl: pdf(12, "biology", 4) },
+                    { number: 5, title: "Molecular Basis of Inheritance", pdfUrl: pdf(12, "biology", 5) },
+                    { number: 6, title: "Evolution", pdfUrl: pdf(12, "biology", 6) },
+                    { number: 7, title: "Human Health and Disease", pdfUrl: pdf(12, "biology", 7) },
+                    { number: 8, title: "Microbes in Human Welfare", pdfUrl: pdf(12, "biology", 8) },
+                    { number: 9, title: "Biotechnology: Principles and Processes", pdfUrl: pdf(12, "biology", 9) },
+                    { number: 10, title: "Biotechnology and its Applications", pdfUrl: pdf(12, "biology", 10) },
+                    { number: 11, title: "Organisms and Populations", pdfUrl: pdf(12, "biology", 11) },
+                    { number: 12, title: "Ecosystem", pdfUrl: pdf(12, "biology", 12) },
+                    { number: 13, title: "Biodiversity and Conservation", pdfUrl: pdf(12, "biology", 13) },
                 ]
             },
             {
@@ -2414,19 +2414,19 @@ export const classes: ClassData[] = [
                 book: "Computer Science",
                 icon: "💻",
                 chapters: [
-                    { number: 1, title: "p t a e h r C Exception Handling 1 in Python In this Chapter", pdfUrl: pdf(12, "computer-science", 1) },
-                    { number: 2, title: "p t a e h r C File Handling in 2 Python In this Chapter", pdfUrl: pdf(12, "computer-science", 2) },
-                    { number: 3, title: "p t a e h r C 3 Stack Were going to In this Chapter", pdfUrl: pdf(12, "computer-science", 3) },
-                    { number: 4, title: "p t a e h r C 4 Queue We could say In this Chapter", pdfUrl: pdf(12, "computer-science", 4) },
-                    { number: 5, title: "p t a e h r C 5 Sorting Every one of In this Chapter", pdfUrl: pdf(12, "computer-science", 5) },
-                    { number: 6, title: "p t a e h r C Searching 6  Brian Kernighan In this Chapter", pdfUrl: pdf(12, "computer-science", 6) },
-                    { number: 7, title: "p t a e h r C 7 Understanding Data Data is not information I", pdfUrl: pdf(12, "computer-science", 7) },
-                    { number: 8, title: "p t a e h r C 8 Database Concepts Inconsistency of your mind", pdfUrl: pdf(12, "computer-science", 8) },
-                    { number: 9, title: "p t a e h r C Structured Query 9 Language SQL In this Chapte", pdfUrl: pdf(12, "computer-science", 9) },
-                    { number: 10, title: "p t a e h r C Computer Networks 10 Hoaxes use In this Chapte", pdfUrl: pdf(12, "computer-science", 10) },
-                    { number: 11, title: "p t a e h r C Data Communication 11 In this Chapter 111 C", pdfUrl: pdf(12, "computer-science", 11) },
-                    { number: 12, title: "p t a e h r C 12 Security Aspects Treat your password like y", pdfUrl: pdf(12, "computer-science", 12) },
-                    { number: 13, title: "p t a e h r C Project Based 13 Learning An idea that is", pdfUrl: pdf(12, "computer-science", 13) },
+                    { number: 1, title: "Exception Handling in Python", pdfUrl: pdf(12, "computer-science", 1) },
+                    { number: 2, title: "File Handling in Python", pdfUrl: pdf(12, "computer-science", 2) },
+                    { number: 3, title: "Stack", pdfUrl: pdf(12, "computer-science", 3) },
+                    { number: 4, title: "Queue", pdfUrl: pdf(12, "computer-science", 4) },
+                    { number: 5, title: "Sorting", pdfUrl: pdf(12, "computer-science", 5) },
+                    { number: 6, title: "Searching", pdfUrl: pdf(12, "computer-science", 6) },
+                    { number: 7, title: "Understanding Data", pdfUrl: pdf(12, "computer-science", 7) },
+                    { number: 8, title: "Database Concepts", pdfUrl: pdf(12, "computer-science", 8) },
+                    { number: 9, title: "Structured Query Language (SQL)", pdfUrl: pdf(12, "computer-science", 9) },
+                    { number: 10, title: "Computer Networks", pdfUrl: pdf(12, "computer-science", 10) },
+                    { number: 11, title: "Data Communication", pdfUrl: pdf(12, "computer-science", 11) },
+                    { number: 12, title: "Security Aspects", pdfUrl: pdf(12, "computer-science", 12) },
+                    { number: 13, title: "Project Based Learning", pdfUrl: pdf(12, "computer-science", 13) },
                 ]
             },
             {
@@ -2443,19 +2443,19 @@ export const classes: ClassData[] = [
                 book: "Mathematics",
                 icon: "📐",
                 chapters: [
-                    { number: 1, title: "1 Chapter RELATIONS AND FUNCTIONS v There is no permanent pl", pdfUrl: pdf(12, "math", 1) },
-                    { number: 2, title: "2 Chapter INVERSE TRIGONOMETRIC FUNCTIONS v v 21 Introductio", pdfUrl: pdf(12, "math", 2) },
-                    { number: 3, title: "3 Chapter MATRICES v v The essence of Mathematics lies in 31", pdfUrl: pdf(12, "math", 3) },
-                    { number: 4, title: "4 Chapter DETERMINANTS v v All 41 Introduction a b  a b 42 D", pdfUrl: pdf(12, "math", 4) },
-                    { number: 5, title: "5 Chapter CONTINUITY AND DIFFERENTIABILITY v The whole v 51 ", pdfUrl: pdf(12, "math", 5) },
-                    { number: 6, title: "6 Chapter APPLICATION OF DERIVATIVES v v 61 Introduction 62 ", pdfUrl: pdf(12, "math", 6) },
-                    { number: 7, title: "7 Chapter INTEGRALS v Just as a mountaineer climbs a mountai", pdfUrl: pdf(12, "math", 7) },
-                    { number: 8, title: "8 Chapter APPLICATION OF INTEGRALS v One v 81 Introduction 8", pdfUrl: pdf(12, "math", 8) },
-                    { number: 9, title: "9 Chapter DIFFERENTIAL EQUATIONS v v 91 Introduction dy dx 9", pdfUrl: pdf(12, "math", 9) },
-                    { number: 10, title: "10 Chapter VECTOR ALGEBRA v In most sciences v 101 Introduct", pdfUrl: pdf(12, "math", 10) },
-                    { number: 11, title: "11 Chapter THREE DIMENSIONAL GEOMETRY v v 111 Introduction 1", pdfUrl: pdf(12, "math", 11) },
-                    { number: 12, title: "12 Chapter LINEAR PROGRAMMING v The mathematical experience ", pdfUrl: pdf(12, "math", 12) },
-                    { number: 13, title: "13 Chapter PROBABILITY v The theory of probabilities is v 13", pdfUrl: pdf(12, "math", 13) },
+                    { number: 1, title: "Relations and Functions", pdfUrl: pdf(12, "math", 1) },
+                    { number: 2, title: "Inverse Trigonometric Functions", pdfUrl: pdf(12, "math", 2) },
+                    { number: 3, title: "Matrices", pdfUrl: pdf(12, "math", 3) },
+                    { number: 4, title: "Determinants", pdfUrl: pdf(12, "math", 4) },
+                    { number: 5, title: "Continuity and Differentiability", pdfUrl: pdf(12, "math", 5) },
+                    { number: 6, title: "Application of Derivatives", pdfUrl: pdf(12, "math", 6) },
+                    { number: 7, title: "Integrals", pdfUrl: pdf(12, "math", 7) },
+                    { number: 8, title: "Application of Integrals", pdfUrl: pdf(12, "math", 8) },
+                    { number: 9, title: "Differential Equations", pdfUrl: pdf(12, "math", 9) },
+                    { number: 10, title: "Vector Algebra", pdfUrl: pdf(12, "math", 10) },
+                    { number: 11, title: "Three Dimensional Geometry", pdfUrl: pdf(12, "math", 11) },
+                    { number: 12, title: "Linear Programming", pdfUrl: pdf(12, "math", 12) },
+                    { number: 13, title: "Probability", pdfUrl: pdf(12, "math", 13) },
                 ]
             },
             {
@@ -2464,20 +2464,20 @@ export const classes: ClassData[] = [
                 book: "Physics",
                 icon: "⚛️",
                 chapters: [
-                    { number: 1, title: "Chapter One ELECTRIC CHARGES AND FIELDS 11 I NTRODUCTION All", pdfUrl: pdf(12, "physics", 1) },
-                    { number: 2, title: "Chapter Two ELECTROSTATIC POTENTIAL AND CAPACITANCE 22222111", pdfUrl: pdf(12, "physics", 2) },
-                    { number: 3, title: "Chapter Three CURRENT ELECTRICITY 31 I NTRODUCTION In Chapte", pdfUrl: pdf(12, "physics", 3) },
-                    { number: 4, title: "Chapter Four MOVING CHARGES AND MAGNETISM 41 I NTRODUCTION t", pdfUrl: pdf(12, "physics", 4) },
-                    { number: 5, title: "Physics Chapter Five MAGNETISM AND MATTER 51 I NTRODUCTION M", pdfUrl: pdf(12, "physics", 5) },
-                    { number: 6, title: "Physics Chapter Six ELECTROMAGNETIC INDUCTION 61 I NTRODUCTI", pdfUrl: pdf(12, "physics", 6) },
-                    { number: 7, title: "Chapter Seven ALTERNATING CURRENT 71 I NTRODUCTION We have s", pdfUrl: pdf(12, "physics", 7) },
-                    { number: 8, title: "Chapter Eight ELECTROMAGNETIC WAVES 81 I NTRODUCTION In Chap", pdfUrl: pdf(12, "physics", 8) },
-                    { number: 9, title: "Chapter Nine RAY OPTICS AND OPTICAL INSTRUMENTS 91 I NTRODUC", pdfUrl: pdf(12, "physics", 9) },
-                    { number: 10, title: "Wave Optics Chapter Ten WAVE OPTICS 101 I NTRODUCTION predic", pdfUrl: pdf(12, "physics", 10) },
-                    { number: 11, title: "Physics Chapter Eleven DUAL NATURE OF RADIATION AND MATTER 1", pdfUrl: pdf(12, "physics", 11) },
-                    { number: 12, title: "Physics Chapter Twelve ATOMS 121 I NTRODUCTION subsequent st", pdfUrl: pdf(12, "physics", 12) },
-                    { number: 13, title: "Physics Chapter Thirteen NUCLEI 131 I NTRODUCTION a 132 A M ", pdfUrl: pdf(12, "physics", 13) },
-                    { number: 14, title: "Chapter Fourteen SEMICONDUCTOR ELECTRONICS MATERIALS DEVICES", pdfUrl: pdf(12, "physics", 14) },
+                    { number: 1, title: "Electric Charges and Fields", pdfUrl: pdf(12, "physics", 1) },
+                    { number: 2, title: "Electrostatic Potential and Capacitance", pdfUrl: pdf(12, "physics", 2) },
+                    { number: 3, title: "Current Electricity", pdfUrl: pdf(12, "physics", 3) },
+                    { number: 4, title: "Moving Charges and Magnetism", pdfUrl: pdf(12, "physics", 4) },
+                    { number: 5, title: "Magnetism and Matter", pdfUrl: pdf(12, "physics", 5) },
+                    { number: 6, title: "Electromagnetic Induction", pdfUrl: pdf(12, "physics", 6) },
+                    { number: 7, title: "Alternating Current", pdfUrl: pdf(12, "physics", 7) },
+                    { number: 8, title: "Electromagnetic Waves", pdfUrl: pdf(12, "physics", 8) },
+                    { number: 9, title: "Ray Optics and Optical Instruments", pdfUrl: pdf(12, "physics", 9) },
+                    { number: 10, title: "Wave Optics", pdfUrl: pdf(12, "physics", 10) },
+                    { number: 11, title: "Dual Nature of Radiation and Matter", pdfUrl: pdf(12, "physics", 11) },
+                    { number: 12, title: "Atoms", pdfUrl: pdf(12, "physics", 12) },
+                    { number: 13, title: "Nuclei", pdfUrl: pdf(12, "physics", 13) },
+                    { number: 14, title: "Semiconductor Electronics: Materials, Devices and Simple Circuits", pdfUrl: pdf(12, "physics", 14) },
                 ]
             },
             {
