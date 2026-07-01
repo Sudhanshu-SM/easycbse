@@ -1656,7 +1656,48 @@ export const classes: ClassData[] = [
                 name: "Fine Arts",
                 book: "An Introduction to Indian Art Part I",
                 icon: "🎨",
-                chapters: []
+                chapters: [
+          {
+                    number: 1,
+                    title: "Chapter 1",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "Chapter 2",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Chapter 3",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Chapter 4",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "Chapter 5",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-5.pdf"
+          },
+          {
+                    number: 6,
+                    title: "Chapter 6",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-6.pdf"
+          },
+          {
+                    number: 7,
+                    title: "Chapter 7",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-7.pdf"
+          },
+          {
+                    number: 8,
+                    title: "Chapter 8",
+                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-8.pdf"
+          }
+]
             },
             {
                 id: "hindi-aroh-khar1dd",
@@ -2228,54 +2269,7 @@ export const classes: ClassData[] = [
           }
 ]
             },
-            {
-                id: "fine-arts-extra-kefa1dd",
-                name: "Fine Arts",
-                book: "Fine Arts Extra",
-                icon: "🎨",
-                chapters: [
-          {
-                    number: 1,
-                    title: "Chapter 1",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Chapter 2",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Chapter 3",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Chapter 4",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Chapter 5",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Chapter 6",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Chapter 7",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Chapter 8",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-8.pdf"
-          }
-]
-            }
+            
         ]
     },
 
