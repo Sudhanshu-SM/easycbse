@@ -1452,7 +1452,7 @@ export const classes: ClassData[] = [
                     pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-5.pdf"
           }
 ]
-            },,
+            },
             {
                 id: "english-woven-words",
                 name: "English",
