@@ -454,16 +454,11 @@ export const classes: ClassData[] = [
                 book: "Poorvi",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "Fables", pdfUrl: pdf(6, "english", 1) },
-                    { number: 2, title: "A Dog Loves Cake", pdfUrl: pdf(6, "english", 2) },
-                    { number: 3, title: "The New House", pdfUrl: pdf(6, "english", 3) },
-                    { number: 4, title: "A Rupee Goes a Long Way", pdfUrl: pdf(6, "english", 4) },
-                    { number: 5, title: "Folk Tales", pdfUrl: pdf(6, "english", 5) },
-                    { number: 6, title: "A Test of Strength", pdfUrl: pdf(6, "english", 6) },
-                    { number: 7, title: "A Hemraj", pdfUrl: pdf(6, "english", 7) },
-                    { number: 8, title: "The Wind and the Sun", pdfUrl: pdf(6, "english", 8) },
-                    { number: 9, title: "My Shadow", pdfUrl: pdf(6, "english", 9) },
-                    { number: 10, title: "The Banyan Tree", pdfUrl: pdf(6, "english", 10) },
+                    { number: 1, title: "Unit 1: Fables and Folk Tales", pdfUrl: pdf(6, "english", 1) },
+                    { number: 2, title: "Unit 2: Friendship", pdfUrl: pdf(6, "english", 2) },
+                    { number: 3, title: "Unit 3: Nurturing Nature", pdfUrl: pdf(6, "english", 3) },
+                    { number: 4, title: "Unit 4: Sports and Wellness", pdfUrl: pdf(6, "english", 4) },
+                    { number: 5, title: "Unit 5: Culture and Tradition", pdfUrl: pdf(6, "english", 5) }
                 ]
             },
             {
@@ -484,6 +479,7 @@ export const classes: ClassData[] = [
                     { number: 10, title: "नदी", pdfUrl: pdf(6, "hindi", 10) },
                     { number: 11, title: "एक दिन की बादशाहत", pdfUrl: pdf(6, "hindi", 11) },
                     { number: 12, title: "स्वदेश प्रेम", pdfUrl: pdf(6, "hindi", 12) },
+                    { number: 13, title: "पेड़ की बात", pdfUrl: pdf(6, "hindi", 13) }
                 ]
             },
             {
@@ -544,6 +540,30 @@ export const classes: ClassData[] = [
                     { number: 12, title: "New Ideas and Religions", pdfUrl: pdf(6, "social_science", 12) },
                     { number: 13, title: "Empires and their Legacies", pdfUrl: pdf(6, "social_science", 13) },
                     { number: 14, title: "India and the World", pdfUrl: pdf(6, "social_science", 14) },
+                ]
+            },
+            {
+                id: "sanskrit",
+                name: "Sanskrit",
+                book: "Ruchira I",
+                icon: "🕉️",
+                chapters: [
+                    { number: 1, title: "Chapter 1", pdfUrl: pdf(6, "sanskrit", 1) },
+                    { number: 2, title: "Chapter 2", pdfUrl: pdf(6, "sanskrit", 2) },
+                    { number: 3, title: "Chapter 3", pdfUrl: pdf(6, "sanskrit", 3) },
+                    { number: 4, title: "Chapter 4", pdfUrl: pdf(6, "sanskrit", 4) },
+                    { number: 5, title: "Chapter 5", pdfUrl: pdf(6, "sanskrit", 5) },
+                    { number: 6, title: "Chapter 6", pdfUrl: pdf(6, "sanskrit", 6) },
+                    { number: 7, title: "Chapter 7", pdfUrl: pdf(6, "sanskrit", 7) },
+                    { number: 8, title: "Chapter 8", pdfUrl: pdf(6, "sanskrit", 8) },
+                    { number: 9, title: "Chapter 9", pdfUrl: pdf(6, "sanskrit", 9) },
+                    { number: 10, title: "Chapter 10", pdfUrl: pdf(6, "sanskrit", 10) },
+                    { number: 11, title: "Chapter 11", pdfUrl: pdf(6, "sanskrit", 11) },
+                    { number: 12, title: "Chapter 12", pdfUrl: pdf(6, "sanskrit", 12) },
+                    { number: 13, title: "Chapter 13", pdfUrl: pdf(6, "sanskrit", 13) },
+                    { number: 14, title: "Chapter 14", pdfUrl: pdf(6, "sanskrit", 14) },
+                    { number: 15, title: "Chapter 15", pdfUrl: pdf(6, "sanskrit", 15) },
+                    { number: 16, title: "Chapter 16", pdfUrl: pdf(6, "sanskrit", 16) }
                 ]
             }
         ]
@@ -654,6 +674,29 @@ export const classes: ClassData[] = [
                     { number: 20, title: "Banks and the Magic of Finance", pdfUrl: pdf(7, "social-science", 20) },
                 ]
             },
+            {
+                id: "sanskrit",
+                name: "Sanskrit",
+                book: "दीपकम",
+                icon: "🕉️",
+                chapters: [
+                    { number: 1, title: "Chapter 1", pdfUrl: pdf(7, "sanskrit", 1) },
+                    { number: 2, title: "Chapter 2", pdfUrl: pdf(7, "sanskrit", 2) },
+                    { number: 3, title: "Chapter 3", pdfUrl: pdf(7, "sanskrit", 3) },
+                    { number: 4, title: "Chapter 4", pdfUrl: pdf(7, "sanskrit", 4) },
+                    { number: 5, title: "Chapter 5", pdfUrl: pdf(7, "sanskrit", 5) },
+                    { number: 6, title: "Chapter 6", pdfUrl: pdf(7, "sanskrit", 6) },
+                    { number: 7, title: "Chapter 7", pdfUrl: pdf(7, "sanskrit", 7) },
+                    { number: 8, title: "Chapter 8", pdfUrl: pdf(7, "sanskrit", 8) },
+                    { number: 9, title: "Chapter 9", pdfUrl: pdf(7, "sanskrit", 9) },
+                    { number: 10, title: "Chapter 10", pdfUrl: pdf(7, "sanskrit", 10) },
+                    { number: 11, title: "Chapter 11", pdfUrl: pdf(7, "sanskrit", 11) },
+                    { number: 12, title: "Chapter 12", pdfUrl: pdf(7, "sanskrit", 12) },
+                    { number: 13, title: "Chapter 13", pdfUrl: pdf(7, "sanskrit", 13) },
+                    { number: 14, title: "Chapter 14", pdfUrl: pdf(7, "sanskrit", 14) },
+                    { number: 15, title: "Chapter 15", pdfUrl: pdf(7, "sanskrit", 15) }
+                ]
+            }
         ]
     },
     {
@@ -663,7 +706,7 @@ export const classes: ClassData[] = [
             {
                 id: "english",
                 name: "English",
-                book: "Honeydew",
+                book: "Poorvi",
                 icon: "📖",
                 chapters: [
                     { number: 1, title: "Wit and Wisdom", pdfUrl: pdf(8, "english", 1) },
@@ -676,7 +719,7 @@ export const classes: ClassData[] = [
             {
                 id: "hindi",
                 name: "Hindi",
-                book: "Vasant",
+                book: "Malhar",
                 icon: "हिं",
                 chapters: [
                     { number: 1, title: "स्वदेश", pdfUrl: pdf(8, "hindi", 1) },
@@ -737,7 +780,7 @@ export const classes: ClassData[] = [
             {
                 id: "social-science",
                 name: "Social Science",
-                book: "Social Science",
+                book: "Exploring Society: India and Beyond",
                 icon: "🌍",
                 chapters: [
                     { number: 1, title: "Natural Resources and Their Use", pdfUrl: pdf(8, "social-science", 1) },
@@ -749,6 +792,30 @@ export const classes: ClassData[] = [
                     { number: 7, title: "Factors of Production", pdfUrl: pdf(8, "social-science", 7) },
                 ]
             },
+            {
+                id: "sanskrit",
+                name: "Sanskrit",
+                book: "Ruchira III",
+                icon: "🕉️",
+                chapters: [
+                    { number: 1, title: "Chapter 1", pdfUrl: pdf(8, "sanskrit", 1) },
+                    { number: 2, title: "Chapter 2", pdfUrl: pdf(8, "sanskrit", 2) },
+                    { number: 3, title: "Chapter 3", pdfUrl: pdf(8, "sanskrit", 3) },
+                    { number: 4, title: "Chapter 4", pdfUrl: pdf(8, "sanskrit", 4) },
+                    { number: 5, title: "Chapter 5", pdfUrl: pdf(8, "sanskrit", 5) },
+                    { number: 6, title: "Chapter 6", pdfUrl: pdf(8, "sanskrit", 6) },
+                    { number: 7, title: "Chapter 7", pdfUrl: pdf(8, "sanskrit", 7) },
+                    { number: 8, title: "Chapter 8", pdfUrl: pdf(8, "sanskrit", 8) },
+                    { number: 9, title: "Chapter 9", pdfUrl: pdf(8, "sanskrit", 9) },
+                    { number: 10, title: "Chapter 10", pdfUrl: pdf(8, "sanskrit", 10) },
+                    { number: 11, title: "Chapter 11", pdfUrl: pdf(8, "sanskrit", 11) },
+                    { number: 12, title: "Chapter 12", pdfUrl: pdf(8, "sanskrit", 12) },
+                    { number: 13, title: "Chapter 13", pdfUrl: pdf(8, "sanskrit", 13) },
+                    { number: 14, title: "Chapter 14", pdfUrl: pdf(8, "sanskrit", 14) },
+                    { number: 15, title: "Chapter 15", pdfUrl: pdf(8, "sanskrit", 15) },
+                    { number: 16, title: "Chapter 16", pdfUrl: pdf(8, "sanskrit", 16) }
+                ]
+            }
         ]
     },
     {
@@ -1201,6 +1268,44 @@ export const classes: ClassData[] = [
                     { number: 5, title: "Consumer Rights", pdfUrl: pdf(10, "economics", 5) },
                 ]
             },
+            {
+                id: "english-words-and-expressions",
+                name: "English",
+                book: "Words and Expressions 2",
+                icon: "📖",
+                chapters: [
+                    { number: 1, title: "Unit 1", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-1.pdf" },
+                    { number: 2, title: "Unit 2", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-2.pdf" },
+                    { number: 3, title: "Unit 3", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-3.pdf" },
+                    { number: 4, title: "Unit 4", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-4.pdf" },
+                    { number: 5, title: "Unit 5", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-5.pdf" },
+                    { number: 6, title: "Unit 6", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-6.pdf" },
+                    { number: 7, title: "Unit 7", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-7.pdf" },
+                    { number: 8, title: "Unit 8", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-8.pdf" },
+                    { number: 9, title: "Unit 9", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-9.pdf" }
+                ]
+            },
+            {
+                id: "physical-education",
+                name: "Health and Physical Education",
+                book: "Health and Physical Education",
+                icon: "🏃",
+                chapters: [
+                    { number: 1, title: "Physical Education: Relation with other Subjects", pdfUrl: "/pdfs/class-10/physical-education/chapter-1.pdf" },
+                    { number: 2, title: "Effects of Physical Activities on Human Body", pdfUrl: "/pdfs/class-10/physical-education/chapter-2.pdf" },
+                    { number: 3, title: "Growth and Development during Adolescence", pdfUrl: "/pdfs/class-10/physical-education/chapter-3.pdf" },
+                    { number: 4, title: "Individual Games and Sports I", pdfUrl: "/pdfs/class-10/physical-education/chapter-4.pdf" },
+                    { number: 5, title: "Individual Games and Sports II", pdfUrl: "/pdfs/class-10/physical-education/chapter-5.pdf" },
+                    { number: 6, title: "Team Games and Sports I", pdfUrl: "/pdfs/class-10/physical-education/chapter-6.pdf" },
+                    { number: 7, title: "Team Games and Sports II", pdfUrl: "/pdfs/class-10/physical-education/chapter-7.pdf" },
+                    { number: 8, title: "Yoga for Healthy Living", pdfUrl: "/pdfs/class-10/physical-education/chapter-8.pdf" },
+                    { number: 9, title: "Dietary Considerations and Food Quality", pdfUrl: "/pdfs/class-10/physical-education/chapter-9.pdf" },
+                    { number: 10, title: "Safety for Healthy Living", pdfUrl: "/pdfs/class-10/physical-education/chapter-10.pdf" },
+                    { number: 11, title: "Healthy Community Living", pdfUrl: "/pdfs/class-10/physical-education/chapter-11.pdf" },
+                    { number: 12, title: "Social Health", pdfUrl: "/pdfs/class-10/physical-education/chapter-12.pdf" },
+                    { number: 13, title: "Agencies and Awards Promoting Health, Sport and Yoga", pdfUrl: "/pdfs/class-10/physical-education/chapter-13.pdf" }
+                ]
+            }
         ]
     },
     {
