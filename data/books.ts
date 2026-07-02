@@ -1367,18 +1367,15 @@ export const classes: ClassData[] = [
                     { number: 8, title: "Cell: The Unit of Life", pdfUrl: pdf(11, "biology", 8) },
                     { number: 9, title: "Biomolecules", pdfUrl: pdf(11, "biology", 9) },
                     { number: 10, title: "Cell Cycle and Cell Division", pdfUrl: pdf(11, "biology", 10) },
-                    { number: 11, title: "Transport in Plants", pdfUrl: pdf(11, "biology", 11) },
-                    { number: 12, title: "Mineral Nutrition", pdfUrl: pdf(11, "biology", 12) },
-                    { number: 13, title: "Photosynthesis in Higher Plants", pdfUrl: pdf(11, "biology", 13) },
-                    { number: 14, title: "Respiration in Plants", pdfUrl: pdf(11, "biology", 14) },
-                    { number: 15, title: "Plant Growth and Development", pdfUrl: pdf(11, "biology", 15) },
-                    { number: 16, title: "Digestion and Absorption", pdfUrl: pdf(11, "biology", 16) },
-                    { number: 17, title: "Breathing and Exchange of Gases", pdfUrl: pdf(11, "biology", 17) },
-                    { number: 18, title: "Body Fluids and Circulation", pdfUrl: pdf(11, "biology", 18) },
-                    { number: 19, title: "Excretory Products and their Elimination", pdfUrl: pdf(11, "biology", 19) },
-                    { number: 20, title: "Locomotion and Movement", pdfUrl: pdf(11, "biology", 20) },
-                    { number: 21, title: "Neural Control and Coordination", pdfUrl: pdf(11, "biology", 21) },
-                    { number: 22, title: "Chemical Coordination and Integration", pdfUrl: pdf(11, "biology", 22) },
+                    { number: 11, title: "Photosynthesis in Higher Plants", pdfUrl: pdf(11, "biology", 11) },
+                    { number: 12, title: "Respiration in Plants", pdfUrl: pdf(11, "biology", 12) },
+                    { number: 13, title: "Plant Growth and Development", pdfUrl: pdf(11, "biology", 13) },
+                    { number: 14, title: "Breathing and Exchange of Gases", pdfUrl: pdf(11, "biology", 14) },
+                    { number: 15, title: "Body Fluids and Circulation", pdfUrl: pdf(11, "biology", 15) },
+                    { number: 16, title: "Excretory Products and their Elimination", pdfUrl: pdf(11, "biology", 16) },
+                    { number: 17, title: "Locomotion and Movement", pdfUrl: pdf(11, "biology", 17) },
+                    { number: 18, title: "Neural Control and Coordination", pdfUrl: pdf(11, "biology", 18) },
+                    { number: 19, title: "Chemical Coordination and Integration", pdfUrl: pdf(11, "biology", 19) }
                 ]
             },
             {
@@ -1390,30 +1387,105 @@ export const classes: ClassData[] = [
                     { number: 1, title: "Sets", pdfUrl: pdf(11, "math", 1) },
                     { number: 2, title: "Relations and Functions", pdfUrl: pdf(11, "math", 2) },
                     { number: 3, title: "Trigonometric Functions", pdfUrl: pdf(11, "math", 3) },
-                    { number: 4, title: "Principle of Mathematical Induction", pdfUrl: pdf(11, "math", 4) },
-                    { number: 5, title: "Complex Numbers and Quadratic Equations", pdfUrl: pdf(11, "math", 5) },
-                    { number: 6, title: "Linear Inequalities", pdfUrl: pdf(11, "math", 6) },
-                    { number: 7, title: "Permutations and Combinations", pdfUrl: pdf(11, "math", 7) },
-                    { number: 8, title: "Binomial Theorem", pdfUrl: pdf(11, "math", 8) },
-                    { number: 9, title: "Sequences and Series", pdfUrl: pdf(11, "math", 9) },
-                    { number: 10, title: "Straight Lines", pdfUrl: pdf(11, "math", 10) },
-                    { number: 11, title: "Conic Sections", pdfUrl: pdf(11, "math", 11) },
-                    { number: 12, title: "Introduction to Three Dimensional Geometry", pdfUrl: pdf(11, "math", 12) },
-                    { number: 13, title: "Limits and Derivatives", pdfUrl: pdf(11, "math", 13) },
-                    { number: 14, title: "Mathematical Reasoning", pdfUrl: pdf(11, "math", 14) },
-                    { number: 15, title: "Statistics", pdfUrl: pdf(11, "math", 15) },
-                    { number: 16, title: "Probability", pdfUrl: pdf(11, "math", 16) },
+                    { number: 4, title: "Complex Numbers and Quadratic Equations", pdfUrl: pdf(11, "math", 4) },
+                    { number: 5, title: "Linear Inequalities", pdfUrl: pdf(11, "math", 5) },
+                    { number: 6, title: "Permutations and Combinations", pdfUrl: pdf(11, "math", 6) },
+                    { number: 7, title: "Binomial Theorem", pdfUrl: pdf(11, "math", 7) },
+                    { number: 8, title: "Sequences and Series", pdfUrl: pdf(11, "math", 8) },
+                    { number: 9, title: "Straight Lines", pdfUrl: pdf(11, "math", 9) },
+                    { number: 10, title: "Conic Sections", pdfUrl: pdf(11, "math", 10) },
+                    { number: 11, title: "Introduction to Three Dimensional Geometry", pdfUrl: pdf(11, "math", 11) },
+                    { number: 12, title: "Limits and Derivatives", pdfUrl: pdf(11, "math", 12) },
+                    { number: 13, title: "Statistics", pdfUrl: pdf(11, "math", 13) },
+                    { number: 14, title: "Probability", pdfUrl: pdf(11, "math", 14) }
                 ]
             },
             {
-                id: "english",
+                id: "english-hornbill",
                 name: "English",
-                book: "Hornbill & Snapshots",
+                book: "Hornbill",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "The Portrait of a Lady", pdfUrl: pdf(11, "english", 1) },
-                    { number: 2, title: "We're Not Afraid to Die", pdfUrl: pdf(11, "english", 2) },
-                    { number: 3, title: "Discovering Tut: the Saga Continues", pdfUrl: pdf(11, "english", 3) },
+                    { number: 1, title: "Chapter 1", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-1.pdf" },
+                    { number: 2, title: "Chapter 2", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-2.pdf" },
+                    { number: 3, title: "Chapter 3", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-3.pdf" },
+                    { number: 4, title: "Chapter 4", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-4.pdf" },
+                    { number: 5, title: "Chapter 5", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-5.pdf" },
+                    { number: 6, title: "Chapter 6", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-6.pdf" },
+                    { number: 7, title: "Chapter 7", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-7.pdf" },
+                    { number: 8, title: "Chapter 8", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-8.pdf" },
+                    { number: 9, title: "Chapter 9", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-9.pdf" },
+                    { number: 10, title: "Chapter 10", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-10.pdf" },
+                    { number: 11, title: "Chapter 11", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-11.pdf" },
+                    { number: 12, title: "Chapter 12", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-12.pdf" }
+                ]
+            },
+            {
+                id: "english-snapshots-kesp1dd",
+                name: "English",
+                book: "Snapshots",
+                icon: "📖",
+                chapters: [
+          {
+                    number: 1,
+                    title: "The Summer of the Beautiful White Horse",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-1.pdf"
+          },
+          {
+                    number: 2,
+                    title: "The Address",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-2.pdf"
+          },
+          {
+                    number: 3,
+                    title: "Mother's Day",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-3.pdf"
+          },
+          {
+                    number: 4,
+                    title: "Birth",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-4.pdf"
+          },
+          {
+                    number: 5,
+                    title: "The Tale of Melon City",
+                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-5.pdf"
+          }
+]
+            },,
+            {
+                id: "english-woven-words",
+                name: "English",
+                book: "Woven Words",
+                icon: "📖",
+                chapters: [
+                    { number: 1, title: "Short Stories - Chapter 1", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-1.pdf" },
+                    { number: 2, title: "Short Stories - Chapter 2", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-2.pdf" },
+                    { number: 3, title: "Short Stories - Chapter 3", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-3.pdf" },
+                    { number: 4, title: "Short Stories - Chapter 4", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-4.pdf" },
+                    { number: 5, title: "Short Stories - Chapter 5", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-5.pdf" },
+                    { number: 6, title: "Short Stories - Chapter 6", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-6.pdf" },
+                    { number: 7, title: "Short Stories - Chapter 7", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-7.pdf" },
+                    { number: 8, title: "Short Stories - Chapter 8", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-8.pdf" },
+                    { number: 9, title: "Poetry - Chapter 1", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-9.pdf" },
+                    { number: 10, title: "Poetry - Chapter 2", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-10.pdf" },
+                    { number: 11, title: "Poetry - Chapter 3", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-11.pdf" },
+                    { number: 12, title: "Poetry - Chapter 4", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-12.pdf" },
+                    { number: 13, title: "Poetry - Chapter 5", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-13.pdf" },
+                    { number: 14, title: "Poetry - Chapter 6", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-14.pdf" },
+                    { number: 15, title: "Poetry - Chapter 7", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-15.pdf" },
+                    { number: 16, title: "Poetry - Chapter 8", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-16.pdf" },
+                    { number: 17, title: "Poetry - Chapter 9", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-17.pdf" },
+                    { number: 18, title: "Poetry - Chapter 10", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-18.pdf" },
+                    { number: 19, title: "Poetry - Chapter 11", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-19.pdf" },
+                    { number: 20, title: "Poetry - Chapter 12", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-20.pdf" },
+                    { number: 21, title: "Essay - Chapter 1", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-21.pdf" },
+                    { number: 22, title: "Essay - Chapter 2", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-22.pdf" },
+                    { number: 23, title: "Essay - Chapter 3", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-23.pdf" },
+                    { number: 24, title: "Essay - Chapter 4", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-24.pdf" },
+                    { number: 25, title: "Essay - Chapter 5", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-25.pdf" },
+                    { number: 26, title: "Essay - Chapter 6", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-26.pdf" },
+                    { number: 27, title: "Essay - Chapter 7", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-27.pdf" }
                 ]
             }
         ,
@@ -1682,11 +1754,6 @@ export const classes: ClassData[] = [
                     number: 8,
                     title: "Motivation and Emotion",
                     pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-8.pdf"
-          },
-          {
-                    number: 9,
-                    title: "Developing Psychological Skills",
-                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-9.pdf"
           }
 ]
             },
@@ -2434,39 +2501,15 @@ export const classes: ClassData[] = [
                 ]
             },
             {
-                id: "english-snapshots-kesp1dd",
-                name: "English",
-                book: "Snapshots",
-                icon: "📖",
+                id: "hindi-antral",
+                name: "Hindi",
+                book: "Antral",
+                icon: "अ",
                 chapters: [
-          {
-                    number: 1,
-                    title: "The Summer of the Beautiful White Horse",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "The Address",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Mother's Day",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Birth",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "The Tale of Melon City",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-5.pdf"
-          }
-]
-            },
-            
+                    { number: 1, title: "Story 1", pdfUrl: "/pdfs/class-11/hindi-antral/chapter-1.pdf" },
+                    { number: 2, title: "Story 2", pdfUrl: "/pdfs/class-11/hindi-antral/chapter-2.pdf" }
+                ]
+            }
         ]
     },
 
