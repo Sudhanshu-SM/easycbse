@@ -1211,7 +1211,7 @@ export const classes: ClassData[] = [
                 id: "physics",
                 name: "Physics",
                 book: "Physics Part I & II",
-                icon: "ΓÜ¢∩╕Å",
+                icon: "⚛️",
                 chapters: [
                     { number: 1, title: "Units and Measurements", pdfUrl: pdf(11, "physics", 1) },
                     { number: 2, title: "Motion in a Straight Line", pdfUrl: pdf(11, "physics", 2) },
@@ -1250,7 +1250,7 @@ export const classes: ClassData[] = [
                 id: "biology",
                 name: "Biology",
                 book: "Biology",
-                icon: "≡ƒº¼",
+                icon: "🧬",
                 chapters: [
                     { number: 1, title: "The Living World", pdfUrl: pdf(11, "biology", 1) },
                     { number: 2, title: "Biological Classification", pdfUrl: pdf(11, "biology", 2) },
@@ -1280,7 +1280,7 @@ export const classes: ClassData[] = [
                 id: "math",
                 name: "Mathematics",
                 book: "Mathematics",
-                icon: "≡ƒôÉ",
+                icon: "📐",
                 chapters: [
                     { number: 1, title: "Sets", pdfUrl: pdf(11, "math", 1) },
                     { number: 2, title: "Relations and Functions", pdfUrl: pdf(11, "math", 2) },
@@ -2396,16 +2396,16 @@ export const classes: ClassData[] = [
                 book: "Chemistry",
                 icon: "⚗️",
                 chapters: [
-                    { number: 1, title: "1 1 UUUUUnnnnniiiiittttt SSoolluuttiioonnss Objectives In no", pdfUrl: pdf(12, "chemistry", 1) },
-                    { number: 2, title: "2 2 UUUUUnnnnniiiiittttt Electrochemistry Electrochemistry O", pdfUrl: pdf(12, "chemistry", 2) },
-                    { number: 3, title: "3 3 UUUUUnnnnniiiiittttt Chemical Chemical Kinetics Kinetics", pdfUrl: pdf(12, "chemistry", 3) },
-                    { number: 4, title: "4 4 d f The and d f The  and  Block Block Elements", pdfUrl: pdf(12, "chemistry", 4) },
-                    { number: 5, title: "5 5 UUUUUnnnnniiiiittttt Coordination Coordination Objective", pdfUrl: pdf(12, "chemistry", 5) },
-                    { number: 6, title: "6 6 UUUUUnnnnniiiiittttt HHHHHHHHHHaaaaaaaaaallllllllllooooo", pdfUrl: pdf(12, "chemistry", 6) },
-                    { number: 7, title: "7 7 UUUUUnnnnniiiiittttt PPPPPPPPPPhhhhhhhhhheeeeeeeeeennnnn", pdfUrl: pdf(12, "chemistry", 7) },
-                    { number: 8, title: "8 8 UUUUUnnnnniiiiittttt KKKKKKKKKKeeeeeeeeeettttttttttooooo", pdfUrl: pdf(12, "chemistry", 8) },
-                    { number: 9, title: "9 9 UUUUUnnnnniiiiittttt AAAAAmmmmmiiiiinnnnneeeeesssss AAAA", pdfUrl: pdf(12, "chemistry", 9) },
-                    { number: 10, title: "10 10 UUUUUnnnnniiiiittttt BBBBBBBBBBiiiiiiiiiioooooooooommm", pdfUrl: pdf(12, "chemistry", 10) },
+                    { number: 1, title: "Solutions", pdfUrl: pdf(12, "chemistry", 1) },
+                    { number: 2, title: "Electrochemistry", pdfUrl: pdf(12, "chemistry", 2) },
+                    { number: 3, title: "Chemical Kinetics", pdfUrl: pdf(12, "chemistry", 3) },
+                    { number: 4, title: "The d- and f- Block Elements", pdfUrl: pdf(12, "chemistry", 4) },
+                    { number: 5, title: "Coordination Compounds", pdfUrl: pdf(12, "chemistry", 5) },
+                    { number: 6, title: "Haloalkanes and Haloarenes", pdfUrl: pdf(12, "chemistry", 6) },
+                    { number: 7, title: "Alcohols, Phenols and Ethers", pdfUrl: pdf(12, "chemistry", 7) },
+                    { number: 8, title: "Aldehydes, Ketones and Carboxylic Acids", pdfUrl: pdf(12, "chemistry", 8) },
+                    { number: 9, title: "Amines", pdfUrl: pdf(12, "chemistry", 9) },
+                    { number: 10, title: "Biomolecules", pdfUrl: pdf(12, "chemistry", 10) },
                 ]
             },
             {
@@ -2430,13 +2430,70 @@ export const classes: ClassData[] = [
                 ]
             },
             {
-                id: "english",
+                id: "english-flamingo",
                 name: "English",
                 book: "Flamingo",
                 icon: "📖",
                 chapters: [
+                    { number: 101, title: "Prose Chapter 1", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-101.pdf" },
+                    { number: 102, title: "Prose Chapter 2", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-102.pdf" },
+                    { number: 103, title: "Prose Chapter 3", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-103.pdf" },
+                    { number: 104, title: "Prose Chapter 4", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-104.pdf" },
+                    { number: 105, title: "Prose Chapter 5", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-105.pdf" },
+                    { number: 106, title: "Prose Chapter 6", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-106.pdf" },
+                    { number: 107, title: "Prose Chapter 7", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-107.pdf" },
+                    { number: 108, title: "Prose Chapter 8", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-108.pdf" },
+                    { number: 111, title: "Poetry Chapter 1", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-111.pdf" },
+                    { number: 112, title: "Poetry Chapter 2", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-112.pdf" },
+                    { number: 113, title: "Poetry Chapter 3", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-113.pdf" },
+                    { number: 114, title: "Poetry Chapter 4", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-114.pdf" },
+                    { number: 115, title: "Poetry Chapter 5", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-115.pdf" },
                 ]
             },
+            {
+                id: "english-kaleidoscope",
+                name: "English",
+                book: "Kaleidoscope",
+                icon: "📖",
+                chapters: [
+                    { number: 101, title: "Short Stories Chapter 1", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-101.pdf" },
+                    { number: 102, title: "Short Stories Chapter 2", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-102.pdf" },
+                    { number: 103, title: "Short Stories Chapter 3", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-103.pdf" },
+                    { number: 104, title: "Short Stories Chapter 4", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-104.pdf" },
+                    { number: 105, title: "Short Stories Chapter 5", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-105.pdf" },
+                    { number: 111, title: "Poetry Chapter 1", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-111.pdf" },
+                    { number: 112, title: "Poetry Chapter 2", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-112.pdf" },
+                    { number: 113, title: "Poetry Chapter 3", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-113.pdf" },
+                    { number: 114, title: "Poetry Chapter 4", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-114.pdf" },
+                    { number: 115, title: "Poetry Chapter 5", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-115.pdf" },
+                    { number: 116, title: "Poetry Chapter 6", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-116.pdf" },
+                    { number: 117, title: "Poetry Chapter 7", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-117.pdf" },
+                    { number: 118, title: "Poetry Chapter 8", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-118.pdf" },
+                    { number: 121, title: "Non Fiction Chapter 1", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-121.pdf" },
+                    { number: 122, title: "Non Fiction Chapter 2", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-122.pdf" },
+                    { number: 123, title: "Non Fiction Chapter 3", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-123.pdf" },
+                    { number: 124, title: "Non Fiction Chapter 4", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-124.pdf" },
+                    { number: 125, title: "Non Fiction Chapter 5", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-125.pdf" },
+                    { number: 126, title: "Non Fiction Chapter 6", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-126.pdf" },
+                    { number: 131, title: "Drama Chapter 1", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-131.pdf" },
+                    { number: 132, title: "Drama Chapter 2", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-132.pdf" },
+                ]
+            },
+            {
+                id: "english-vistas",
+                name: "English",
+                book: "Vistas",
+                icon: "📖",
+                chapters: [
+                    { number: 101, title: "Chapter 1", pdfUrl: "/pdfs/class-12/english/vistas/chapter-101.pdf" },
+                    { number: 102, title: "Chapter 2", pdfUrl: "/pdfs/class-12/english/vistas/chapter-102.pdf" },
+                    { number: 103, title: "Chapter 3", pdfUrl: "/pdfs/class-12/english/vistas/chapter-103.pdf" },
+                    { number: 104, title: "Chapter 4", pdfUrl: "/pdfs/class-12/english/vistas/chapter-104.pdf" },
+                    { number: 105, title: "Chapter 5", pdfUrl: "/pdfs/class-12/english/vistas/chapter-105.pdf" },
+                    { number: 106, title: "Chapter 6", pdfUrl: "/pdfs/class-12/english/vistas/chapter-106.pdf" },
+                ]
+            },
+
             {
                 id: "math",
                 name: "Mathematics",
@@ -2517,6 +2574,304 @@ export const classes: ClassData[] = [
                     { number: 11, title: "Chp-11", pdfUrl: pdf(12, "sanskrit-shashwati", 11) },
                 ]
             },
+            {
+                id: "accountancy-leac1dd",
+                name: "Accountancy",
+                book: "Accountancy - Partnership Accounts",
+                icon: "📊",
+                chapters: [
+                    { number: 1, title: "Accounting for Partnership: Basic Concepts", pdfUrl: "/pdfs/class-12/accountancy/accountancy-i/chapter-1.pdf" },
+                    { number: 2, title: "Reconstitution of a Partnership Firm –", pdfUrl: "/pdfs/class-12/accountancy/accountancy-i/chapter-2.pdf" },
+                    { number: 3, title: "Reconstitution of a Partnership Firm –", pdfUrl: "/pdfs/class-12/accountancy/accountancy-i/chapter-3.pdf" },
+                    { number: 4, title: "Dissolution of Partnership Firm", pdfUrl: "/pdfs/class-12/accountancy/accountancy-i/chapter-4.pdf" },
+                ]
+            },
+            {
+                id: "accountancy-leac2dd",
+                name: "Accountancy",
+                book: "Accountancy - Company Accounts and Analysis of Financial Statements",
+                icon: "📊",
+                chapters: [
+                    { number: 1, title: "Accounting for Share Capital", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-1.pdf" },
+                    { number: 2, title: "Issue and Redemption of Debentures", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-2.pdf" },
+                    { number: 3, title: "144 Accountancy : Company Accounts and Analysis of Financial Statements", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-3.pdf" },
+                    { number: 4, title: "Analysis of Financial Statements 171", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-4.pdf" },
+                    { number: 5, title: "Accounting Ratios", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-5.pdf" },
+                    { number: 6, title: "Cash Flow Statement", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-6.pdf" },
+                ]
+            },
+            {
+                id: "hindi-antra",
+                name: "Hindi",
+                book: "Antra",
+                icon: "📚",
+                chapters: [
+                    { number: 1, title: "Chapter-1", pdfUrl: "/pdfs/class-12/hindi/antra/chapter-1.pdf" },
+                    { number: 2, title: "Chapter-2", pdfUrl: "/pdfs/class-12/hindi/antra/chapter-2.pdf" },
+                    { number: 3, title: "Chapter-3", pdfUrl: "/pdfs/class-12/hindi/antra/chapter-3.pdf" },
+                ]
+            },
+            {
+                id: "hindi-aroh",
+                name: "Hindi",
+                book: "Aroh",
+                icon: "📚",
+                chapters: [
+                    { number: 1, title: "Chapter-1", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-1.pdf" },
+                    { number: 2, title: "Chapter-2", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-2.pdf" },
+                    { number: 3, title: "Chapter-3", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-3.pdf" },
+                    { number: 4, title: "Chapter-4", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-4.pdf" },
+                    { number: 5, title: "Chapter-5", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-5.pdf" },
+                    { number: 6, title: "Chapter-6", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-6.pdf" },
+                    { number: 7, title: "Chapter-7", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-7.pdf" },
+                    { number: 8, title: "Chapter-8", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-8.pdf" },
+                    { number: 9, title: "Chapter-9", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-9.pdf" },
+                    { number: 10, title: "Chapter-10", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-10.pdf" },
+                    { number: 11, title: "Chapter-11", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-11.pdf" },
+                    { number: 12, title: "Chapter-12", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-12.pdf" },
+                    { number: 13, title: "Chapter-13", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-13.pdf" },
+                    { number: 14, title: "Chapter-14", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-14.pdf" },
+                    { number: 15, title: "Chapter-15", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-15.pdf" },
+                ]
+            },
+            {
+                id: "hindi-antral",
+                name: "Hindi",
+                book: "Antral",
+                icon: "📚",
+                chapters: [
+                    { number: 1, title: "Kavita 1", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-1.pdf" },
+                    { number: 2, title: "Kavita 2", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-2.pdf" },
+                    { number: 3, title: "Kavita 3", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-3.pdf" },
+                    { number: 4, title: "Kavita 4", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-4.pdf" },
+                    { number: 5, title: "Kavita 5", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-5.pdf" },
+                    { number: 6, title: "Kavita 6", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-6.pdf" },
+                    { number: 7, title: "Kavita 7", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-7.pdf" },
+                    { number: 8, title: "Kavita 8", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-8.pdf" },
+                    { number: 9, title: "Kavita 9", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-9.pdf" },
+                    { number: 10, title: "Story 10", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-10.pdf" },
+                    { number: 11, title: "Story 11", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-11.pdf" },
+                    { number: 12, title: "Story 12", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-12.pdf" },
+                    { number: 13, title: "Story 13", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-13.pdf" },
+                    { number: 14, title: "Story 14", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-14.pdf" },
+                    { number: 15, title: "Story 15", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-15.pdf" },
+                    { number: 16, title: "Story 16", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-16.pdf" },
+                    { number: 17, title: "Story 17", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-17.pdf" },
+                ]
+            },
+            {
+                id: "hindi-vitan",
+                name: "Hindi",
+                book: "Vitan",
+                icon: "📚",
+                chapters: [
+                    { number: 1, title: "Chapter-1", pdfUrl: "/pdfs/class-12/hindi/vitan/chapter-1.pdf" },
+                    { number: 2, title: "Chapter-2", pdfUrl: "/pdfs/class-12/hindi/vitan/chapter-2.pdf" },
+                    { number: 3, title: "Chapter-3", pdfUrl: "/pdfs/class-12/hindi/vitan/chapter-3.pdf" },
+                ]
+            },
+            {
+                id: "history",
+                name: "History",
+                book: "Themes in Indian History",
+                icon: "🏛️",
+                chapters: [
+                    { number: 1, title: "Bricks, Beads and Bones", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-i/chapter-101.pdf" },
+                    { number: 2, title: "Kings, Farmers and Towns", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-i/chapter-102.pdf" },
+                    { number: 3, title: "Kinship, Caste and Class", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-i/chapter-103.pdf" },
+                    { number: 4, title: "Thinkers, Beliefs and Buildings", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-i/chapter-104.pdf" },
+                    { number: 5, title: "Through the Eyes of Travellers", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-ii/chapter-201.pdf" },
+                    { number: 6, title: "Bhakti-Sufi Traditions", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-ii/chapter-202.pdf" },
+                    { number: 7, title: "An Imperial Capital: Vijayanagara", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-ii/chapter-203.pdf" },
+                    { number: 8, title: "Peasants, Zamindars and the State", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-ii/chapter-204.pdf" },
+                    { number: 9, title: "Colonialism and the Countryside", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-iii/chapter-301.pdf" },
+                    { number: 10, title: "Rebels and the Raj", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-iii/chapter-302.pdf" },
+                    { number: 11, title: "Mahatma Gandhi and the Nationalist Movement", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-iii/chapter-303.pdf" },
+                    { number: 12, title: "Framing the Constitution", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-iii/chapter-304.pdf" },
+                ]
+            },
+            {
+                id: "geography-legy1dd",
+                name: "Geography",
+                book: "Fundamentals of Human Geography",
+                icon: "🌍",
+                chapters: [
+                    { number: 101, title: "Human Geography Nature and Scope", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-101.pdf" },
+                    { number: 102, title: "The World Population Distribution, Density and Growth", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-102.pdf" },
+                    { number: 103, title: "Human Development", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-103.pdf" },
+                    { number: 104, title: "Primary Activities", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-104.pdf" },
+                    { number: 105, title: "Secondary Activities", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-105.pdf" },
+                    { number: 106, title: "Tertiary and Quaternary Activities", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-106.pdf" },
+                    { number: 107, title: "Transport and Communication", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-107.pdf" },
+                    { number: 108, title: "International Trade", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-108.pdf" },
+                ]
+            },
+            {
+                id: "geography-legy3dd",
+                name: "Geography",
+                book: "Practical Work in Geography Part II",
+                icon: "🌍",
+                chapters: [
+                    { number: 301, title: "Data - Its Source and Compilation", pdfUrl: "/pdfs/class-12/geography/practical-work-in-geography-part-ii/chapter-301.pdf" },
+                    { number: 302, title: "Data Processing", pdfUrl: "/pdfs/class-12/geography/practical-work-in-geography-part-ii/chapter-302.pdf" },
+                    { number: 303, title: "Graphical Representation of Data", pdfUrl: "/pdfs/class-12/geography/practical-work-in-geography-part-ii/chapter-303.pdf" },
+                    { number: 304, title: "Use of Computer in Data Processing and Mapping", pdfUrl: "/pdfs/class-12/geography/practical-work-in-geography-part-ii/chapter-304.pdf" },
+                ]
+            },
+            {
+                id: "psychology-lepy1dd",
+                name: "Psychology",
+                book: "Psychology",
+                icon: "🧠",
+                chapters: [
+                    { number: 101, title: "Variations in Psychological Attributes", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-101.pdf" },
+                    { number: 102, title: "Self and Personality", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-102.pdf" },
+                    { number: 103, title: "Meeting Life Challenges", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-103.pdf" },
+                    { number: 104, title: "Psychological Disorders", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-104.pdf" },
+                    { number: 105, title: "Therapeutic Approaches", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-105.pdf" },
+                    { number: 106, title: "Attitude and Social Cognition", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-106.pdf" },
+                    { number: 107, title: "Social Influence and Group Processes", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-107.pdf" },
+                ]
+            },
+            {
+                id: "sociology-lesy1dd",
+                name: "Sociology",
+                book: "Indian Society",
+                icon: "🧑‍🤝‍🧑",
+                chapters: [
+                    { number: 101, title: "Introducing Indian Society", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-101.pdf" },
+                    { number: 102, title: "The Demographic Structure of the Indian Society", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-102.pdf" },
+                    { number: 103, title: "Social Institutions: Continuity and Change", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-103.pdf" },
+                    { number: 104, title: "The Market as a Social Institution", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-104.pdf" },
+                    { number: 105, title: "Patterns of Social Inequality and Exclusion", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-105.pdf" },
+                    { number: 106, title: "The Challenges of Cultural Diversity", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-106.pdf" },
+                    { number: 107, title: "Chapter 107", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-107.pdf" },
+                ]
+            },
+            {
+                id: "sociology-lesy2dd",
+                name: "Sociology",
+                book: "Social Change and Development in India",
+                icon: "🧑‍🤝‍🧑",
+                chapters: [
+                    { number: 201, title: "Structural Change", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-201.pdf" },
+                    { number: 202, title: "Cultural Change", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-202.pdf" },
+                    { number: 203, title: "The Story of Indian Democracy", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-203.pdf" },
+                    { number: 204, title: "Change and Development in Rural Society", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-204.pdf" },
+                    { number: 205, title: "Change and Development in Industrial Society", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-205.pdf" },
+                    { number: 206, title: "Social Movements", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-206.pdf" },
+                    { number: 207, title: "Chapter 207", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-207.pdf" },
+                    { number: 208, title: "Chapter 208", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-208.pdf" },
+                ]
+            },
+            {
+                id: "political-science-leps1dd",
+                name: "Political Science",
+                book: "Contemporary World Politics",
+                icon: "🗳️",
+                chapters: [
+                    { number: 101, title: "The End of Bipolarity", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-101.pdf" },
+                    { number: 102, title: "Contemporary Centres of Power", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-102.pdf" },
+                    { number: 103, title: "Contemporary South Asia", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-103.pdf" },
+                    { number: 104, title: "International Organisations", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-104.pdf" },
+                    { number: 105, title: "Security in the Contemporary World", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-105.pdf" },
+                    { number: 106, title: "Environment and Natural Resources", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-106.pdf" },
+                    { number: 107, title: "Globalisation", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-107.pdf" }
+                ]
+            },
+            {
+                id: "political-science-leps2dd",
+                name: "Political Science",
+                book: "Politics in India Since Independence",
+                icon: "🗳️",
+                chapters: [
+                    { number: 201, title: "Challenges of Nation Building", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-201.pdf" },
+                    { number: 202, title: "Era of One-party Dominance", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-202.pdf" },
+                    { number: 203, title: "Politics of Planned Development", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-203.pdf" },
+                    { number: 204, title: "India's External Relations", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-204.pdf" },
+                    { number: 205, title: "Challenges to and Restoration of the Congress System", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-205.pdf" },
+                    { number: 206, title: "The Crisis of Democratic Order", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-206.pdf" },
+                    { number: 207, title: "Regional Aspirations", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-207.pdf" },
+                    { number: 208, title: "Recent Developments in Indian Politics", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-208.pdf" }
+                ]
+            },
+            {
+                id: "economics-leec1dd",
+                name: "Economics",
+                book: "Introductory Macroeconomics",
+                icon: "📈",
+                chapters: [
+                    { number: 101, title: "Introduction", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-101.pdf" },
+                    { number: 102, title: "National Income Accounting", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-102.pdf" },
+                    { number: 103, title: "Money and Banking", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-103.pdf" },
+                    { number: 104, title: "Determination of Income and Employment", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-104.pdf" },
+                    { number: 105, title: "Government Budget and the Economy", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-105.pdf" },
+                    { number: 106, title: "Open Economy Macroeconomics", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-106.pdf" },
+                ]
+            },
+            {
+                id: "economics-leec2dd",
+                name: "Economics",
+                book: "Indian Economic Development",
+                icon: "📈",
+                chapters: [
+                    { number: 201, title: "Indian Economy on the Eve of Independence", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-201.pdf" },
+                    { number: 202, title: "Indian Economy 1950-1990", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-202.pdf" },
+                    { number: 203, title: "Liberalisation, Privatisation and Globalisation : An Appraisal", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-203.pdf" },
+                    { number: 204, title: "Human Capital Formation in India", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-204.pdf" },
+                    { number: 205, title: "Rural Development", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-205.pdf" },
+                ]
+            },
+            {
+                id: "business-studies",
+                name: "Business Studies",
+                book: "Business Studies",
+                icon: "💼",
+                chapters: [
+                    { number: 1, title: "Nature and Significance of Management", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-1.pdf" },
+                    { number: 2, title: "Principles of Management", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-2.pdf" },
+                    { number: 3, title: "Business Environment", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-3.pdf" },
+                    { number: 4, title: "Planning", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-4.pdf" },
+                    { number: 5, title: "Organising", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-5.pdf" },
+                    { number: 6, title: "Staffing", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-6.pdf" },
+                    { number: 7, title: "Directing", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-7.pdf" },
+                    { number: 8, title: "Controlling", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-8.pdf" },
+                    { number: 9, title: "Financial Management", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-9.pdf" },
+                    { number: 10, title: "Financial Markets", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-10.pdf" },
+                    { number: 11, title: "Marketing", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-11.pdf" },
+                ]
+            },
+            {
+                id: "fine-arts-lefa1dd",
+                name: "Fine Arts",
+                book: "An Introduction to Indian Art Part II",
+                icon: "🎨",
+                chapters: [
+                    { number: 101, title: "The Manuscript Painting Tradition", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-101.pdf" },
+                    { number: 102, title: "The Rajasthani School of Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-102.pdf" },
+                    { number: 103, title: "The Mughal School of Miniature Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-103.pdf" },
+                    { number: 104, title: "The Deccani Schools of Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-104.pdf" },
+                    { number: 105, title: "The Pahari School of Miniature Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-105.pdf" },
+                    { number: 106, title: "The Bengal School of Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-106.pdf" },
+                    { number: 107, title: "The Modern Indian Art", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-107.pdf" },
+                    { number: 108, title: "The Living Art Traditions of India", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-108.pdf" },
+                ]
+            },
+            {
+                id: "informatics-practices-leip1dd",
+                name: "Informatics Practices",
+                book: "Informatics Practices",
+                icon: "💻",
+                chapters: [
+                    { number: 101, title: "Querying and SQL Functions", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-101.pdf" },
+                    { number: 102, title: "Data Handling using Pandas - I", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-102.pdf" },
+                    { number: 103, title: "Data Handling using Pandas - II", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-103.pdf" },
+                    { number: 104, title: "Plotting Data using Matplotlib", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-104.pdf" },
+                    { number: 105, title: "Internet and Web", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-105.pdf" },
+                    { number: 106, title: "Societal Impacts", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-106.pdf" },
+                    { number: 107, title: "Project Based Learning", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-107.pdf" },
+                ]
+            }
         ]
     }
 ];
