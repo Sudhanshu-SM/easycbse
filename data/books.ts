@@ -2509,6 +2509,26 @@ export const classes: ClassData[] = [
                     { number: 1, title: "Story 1", pdfUrl: "/pdfs/class-11/hindi-antral/chapter-1.pdf" },
                     { number: 2, title: "Story 2", pdfUrl: "/pdfs/class-11/hindi-antral/chapter-2.pdf" }
                 ]
+            },
+            {
+                id: "biotechnology-kebt1dd",
+                name: "Biotechnology",
+                book: "Biotechnology",
+                icon: "🔬",
+                chapters: [
+                    { number: 1, title: "Chapter 1", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-1.pdf" },
+                    { number: 2, title: "Chapter 2", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-2.pdf" },
+                    { number: 3, title: "Chapter 3", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-3.pdf" },
+                    { number: 4, title: "Chapter 4", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-4.pdf" },
+                    { number: 5, title: "Chapter 5", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-5.pdf" },
+                    { number: 6, title: "Chapter 6", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-6.pdf" },
+                    { number: 7, title: "Chapter 7", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-7.pdf" },
+                    { number: 8, title: "Chapter 8", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-8.pdf" },
+                    { number: 9, title: "Chapter 9", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-9.pdf" },
+                    { number: 10, title: "Chapter 10", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-10.pdf" },
+                    { number: 11, title: "Chapter 11", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-11.pdf" },
+                    { number: 12, title: "Chapter 12", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-12.pdf" }
+                ]
             }
         ]
     },
@@ -2751,7 +2771,7 @@ export const classes: ClassData[] = [
             {
                 id: "hindi-antra",
                 name: "Hindi",
-                book: "Antra",
+                book: "Antral",
                 icon: "📚",
                 chapters: [
                     { number: 1, title: "Chapter-1", pdfUrl: "/pdfs/class-12/hindi/antra/chapter-1.pdf" },
@@ -2785,7 +2805,7 @@ export const classes: ClassData[] = [
             {
                 id: "hindi-antral",
                 name: "Hindi",
-                book: "Antral",
+                book: "Antra",
                 icon: "📚",
                 chapters: [
                     { number: 1, title: "Kavita 1", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-1.pdf" },
@@ -2852,6 +2872,23 @@ export const classes: ClassData[] = [
                     { number: 106, title: "Tertiary and Quaternary Activities", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-106.pdf" },
                     { number: 107, title: "Transport and Communication", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-107.pdf" },
                     { number: 108, title: "International Trade", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-108.pdf" },
+                ]
+            },
+            {
+                id: "geography-legy2dd",
+                name: "Geography",
+                book: "India People and Economy",
+                icon: "🌍",
+                chapters: [
+                    { number: 201, title: "Population: Distribution, Density, Growth and Composition", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-201.pdf" },
+                    { number: 202, title: "Human Settlements", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-202.pdf" },
+                    { number: 203, title: "Land Resources and Agriculture", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-203.pdf" },
+                    { number: 204, title: "Water Resources", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-204.pdf" },
+                    { number: 205, title: "Mineral and Energy Resources", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-205.pdf" },
+                    { number: 206, title: "Planning and Sustainable Development in Indian Context", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-206.pdf" },
+                    { number: 207, title: "Transport and Communication", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-207.pdf" },
+                    { number: 208, title: "International Trade", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-208.pdf" },
+                    { number: 209, title: "Geographical Perspective on Selected Issues and Problems", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-209.pdf" },
                 ]
             },
             {
@@ -2960,14 +2997,14 @@ export const classes: ClassData[] = [
             {
                 id: "economics-leec2dd",
                 name: "Economics",
-                book: "Indian Economic Development",
+                book: "Introductory Microeconomics",
                 icon: "📈",
                 chapters: [
-                    { number: 201, title: "Indian Economy on the Eve of Independence", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-201.pdf" },
-                    { number: 202, title: "Indian Economy 1950-1990", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-202.pdf" },
-                    { number: 203, title: "Liberalisation, Privatisation and Globalisation : An Appraisal", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-203.pdf" },
-                    { number: 204, title: "Human Capital Formation in India", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-204.pdf" },
-                    { number: 205, title: "Rural Development", pdfUrl: "/pdfs/class-12/economics/indian-economic-development/chapter-205.pdf" },
+                    { number: 201, title: "Introduction", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-201.pdf" },
+                    { number: 202, title: "Theory of Consumer Behaviour", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-202.pdf" },
+                    { number: 203, title: "Production and Costs", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-203.pdf" },
+                    { number: 204, title: "The Theory of the Firm under Perfect Competition", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-204.pdf" },
+                    { number: 205, title: "Market Equilibrium", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-205.pdf" },
                 ]
             },
             {
@@ -3018,6 +3055,27 @@ export const classes: ClassData[] = [
                     { number: 105, title: "Internet and Web", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-105.pdf" },
                     { number: 106, title: "Societal Impacts", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-106.pdf" },
                     { number: 107, title: "Project Based Learning", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-107.pdf" },
+                ]
+            },
+            {
+                id: "biotechnology-lebt1dd",
+                name: "Biotechnology",
+                book: "Biotechnology",
+                icon: "🔬",
+                chapters: [
+                    { number: 1, title: "Chapter 1", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-1.pdf" },
+                    { number: 2, title: "Chapter 2", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-2.pdf" },
+                    { number: 3, title: "Chapter 3", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-3.pdf" },
+                    { number: 4, title: "Chapter 4", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-4.pdf" },
+                    { number: 5, title: "Chapter 5", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-5.pdf" },
+                    { number: 6, title: "Chapter 6", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-6.pdf" },
+                    { number: 7, title: "Chapter 7", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-7.pdf" },
+                    { number: 8, title: "Chapter 8", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-8.pdf" },
+                    { number: 9, title: "Chapter 9", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-9.pdf" },
+                    { number: 10, title: "Chapter 10", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-10.pdf" },
+                    { number: 11, title: "Chapter 11", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-11.pdf" },
+                    { number: 12, title: "Chapter 12", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-12.pdf" },
+                    { number: 13, title: "Chapter 13", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-13.pdf" },
                 ]
             }
         ]
