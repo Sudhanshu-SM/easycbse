@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Google Drive API Secrets
+client_secrets.json
+token.json
+credentials.json
+
+# Ignore local PDFs since they are on Drive
+/public/pdfs/
+
+# Trash and Temp files
+/functionarchive(useless)/
+data/books_old.ts
+*.py
+*.txt

@@ -22,12 +22,17 @@ export interface ClassData {
     subjects: Subject[];
 }
 
-// Helper function to generate local PDF path
-const pdf = (classId: number, subject: string, chapter: number) =>
-    `/pdfs/class-${classId}/${subject}/chapter-${chapter}.pdf`;
+import pdfLinks from './pdf_links.json';
+
+// Helper function to generate Google Drive PDF link
+const links: Record<string, string> = pdfLinks;
+const pdf = (classId: number, subject: string, chapter: number) => {
+    const key = `class-${classId}/${subject}/chapter-${chapter}.pdf`;
+    return links[key] || "";
+};
 
 export const classes: ClassData[] = [
-        {
+    {
         id: 1,
         name: "Class 1",
         subjects: [
@@ -81,19 +86,19 @@ export const classes: ClassData[] = [
                 book: "Joyful Mathematics",
                 icon: "🔢",
                 chapters: [
-                    { number: 1, title: "Relations and Functions", pdfUrl: pdf(1, "math", 1) },
-                    { number: 2, title: "Inverse Trigonometric Functions", pdfUrl: pdf(1, "math", 2) },
-                    { number: 3, title: "Matrices", pdfUrl: pdf(1, "math", 3) },
-                    { number: 4, title: "Determinants", pdfUrl: pdf(1, "math", 4) },
-                    { number: 5, title: "Continuity and Differentiability", pdfUrl: pdf(1, "math", 5) },
-                    { number: 6, title: "Application of Derivatives", pdfUrl: pdf(1, "math", 6) },
-                    { number: 7, title: "Integrals", pdfUrl: pdf(1, "math", 7) },
-                    { number: 8, title: "Application of Integrals", pdfUrl: pdf(1, "math", 8) },
-                    { number: 9, title: "Differential Equations", pdfUrl: pdf(1, "math", 9) },
-                    { number: 10, title: "Vector Algebra", pdfUrl: pdf(1, "math", 10) },
-                    { number: 11, title: "Three Dimensional Geometry", pdfUrl: pdf(1, "math", 11) },
-                    { number: 12, title: "Linear Programming", pdfUrl: pdf(1, "math", 12) },
-                    { number: 13, title: "Probability", pdfUrl: pdf(1, "math", 13) }
+                    { number: 1, title: "Finding the Furry Cat!", pdfUrl: pdf(1, "math", 1) },
+                    { number: 2, title: "What is Long? What is Round?", pdfUrl: pdf(1, "math", 2) },
+                    { number: 3, title: "Mango Treat", pdfUrl: pdf(1, "math", 3) },
+                    { number: 4, title: "Making 10", pdfUrl: pdf(1, "math", 4) },
+                    { number: 5, title: "How Many?", pdfUrl: pdf(1, "math", 5) },
+                    { number: 6, title: "Vegetable Farm", pdfUrl: pdf(1, "math", 6) },
+                    { number: 7, title: "Lina's Family", pdfUrl: pdf(1, "math", 7) },
+                    { number: 8, title: "Fun with Numbers", pdfUrl: pdf(1, "math", 8) },
+                    { number: 9, title: "Utsav", pdfUrl: pdf(1, "math", 9) },
+                    { number: 10, title: "How do I Spend my Day?", pdfUrl: pdf(1, "math", 10) },
+                    { number: 11, title: "How Many Times?", pdfUrl: pdf(1, "math", 11) },
+                    { number: 12, title: "How Much Can We Spend?", pdfUrl: pdf(1, "math", 12) },
+                    { number: 13, title: "So Many Toys and Puzzles", pdfUrl: pdf(1, "math", 13) }
                 ]
             }
         ]
@@ -875,39 +880,39 @@ export const classes: ClassData[] = [
             },
             {
                 id: "english-kaveri",
-                  name: "English",
-                  book: "Kaveri",
-                  icon: "📖",
-                  chapters: [
-                      { number: 1, title: "How I Taught My Grandmother to Read & Bharat Our Land", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-1.pdf" },
-                      { number: 2, title: "The Pot Maker & Gifts of Grace: Honouring Our Vocations", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-2.pdf" },
-                      { number: 3, title: "Winds of Change & Canvas of Soil", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-3.pdf" },
-                      { number: 4, title: "Vitamin-M & I Cannot Remember My Mother", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-4.pdf" },
-                      { number: 5, title: "The World of Limitless Possibilities & Nine Gold Medals", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-5.pdf" },
-                      { number: 6, title: "Twin Melodies & A Friend Found in Music", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-6.pdf" },
-                      { number: 7, title: "Carrier of Words & Words", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-7.pdf" },
-                      { number: 8, title: "Follow That Dream & Believe in Yourself", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-8.pdf" },
-                      { number: 9, title: "Appendix", pdfUrl: "/pdfs/class-9/english-kaveri/kaveri/chapter-11.pdf" },
-                  ]
-              },
+                name: "English",
+                book: "Kaveri",
+                icon: "📖",
+                chapters: [
+                    { number: 1, title: "How I Taught My Grandmother to Read & Bharat Our Land", pdfUrl: links["class-9/english-kaveri/chapter-1.pdf"] || "" },
+                    { number: 2, title: "The Pot Maker & Gifts of Grace: Honouring Our Vocations", pdfUrl: links["class-9/english-kaveri/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Winds of Change & Canvas of Soil", pdfUrl: links["class-9/english-kaveri/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Vitamin-M & I Cannot Remember My Mother", pdfUrl: links["class-9/english-kaveri/chapter-4.pdf"] || "" },
+                    { number: 5, title: "The World of Limitless Possibilities & Nine Gold Medals", pdfUrl: links["class-9/english-kaveri/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Twin Melodies & A Friend Found in Music", pdfUrl: links["class-9/english-kaveri/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Carrier of Words & Words", pdfUrl: links["class-9/english-kaveri/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Follow That Dream & Believe in Yourself", pdfUrl: links["class-9/english-kaveri/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Appendix", pdfUrl: links["class-9/english-kaveri/chapter-11.pdf"] || "" },
+                ]
+            },
             {
                 id: "hindi-ganga",
                 name: "Hindi",
                 book: "Ganga",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "Chp-1", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-1.pdf" },
-                    { number: 2, title: "Chp-2", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-2.pdf" },
-                    { number: 3, title: "Chp-3", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-3.pdf" },
-                    { number: 4, title: "Chp-4", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-4.pdf" },
-                    { number: 5, title: "Chp-5", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-5.pdf" },
-                    { number: 6, title: "Chp-6", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-6.pdf" },
-                    { number: 7, title: "Chp-7", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-7.pdf" },
-                    { number: 8, title: "Chp-8", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-8.pdf" },
-                    { number: 9, title: "Chp-9", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-9.pdf" },
-                    { number: 10, title: "Chp-10", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-10.pdf" },
-                    { number: 11, title: "Chp-11", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-11.pdf" },
-                    { number: 12, title: "Chp-12", pdfUrl: "/pdfs/class-9/hindi-ganga/ganga/chapter-12.pdf" },
+                    { number: 1, title: "Chp-1", pdfUrl: links["class-9/hindi-ganga/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Chp-2", pdfUrl: links["class-9/hindi-ganga/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Chp-3", pdfUrl: links["class-9/hindi-ganga/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Chp-4", pdfUrl: links["class-9/hindi-ganga/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Chp-5", pdfUrl: links["class-9/hindi-ganga/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Chp-6", pdfUrl: links["class-9/hindi-ganga/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Chp-7", pdfUrl: links["class-9/hindi-ganga/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Chp-8", pdfUrl: links["class-9/hindi-ganga/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Chp-9", pdfUrl: links["class-9/hindi-ganga/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Chp-10", pdfUrl: links["class-9/hindi-ganga/chapter-10.pdf"] || "" },
+                    { number: 11, title: "Chp-11", pdfUrl: links["class-9/hindi-ganga/chapter-11.pdf"] || "" },
+                    { number: 12, title: "Chp-12", pdfUrl: links["class-9/hindi-ganga/chapter-12.pdf"] || "" },
                 ]
             },
             {
@@ -916,16 +921,16 @@ export const classes: ClassData[] = [
                 book: "Reva",
                 icon: "हिं",
                 chapters: [
-                    { number: 1, title: "Chp-1", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-1.pdf" },
-                    { number: 2, title: "Chp-2", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-2.pdf" },
-                    { number: 3, title: "Chp-3", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-3.pdf" },
-                    { number: 4, title: "Chp-4", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-4.pdf" },
-                    { number: 5, title: "Chp-5", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-5.pdf" },
-                    { number: 6, title: "Chp-6", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-6.pdf" },
-                    { number: 7, title: "Chp-7", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-7.pdf" },
-                    { number: 8, title: "Chp-8", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-8.pdf" },
-                    { number: 9, title: "Chp-9", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-9.pdf" },
-                    { number: 10, title: "Chp-10", pdfUrl: "/pdfs/class-9/hindi-reva/reva/chapter-10.pdf" },
+                    { number: 1, title: "Chp-1", pdfUrl: links["class-9/hindi-reva/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Chp-2", pdfUrl: links["class-9/hindi-reva/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Chp-3", pdfUrl: links["class-9/hindi-reva/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Chp-4", pdfUrl: links["class-9/hindi-reva/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Chp-5", pdfUrl: links["class-9/hindi-reva/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Chp-6", pdfUrl: links["class-9/hindi-reva/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Chp-7", pdfUrl: links["class-9/hindi-reva/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Chp-8", pdfUrl: links["class-9/hindi-reva/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Chp-9", pdfUrl: links["class-9/hindi-reva/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Chp-10", pdfUrl: links["class-9/hindi-reva/chapter-10.pdf"] || "" },
                 ]
             },
             {
@@ -1274,15 +1279,15 @@ export const classes: ClassData[] = [
                 book: "Words and Expressions 2",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "Unit 1", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-1.pdf" },
-                    { number: 2, title: "Unit 2", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-2.pdf" },
-                    { number: 3, title: "Unit 3", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-3.pdf" },
-                    { number: 4, title: "Unit 4", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-4.pdf" },
-                    { number: 5, title: "Unit 5", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-5.pdf" },
-                    { number: 6, title: "Unit 6", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-6.pdf" },
-                    { number: 7, title: "Unit 7", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-7.pdf" },
-                    { number: 8, title: "Unit 8", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-8.pdf" },
-                    { number: 9, title: "Unit 9", pdfUrl: "/pdfs/class-10/english-words-and-expressions/chapter-9.pdf" }
+                    { number: 1, title: "Unit 1", pdfUrl: links["class-10/english-words-and-expressions/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Unit 2", pdfUrl: links["class-10/english-words-and-expressions/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Unit 3", pdfUrl: links["class-10/english-words-and-expressions/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Unit 4", pdfUrl: links["class-10/english-words-and-expressions/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Unit 5", pdfUrl: links["class-10/english-words-and-expressions/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Unit 6", pdfUrl: links["class-10/english-words-and-expressions/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Unit 7", pdfUrl: links["class-10/english-words-and-expressions/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Unit 8", pdfUrl: links["class-10/english-words-and-expressions/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Unit 9", pdfUrl: links["class-10/english-words-and-expressions/chapter-9.pdf"] || "" }
                 ]
             },
             {
@@ -1291,19 +1296,19 @@ export const classes: ClassData[] = [
                 book: "Health and Physical Education",
                 icon: "🏃",
                 chapters: [
-                    { number: 1, title: "Physical Education: Relation with other Subjects", pdfUrl: "/pdfs/class-10/physical-education/chapter-1.pdf" },
-                    { number: 2, title: "Effects of Physical Activities on Human Body", pdfUrl: "/pdfs/class-10/physical-education/chapter-2.pdf" },
-                    { number: 3, title: "Growth and Development during Adolescence", pdfUrl: "/pdfs/class-10/physical-education/chapter-3.pdf" },
-                    { number: 4, title: "Individual Games and Sports I", pdfUrl: "/pdfs/class-10/physical-education/chapter-4.pdf" },
-                    { number: 5, title: "Individual Games and Sports II", pdfUrl: "/pdfs/class-10/physical-education/chapter-5.pdf" },
-                    { number: 6, title: "Team Games and Sports I", pdfUrl: "/pdfs/class-10/physical-education/chapter-6.pdf" },
-                    { number: 7, title: "Team Games and Sports II", pdfUrl: "/pdfs/class-10/physical-education/chapter-7.pdf" },
-                    { number: 8, title: "Yoga for Healthy Living", pdfUrl: "/pdfs/class-10/physical-education/chapter-8.pdf" },
-                    { number: 9, title: "Dietary Considerations and Food Quality", pdfUrl: "/pdfs/class-10/physical-education/chapter-9.pdf" },
-                    { number: 10, title: "Safety for Healthy Living", pdfUrl: "/pdfs/class-10/physical-education/chapter-10.pdf" },
-                    { number: 11, title: "Healthy Community Living", pdfUrl: "/pdfs/class-10/physical-education/chapter-11.pdf" },
-                    { number: 12, title: "Social Health", pdfUrl: "/pdfs/class-10/physical-education/chapter-12.pdf" },
-                    { number: 13, title: "Agencies and Awards Promoting Health, Sport and Yoga", pdfUrl: "/pdfs/class-10/physical-education/chapter-13.pdf" }
+                    { number: 1, title: "Physical Education: Relation with other Subjects", pdfUrl: links["class-10/physical-education/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Effects of Physical Activities on Human Body", pdfUrl: links["class-10/physical-education/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Growth and Development during Adolescence", pdfUrl: links["class-10/physical-education/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Individual Games and Sports I", pdfUrl: links["class-10/physical-education/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Individual Games and Sports II", pdfUrl: links["class-10/physical-education/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Team Games and Sports I", pdfUrl: links["class-10/physical-education/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Team Games and Sports II", pdfUrl: links["class-10/physical-education/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Yoga for Healthy Living", pdfUrl: links["class-10/physical-education/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Dietary Considerations and Food Quality", pdfUrl: links["class-10/physical-education/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Safety for Healthy Living", pdfUrl: links["class-10/physical-education/chapter-10.pdf"] || "" },
+                    { number: 11, title: "Healthy Community Living", pdfUrl: links["class-10/physical-education/chapter-11.pdf"] || "" },
+                    { number: 12, title: "Social Health", pdfUrl: links["class-10/physical-education/chapter-12.pdf"] || "" },
+                    { number: 13, title: "Agencies and Awards Promoting Health, Sport and Yoga", pdfUrl: links["class-10/physical-education/chapter-13.pdf"] || "" }
                 ]
             }
         ]
@@ -1406,18 +1411,18 @@ export const classes: ClassData[] = [
                 book: "Hornbill",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "Chapter 1", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-1.pdf" },
-                    { number: 2, title: "Chapter 2", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-2.pdf" },
-                    { number: 3, title: "Chapter 3", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-3.pdf" },
-                    { number: 4, title: "Chapter 4", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-4.pdf" },
-                    { number: 5, title: "Chapter 5", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-5.pdf" },
-                    { number: 6, title: "Chapter 6", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-6.pdf" },
-                    { number: 7, title: "Chapter 7", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-7.pdf" },
-                    { number: 8, title: "Chapter 8", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-8.pdf" },
-                    { number: 9, title: "Chapter 9", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-9.pdf" },
-                    { number: 10, title: "Chapter 10", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-10.pdf" },
-                    { number: 11, title: "Chapter 11", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-11.pdf" },
-                    { number: 12, title: "Chapter 12", pdfUrl: "/pdfs/class-11/english/hornbill/chapter-12.pdf" }
+                    { number: 1, title: "Chapter 1", pdfUrl: links["class-11/english/hornbill/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Chapter 2", pdfUrl: links["class-11/english/hornbill/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Chapter 3", pdfUrl: links["class-11/english/hornbill/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Chapter 4", pdfUrl: links["class-11/english/hornbill/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Chapter 5", pdfUrl: links["class-11/english/hornbill/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Chapter 6", pdfUrl: links["class-11/english/hornbill/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Chapter 7", pdfUrl: links["class-11/english/hornbill/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Chapter 8", pdfUrl: links["class-11/english/hornbill/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Chapter 9", pdfUrl: links["class-11/english/hornbill/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Chapter 10", pdfUrl: links["class-11/english/hornbill/chapter-10.pdf"] || "" },
+                    { number: 11, title: "Chapter 11", pdfUrl: links["class-11/english/hornbill/chapter-11.pdf"] || "" },
+                    { number: 12, title: "Chapter 12", pdfUrl: links["class-11/english/hornbill/chapter-12.pdf"] || "" }
                 ]
             },
             {
@@ -1426,32 +1431,32 @@ export const classes: ClassData[] = [
                 book: "Snapshots",
                 icon: "📖",
                 chapters: [
-          {
-                    number: 1,
-                    title: "The Summer of the Beautiful White Horse",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "The Address",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Mother's Day",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Birth",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "The Tale of Melon City",
-                    pdfUrl: "/pdfs/class-11/english-snapshots/snapshots/chapter-5.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "The Summer of the Beautiful White Horse",
+                        pdfUrl: links["class-11/english-snapshots/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "The Address",
+                        pdfUrl: links["class-11/english-snapshots/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Mother's Day",
+                        pdfUrl: links["class-11/english-snapshots/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Birth",
+                        pdfUrl: links["class-11/english-snapshots/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "The Tale of Melon City",
+                        pdfUrl: links["class-11/english-snapshots/chapter-5.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "english-woven-words",
@@ -1459,78 +1464,78 @@ export const classes: ClassData[] = [
                 book: "Woven Words",
                 icon: "📖",
                 chapters: [
-                    { number: 1, title: "Short Stories - Chapter 1", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-1.pdf" },
-                    { number: 2, title: "Short Stories - Chapter 2", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-2.pdf" },
-                    { number: 3, title: "Short Stories - Chapter 3", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-3.pdf" },
-                    { number: 4, title: "Short Stories - Chapter 4", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-4.pdf" },
-                    { number: 5, title: "Short Stories - Chapter 5", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-5.pdf" },
-                    { number: 6, title: "Short Stories - Chapter 6", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-6.pdf" },
-                    { number: 7, title: "Short Stories - Chapter 7", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-7.pdf" },
-                    { number: 8, title: "Short Stories - Chapter 8", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-8.pdf" },
-                    { number: 9, title: "Poetry - Chapter 1", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-9.pdf" },
-                    { number: 10, title: "Poetry - Chapter 2", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-10.pdf" },
-                    { number: 11, title: "Poetry - Chapter 3", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-11.pdf" },
-                    { number: 12, title: "Poetry - Chapter 4", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-12.pdf" },
-                    { number: 13, title: "Poetry - Chapter 5", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-13.pdf" },
-                    { number: 14, title: "Poetry - Chapter 6", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-14.pdf" },
-                    { number: 15, title: "Poetry - Chapter 7", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-15.pdf" },
-                    { number: 16, title: "Poetry - Chapter 8", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-16.pdf" },
-                    { number: 17, title: "Poetry - Chapter 9", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-17.pdf" },
-                    { number: 18, title: "Poetry - Chapter 10", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-18.pdf" },
-                    { number: 19, title: "Poetry - Chapter 11", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-19.pdf" },
-                    { number: 20, title: "Poetry - Chapter 12", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-20.pdf" },
-                    { number: 21, title: "Essay - Chapter 1", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-21.pdf" },
-                    { number: 22, title: "Essay - Chapter 2", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-22.pdf" },
-                    { number: 23, title: "Essay - Chapter 3", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-23.pdf" },
-                    { number: 24, title: "Essay - Chapter 4", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-24.pdf" },
-                    { number: 25, title: "Essay - Chapter 5", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-25.pdf" },
-                    { number: 26, title: "Essay - Chapter 6", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-26.pdf" },
-                    { number: 27, title: "Essay - Chapter 7", pdfUrl: "/pdfs/class-11/english/woven-words/chapter-27.pdf" }
+                    { number: 1, title: "Short Stories - Chapter 1", pdfUrl: links["class-11/english/woven-words/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Short Stories - Chapter 2", pdfUrl: links["class-11/english/woven-words/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Short Stories - Chapter 3", pdfUrl: links["class-11/english/woven-words/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Short Stories - Chapter 4", pdfUrl: links["class-11/english/woven-words/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Short Stories - Chapter 5", pdfUrl: links["class-11/english/woven-words/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Short Stories - Chapter 6", pdfUrl: links["class-11/english/woven-words/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Short Stories - Chapter 7", pdfUrl: links["class-11/english/woven-words/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Short Stories - Chapter 8", pdfUrl: links["class-11/english/woven-words/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Poetry - Chapter 1", pdfUrl: links["class-11/english/woven-words/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Poetry - Chapter 2", pdfUrl: links["class-11/english/woven-words/chapter-10.pdf"] || "" },
+                    { number: 11, title: "Poetry - Chapter 3", pdfUrl: links["class-11/english/woven-words/chapter-11.pdf"] || "" },
+                    { number: 12, title: "Poetry - Chapter 4", pdfUrl: links["class-11/english/woven-words/chapter-12.pdf"] || "" },
+                    { number: 13, title: "Poetry - Chapter 5", pdfUrl: links["class-11/english/woven-words/chapter-13.pdf"] || "" },
+                    { number: 14, title: "Poetry - Chapter 6", pdfUrl: links["class-11/english/woven-words/chapter-14.pdf"] || "" },
+                    { number: 15, title: "Poetry - Chapter 7", pdfUrl: links["class-11/english/woven-words/chapter-15.pdf"] || "" },
+                    { number: 16, title: "Poetry - Chapter 8", pdfUrl: links["class-11/english/woven-words/chapter-16.pdf"] || "" },
+                    { number: 17, title: "Poetry - Chapter 9", pdfUrl: links["class-11/english/woven-words/chapter-17.pdf"] || "" },
+                    { number: 18, title: "Poetry - Chapter 10", pdfUrl: links["class-11/english/woven-words/chapter-18.pdf"] || "" },
+                    { number: 19, title: "Poetry - Chapter 11", pdfUrl: links["class-11/english/woven-words/chapter-19.pdf"] || "" },
+                    { number: 20, title: "Poetry - Chapter 12", pdfUrl: links["class-11/english/woven-words/chapter-20.pdf"] || "" },
+                    { number: 21, title: "Essay - Chapter 1", pdfUrl: links["class-11/english/woven-words/chapter-21.pdf"] || "" },
+                    { number: 22, title: "Essay - Chapter 2", pdfUrl: links["class-11/english/woven-words/chapter-22.pdf"] || "" },
+                    { number: 23, title: "Essay - Chapter 3", pdfUrl: links["class-11/english/woven-words/chapter-23.pdf"] || "" },
+                    { number: 24, title: "Essay - Chapter 4", pdfUrl: links["class-11/english/woven-words/chapter-24.pdf"] || "" },
+                    { number: 25, title: "Essay - Chapter 5", pdfUrl: links["class-11/english/woven-words/chapter-25.pdf"] || "" },
+                    { number: 26, title: "Essay - Chapter 6", pdfUrl: links["class-11/english/woven-words/chapter-26.pdf"] || "" },
+                    { number: 27, title: "Essay - Chapter 7", pdfUrl: links["class-11/english/woven-words/chapter-27.pdf"] || "" }
                 ]
             }
-        ,
+            ,
             {
                 id: "accountancy-keac1dd",
                 name: "Accountancy",
                 book: "Financial Accounting - I",
                 icon: "📊",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Introduction to Accounting",
-                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Theory Base of Accounting",
-                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Recording of Transactions - I",
-                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Recording of Transactions - II",
-                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Bank Reconciliation Statement",
-                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Trial Balance and Rectification of Errors",
-                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Depreciation, Provisions and Reserves",
-                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-i/chapter-7.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Introduction to Accounting",
+                        pdfUrl: links["class-11/accountancy/financial-accounting-i/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Theory Base of Accounting",
+                        pdfUrl: links["class-11/accountancy/financial-accounting-i/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Recording of Transactions - I",
+                        pdfUrl: links["class-11/accountancy/financial-accounting-i/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Recording of Transactions - II",
+                        pdfUrl: links["class-11/accountancy/financial-accounting-i/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Bank Reconciliation Statement",
+                        pdfUrl: links["class-11/accountancy/financial-accounting-i/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Trial Balance and Rectification of Errors",
+                        pdfUrl: links["class-11/accountancy/financial-accounting-i/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Depreciation, Provisions and Reserves",
+                        pdfUrl: links["class-11/accountancy/financial-accounting-i/chapter-7.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "accountancy-keac2dd",
@@ -1538,17 +1543,17 @@ export const classes: ClassData[] = [
                 book: "Financial Accounting - II",
                 icon: "📊",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Financial Statements - I",
-                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-ii/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Financial Statements - II",
-                    pdfUrl: "/pdfs/class-11/accountancy/financial-accounting-ii/chapter-2.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Financial Statements - I",
+                        pdfUrl: links["class-11/accountancy/financial-accounting-ii/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Financial Statements - II",
+                        pdfUrl: links["class-11/accountancy/financial-accounting-ii/chapter-2.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "geography-kegy1dd",
@@ -1556,81 +1561,81 @@ export const classes: ClassData[] = [
                 book: "Fundamentals of Physical Geography",
                 icon: "🌍",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Geography as a Discipline",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "The Origin and Evolution of the Earth",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Interior of the Earth",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Distribution of Oceans and Continents",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Minerals and Rocks",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Geomorphic Processes",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Landforms and their Evolution",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Composition and Structure of Atmosphere",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-8.pdf"
-          },
-          {
-                    number: 9,
-                    title: "Solar Radiation, Heat Balance and Temperature",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-9.pdf"
-          },
-          {
-                    number: 10,
-                    title: "Atmospheric Circulation and Weather Systems",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-10.pdf"
-          },
-          {
-                    number: 11,
-                    title: "Water in the Atmosphere",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-11.pdf"
-          },
-          {
-                    number: 12,
-                    title: "World Climate and Climate Change",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-12.pdf"
-          },
-          {
-                    number: 13,
-                    title: "Water (Oceans)",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-13.pdf"
-          },
-          {
-                    number: 14,
-                    title: "Movements of Ocean Water",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-14.pdf"
-          },
-          {
-                    number: 15,
-                    title: "Glossary",
-                    pdfUrl: "/pdfs/class-11/geography/fundamentals-of-physical-geography/chapter-15.pdf"
-          }
+                    {
+                        number: 1,
+                        title: "Geography as a Discipline",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "The Origin and Evolution of the Earth",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Interior of the Earth",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Distribution of Oceans and Continents",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Minerals and Rocks",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Geomorphic Processes",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Landforms and their Evolution",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Composition and Structure of Atmosphere",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-8.pdf"] || ""
+                    },
+                    {
+                        number: 9,
+                        title: "Solar Radiation, Heat Balance and Temperature",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-9.pdf"] || ""
+                    },
+                    {
+                        number: 10,
+                        title: "Atmospheric Circulation and Weather Systems",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-10.pdf"] || ""
+                    },
+                    {
+                        number: 11,
+                        title: "Water in the Atmosphere",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-11.pdf"] || ""
+                    },
+                    {
+                        number: 12,
+                        title: "World Climate and Climate Change",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-12.pdf"] || ""
+                    },
+                    {
+                        number: 13,
+                        title: "Water (Oceans)",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-13.pdf"] || ""
+                    },
+                    {
+                        number: 14,
+                        title: "Movements of Ocean Water",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-14.pdf"] || ""
+                    },
+                    {
+                        number: 15,
+                        title: "Glossary",
+                        pdfUrl: links["class-11/geography/fundamentals-of-physical-geography/chapter-15.pdf"] || ""
+                    }
                 ]
             },
             {
@@ -1639,36 +1644,36 @@ export const classes: ClassData[] = [
                 book: "India Physical Environment",
                 icon: "🌍",
                 chapters: [
-          {
-                    number: 1,
-                    title: "India - Location",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Structure and Physiography",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Drainage System",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Climate",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Natural Vegetation",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Natural Hazards and Disasters",
-                    pdfUrl: "/pdfs/class-11/geography/india-physical-environment/chapter-6.pdf"
-          }
+                    {
+                        number: 1,
+                        title: "India - Location",
+                        pdfUrl: links["class-11/geography/india-physical-environment/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Structure and Physiography",
+                        pdfUrl: links["class-11/geography/india-physical-environment/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Drainage System",
+                        pdfUrl: links["class-11/geography/india-physical-environment/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Climate",
+                        pdfUrl: links["class-11/geography/india-physical-environment/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Natural Vegetation",
+                        pdfUrl: links["class-11/geography/india-physical-environment/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Natural Hazards and Disasters",
+                        pdfUrl: links["class-11/geography/india-physical-environment/chapter-6.pdf"] || ""
+                    }
                 ]
             },
             {
@@ -1677,36 +1682,36 @@ export const classes: ClassData[] = [
                 book: "Practical Work in Geography",
                 icon: "🌍",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Introduction to Maps",
-                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Map Scale",
-                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Latitude, Longitude and Time",
-                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Map Projections",
-                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Topographical Maps",
-                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Introduction To Remote Sensing",
-                    pdfUrl: "/pdfs/class-11/geography/practical-work-in-geography/chapter-6.pdf"
-          }
+                    {
+                        number: 1,
+                        title: "Introduction to Maps",
+                        pdfUrl: links["class-11/geography/practical-work-in-geography/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Map Scale",
+                        pdfUrl: links["class-11/geography/practical-work-in-geography/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Latitude, Longitude and Time",
+                        pdfUrl: links["class-11/geography/practical-work-in-geography/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Map Projections",
+                        pdfUrl: links["class-11/geography/practical-work-in-geography/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Topographical Maps",
+                        pdfUrl: links["class-11/geography/practical-work-in-geography/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Introduction To Remote Sensing",
+                        pdfUrl: links["class-11/geography/practical-work-in-geography/chapter-6.pdf"] || ""
+                    }
                 ]
             },
             {
@@ -1715,47 +1720,47 @@ export const classes: ClassData[] = [
                 book: "Psychology",
                 icon: "🧠",
                 chapters: [
-          {
-                    number: 1,
-                    title: "What is Psychology?",
-                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Methods of Enquiry in Psychology",
-                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Human Development",
-                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Sensory, Attentional and Perceptual Processes",
-                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Learning",
-                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Human Memory",
-                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Thinking",
-                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Motivation and Emotion",
-                    pdfUrl: "/pdfs/class-11/psychology/psychology/chapter-8.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "What is Psychology?",
+                        pdfUrl: links["class-11/psychology/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Methods of Enquiry in Psychology",
+                        pdfUrl: links["class-11/psychology/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Human Development",
+                        pdfUrl: links["class-11/psychology/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Sensory, Attentional and Perceptual Processes",
+                        pdfUrl: links["class-11/psychology/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Learning",
+                        pdfUrl: links["class-11/psychology/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Human Memory",
+                        pdfUrl: links["class-11/psychology/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Thinking",
+                        pdfUrl: links["class-11/psychology/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Motivation and Emotion",
+                        pdfUrl: links["class-11/psychology/chapter-8.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "sociology-kesy1dd",
@@ -1763,32 +1768,32 @@ export const classes: ClassData[] = [
                 book: "Introducing Sociology",
                 icon: "🤝",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Sociology and Society",
-                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Terms, Concepts and their use in Sociology",
-                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Understanding Social Institutions",
-                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Culture and Socialisation",
-                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Doing Sociology: Research Methods",
-                    pdfUrl: "/pdfs/class-11/sociology/introducing-sociology/chapter-5.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Sociology and Society",
+                        pdfUrl: links["class-11/sociology/introducing-sociology/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Terms, Concepts and their use in Sociology",
+                        pdfUrl: links["class-11/sociology/introducing-sociology/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Understanding Social Institutions",
+                        pdfUrl: links["class-11/sociology/introducing-sociology/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Culture and Socialisation",
+                        pdfUrl: links["class-11/sociology/introducing-sociology/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Doing Sociology: Research Methods",
+                        pdfUrl: links["class-11/sociology/introducing-sociology/chapter-5.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "sociology-kesy2dd",
@@ -1796,32 +1801,32 @@ export const classes: ClassData[] = [
                 book: "Understanding Society",
                 icon: "🤝",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Social Structure, Stratification and Social Processes in Society",
-                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Social Change and Social Order in Rural and Urban Society",
-                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Environment and Society",
-                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Introducing Western Sociologists",
-                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Indian Sociologists",
-                    pdfUrl: "/pdfs/class-11/sociology/understanding-society/chapter-5.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Social Structure, Stratification and Social Processes in Society",
+                        pdfUrl: links["class-11/sociology/understanding-society/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Social Change and Social Order in Rural and Urban Society",
+                        pdfUrl: links["class-11/sociology/understanding-society/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Environment and Society",
+                        pdfUrl: links["class-11/sociology/understanding-society/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Introducing Western Sociologists",
+                        pdfUrl: links["class-11/sociology/understanding-society/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Indian Sociologists",
+                        pdfUrl: links["class-11/sociology/understanding-society/chapter-5.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "fine-arts-khan1dd",
@@ -1829,47 +1834,47 @@ export const classes: ClassData[] = [
                 book: "An Introduction to Indian Art Part I",
                 icon: "🎨",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Prehistoric Rock Paintings",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Arts of the Indus Valley",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Arts of the Mauryan Period",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Post-Mauryan Trends in Indian Art and Architecture",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Later Mural Traditions",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Temple Architecture and Sculpture",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Indian Bronze Sculpture",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Some Aspects of Indo-Islamic Architecture",
-                    pdfUrl: "/pdfs/class-11/fine-arts-extra/fine-arts-extra/chapter-8.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Prehistoric Rock Paintings",
+                        pdfUrl: links["class-11/fine-arts-extra/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Arts of the Indus Valley",
+                        pdfUrl: links["class-11/fine-arts-extra/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Arts of the Mauryan Period",
+                        pdfUrl: links["class-11/fine-arts-extra/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Post-Mauryan Trends in Indian Art and Architecture",
+                        pdfUrl: links["class-11/fine-arts-extra/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Later Mural Traditions",
+                        pdfUrl: links["class-11/fine-arts-extra/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Temple Architecture and Sculpture",
+                        pdfUrl: links["class-11/fine-arts-extra/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Indian Bronze Sculpture",
+                        pdfUrl: links["class-11/fine-arts-extra/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Some Aspects of Indo-Islamic Architecture",
+                        pdfUrl: links["class-11/fine-arts-extra/chapter-8.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "hindi-aroh-khar1dd",
@@ -1877,87 +1882,87 @@ export const classes: ClassData[] = [
                 book: "Aroh",
                 icon: "📙",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Chapter 1",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Chapter 2",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Chapter 3",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Chapter 4",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Chapter 5",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Chapter 6",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Chapter 7",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Chapter 8",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-8.pdf"
-          },
-          {
-                    number: 9,
-                    title: "Chapter 9",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-9.pdf"
-          },
-          {
-                    number: 10,
-                    title: "Chapter 10",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-10.pdf"
-          },
-          {
-                    number: 11,
-                    title: "Chapter 11",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-11.pdf"
-          },
-          {
-                    number: 12,
-                    title: "Chapter 12",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-12.pdf"
-          },
-          {
-                    number: 13,
-                    title: "Chapter 13",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-13.pdf"
-          },
-          {
-                    number: 14,
-                    title: "Chapter 14",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-14.pdf"
-          },
-          {
-                    number: 15,
-                    title: "Chapter 15",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-15.pdf"
-          },
-          {
-                    number: 16,
-                    title: "Chapter 16",
-                    pdfUrl: "/pdfs/class-11/hindi-aroh/aroh/chapter-16.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Chapter 1",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Chapter 2",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Chapter 3",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Chapter 4",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Chapter 5",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Chapter 6",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Chapter 7",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Chapter 8",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-8.pdf"] || ""
+                    },
+                    {
+                        number: 9,
+                        title: "Chapter 9",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-9.pdf"] || ""
+                    },
+                    {
+                        number: 10,
+                        title: "Chapter 10",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-10.pdf"] || ""
+                    },
+                    {
+                        number: 11,
+                        title: "Chapter 11",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-11.pdf"] || ""
+                    },
+                    {
+                        number: 12,
+                        title: "Chapter 12",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-12.pdf"] || ""
+                    },
+                    {
+                        number: 13,
+                        title: "Chapter 13",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-13.pdf"] || ""
+                    },
+                    {
+                        number: 14,
+                        title: "Chapter 14",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-14.pdf"] || ""
+                    },
+                    {
+                        number: 15,
+                        title: "Chapter 15",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-15.pdf"] || ""
+                    },
+                    {
+                        number: 16,
+                        title: "Chapter 16",
+                        pdfUrl: links["class-11/hindi-aroh/chapter-16.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "hindi-vitan-khvt1dd",
@@ -1965,32 +1970,32 @@ export const classes: ClassData[] = [
                 book: "Vitan",
                 icon: "📙",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Chapter 1",
-                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Chapter 2",
-                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Chapter 3",
-                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Chapter 4",
-                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Chapter 5",
-                    pdfUrl: "/pdfs/class-11/hindi-vitan/vitan/chapter-5.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Chapter 1",
+                        pdfUrl: links["class-11/hindi-vitan/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Chapter 2",
+                        pdfUrl: links["class-11/hindi-vitan/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Chapter 3",
+                        pdfUrl: links["class-11/hindi-vitan/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Chapter 4",
+                        pdfUrl: links["class-11/hindi-vitan/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Chapter 5",
+                        pdfUrl: links["class-11/hindi-vitan/chapter-5.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "hindi-antra-khat1dd",
@@ -1998,151 +2003,151 @@ export const classes: ClassData[] = [
                 book: "Antra",
                 icon: "📙",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Chapter 1",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Chapter 2",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Chapter 3",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Chapter 4",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Chapter 5",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Chapter 6",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Chapter 7",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Chapter 8",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-8.pdf"
-          },
-          {
-                    number: 9,
-                    title: "Chapter 9",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-9.pdf"
-          },
-          {
-                    number: 10,
-                    title: "Chapter 10",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-10.pdf"
-          },
-          {
-                    number: 11,
-                    title: "Chapter 11",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-11.pdf"
-          },
-          {
-                    number: 12,
-                    title: "Chapter 12",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-12.pdf"
-          },
-          {
-                    number: 13,
-                    title: "Chapter 13",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-13.pdf"
-          },
-          {
-                    number: 14,
-                    title: "Chapter 14",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-14.pdf"
-          },
-          {
-                    number: 15,
-                    title: "Chapter 15",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-15.pdf"
-          },
-          {
-                    number: 16,
-                    title: "Chapter 16",
-                    pdfUrl: "/pdfs/class-11/hindi-antra/antra/chapter-16.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Chapter 1",
+                        pdfUrl: links["class-11/hindi-antra/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Chapter 2",
+                        pdfUrl: links["class-11/hindi-antra/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Chapter 3",
+                        pdfUrl: links["class-11/hindi-antra/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Chapter 4",
+                        pdfUrl: links["class-11/hindi-antra/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Chapter 5",
+                        pdfUrl: links["class-11/hindi-antra/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Chapter 6",
+                        pdfUrl: links["class-11/hindi-antra/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Chapter 7",
+                        pdfUrl: links["class-11/hindi-antra/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Chapter 8",
+                        pdfUrl: links["class-11/hindi-antra/chapter-8.pdf"] || ""
+                    },
+                    {
+                        number: 9,
+                        title: "Chapter 9",
+                        pdfUrl: links["class-11/hindi-antra/chapter-9.pdf"] || ""
+                    },
+                    {
+                        number: 10,
+                        title: "Chapter 10",
+                        pdfUrl: links["class-11/hindi-antra/chapter-10.pdf"] || ""
+                    },
+                    {
+                        number: 11,
+                        title: "Chapter 11",
+                        pdfUrl: links["class-11/hindi-antra/chapter-11.pdf"] || ""
+                    },
+                    {
+                        number: 12,
+                        title: "Chapter 12",
+                        pdfUrl: links["class-11/hindi-antra/chapter-12.pdf"] || ""
+                    },
+                    {
+                        number: 13,
+                        title: "Chapter 13",
+                        pdfUrl: links["class-11/hindi-antra/chapter-13.pdf"] || ""
+                    },
+                    {
+                        number: 14,
+                        title: "Chapter 14",
+                        pdfUrl: links["class-11/hindi-antra/chapter-14.pdf"] || ""
+                    },
+                    {
+                        number: 15,
+                        title: "Chapter 15",
+                        pdfUrl: links["class-11/hindi-antra/chapter-15.pdf"] || ""
+                    },
+                    {
+                        number: 16,
+                        title: "Chapter 16",
+                        pdfUrl: links["class-11/hindi-antra/chapter-16.pdf"] || ""
+                    }
+                ]
             }
-        ,
+            ,
             {
                 id: "physical-education-kehp1dd",
                 name: "Physical Education",
                 book: "Health and Physical Education",
                 icon: "🏃‍♂️",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Physical Education",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Understanding Health",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Physical and Physiological Aspects of Physical Education and Sports",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Individual Games",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Team Games",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Yoga and Its Relevance in the Modern Time",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Safety and Security",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Health Related Physical Fitness",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-8.pdf"
-          },
-          {
-                    number: 9,
-                    title: "Measurements and Evaluation",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-9.pdf"
-          },
-          {
-                    number: 10,
-                    title: "Tournaments and Competitions",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-10.pdf"
-          },
-          {
-                    number: 11,
-                    title: "Adventure Sports",
-                    pdfUrl: "/pdfs/class-11/physical-education/health-and-physical-education/chapter-11.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Physical Education",
+                        pdfUrl: links["class-11/physical-education/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Understanding Health",
+                        pdfUrl: links["class-11/physical-education/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Physical and Physiological Aspects of Physical Education and Sports",
+                        pdfUrl: links["class-11/physical-education/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Individual Games",
+                        pdfUrl: links["class-11/physical-education/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Team Games",
+                        pdfUrl: links["class-11/physical-education/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Yoga and Its Relevance in the Modern Time",
+                        pdfUrl: links["class-11/physical-education/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Safety and Security",
+                        pdfUrl: links["class-11/physical-education/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Health Related Physical Fitness",
+                        pdfUrl: links["class-11/physical-education/chapter-8.pdf"] || ""
+                    },
+                    {
+                        number: 9,
+                        title: "Measurements and Evaluation",
+                        pdfUrl: links["class-11/physical-education/chapter-9.pdf"] || ""
+                    },
+                    {
+                        number: 10,
+                        title: "Tournaments and Competitions",
+                        pdfUrl: links["class-11/physical-education/chapter-10.pdf"] || ""
+                    },
+                    {
+                        number: 11,
+                        title: "Adventure Sports",
+                        pdfUrl: links["class-11/physical-education/chapter-11.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "informatics-practices-keip1dd",
@@ -2150,47 +2155,47 @@ export const classes: ClassData[] = [
                 book: "Informatics Practices",
                 icon: "💻",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Computer System",
-                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Emerging Trends",
-                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Brief Overview of Python",
-                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Working with Lists and Dictionaries",
-                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Understanding Data",
-                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Introduction to NumPy",
-                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Database Concepts",
-                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Introduction to Structured Query Language (SQL)",
-                    pdfUrl: "/pdfs/class-11/informatics-practices/informatics-practices/chapter-8.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Computer System",
+                        pdfUrl: links["class-11/informatics-practices/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Emerging Trends",
+                        pdfUrl: links["class-11/informatics-practices/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Brief Overview of Python",
+                        pdfUrl: links["class-11/informatics-practices/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Working with Lists and Dictionaries",
+                        pdfUrl: links["class-11/informatics-practices/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Understanding Data",
+                        pdfUrl: links["class-11/informatics-practices/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Introduction to NumPy",
+                        pdfUrl: links["class-11/informatics-practices/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Database Concepts",
+                        pdfUrl: links["class-11/informatics-practices/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Introduction to Structured Query Language (SQL)",
+                        pdfUrl: links["class-11/informatics-practices/chapter-8.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "business-studies-kebs1dd",
@@ -2198,62 +2203,62 @@ export const classes: ClassData[] = [
                 book: "Business Studies",
                 icon: "💼",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Business, Trade and Commerce",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Forms of Business Organisation",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Private, Public and Global Enterprises",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Business Services",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Emerging Modes of Business",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Social Responsibilities of Business and Business Ethics",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Formation of a Company",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Sources of Business Finance",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-8.pdf"
-          },
-          {
-                    number: 9,
-                    title: "Small Business and Entrepreneurship",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-9.pdf"
-          },
-          {
-                    number: 10,
-                    title: "Internal Trade",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-10.pdf"
-          },
-          {
-                    number: 11,
-                    title: "International Business",
-                    pdfUrl: "/pdfs/class-11/business-studies/business-studies/chapter-11.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Business, Trade and Commerce",
+                        pdfUrl: links["class-11/business-studies/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Forms of Business Organisation",
+                        pdfUrl: links["class-11/business-studies/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Private, Public and Global Enterprises",
+                        pdfUrl: links["class-11/business-studies/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Business Services",
+                        pdfUrl: links["class-11/business-studies/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Emerging Modes of Business",
+                        pdfUrl: links["class-11/business-studies/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Social Responsibilities of Business and Business Ethics",
+                        pdfUrl: links["class-11/business-studies/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Formation of a Company",
+                        pdfUrl: links["class-11/business-studies/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Sources of Business Finance",
+                        pdfUrl: links["class-11/business-studies/chapter-8.pdf"] || ""
+                    },
+                    {
+                        number: 9,
+                        title: "Small Business and Entrepreneurship",
+                        pdfUrl: links["class-11/business-studies/chapter-9.pdf"] || ""
+                    },
+                    {
+                        number: 10,
+                        title: "Internal Trade",
+                        pdfUrl: links["class-11/business-studies/chapter-10.pdf"] || ""
+                    },
+                    {
+                        number: 11,
+                        title: "International Business",
+                        pdfUrl: links["class-11/business-studies/chapter-11.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "economics-statistics-kest1dd",
@@ -2261,47 +2266,47 @@ export const classes: ClassData[] = [
                 book: "Statistics for Economics",
                 icon: "📈",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Introduction to Statistics",
-                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Collection of Data",
-                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Organisation of Data",
-                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Presentation of Data",
-                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Measures of Central Tendency",
-                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Measures of Dispersion",
-                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Correlation",
-                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Index Numbers",
-                    pdfUrl: "/pdfs/class-11/economics-statistics/statistics-for-economics/chapter-8.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Introduction to Statistics",
+                        pdfUrl: links["class-11/economics-statistics/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Collection of Data",
+                        pdfUrl: links["class-11/economics-statistics/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Organisation of Data",
+                        pdfUrl: links["class-11/economics-statistics/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Presentation of Data",
+                        pdfUrl: links["class-11/economics-statistics/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Measures of Central Tendency",
+                        pdfUrl: links["class-11/economics-statistics/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Measures of Dispersion",
+                        pdfUrl: links["class-11/economics-statistics/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Index Numbers",
+                        pdfUrl: links["class-11/economics-statistics/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Use of Statistical Tools",
+                        pdfUrl: links["class-11/economics-statistics/chapter-8.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "economics-indian-keec1dd",
@@ -2309,47 +2314,47 @@ export const classes: ClassData[] = [
                 book: "Indian Economic Development",
                 icon: "📈",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Indian Economy on the Eve of Independence",
-                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Indian Economy (1950-1990)",
-                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Liberalisation, Privatisation and Globalisation: An Appraisal",
-                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Human Capital Formation in India",
-                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Rural Development",
-                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Employment: Growth, Informalisation and Other Issues",
-                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Environment and Sustainable Development",
-                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Comparative Development Experiences of India and its Neighbours",
-                    pdfUrl: "/pdfs/class-11/economics-indian/indian-economic-development/chapter-8.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Indian Economy on the Eve of Independence",
+                        pdfUrl: links["class-11/economics-indian/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Indian Economy (1950-1990)",
+                        pdfUrl: links["class-11/economics-indian/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Liberalisation, Privatisation and Globalisation: An Appraisal",
+                        pdfUrl: links["class-11/economics-indian/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Human Capital Formation in India",
+                        pdfUrl: links["class-11/economics-indian/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Rural Development",
+                        pdfUrl: links["class-11/economics-indian/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Employment: Growth, Informalisation and Other Issues",
+                        pdfUrl: links["class-11/economics-indian/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Environment and Sustainable Development",
+                        pdfUrl: links["class-11/economics-indian/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Comparative Development Experiences of India and its Neighbours",
+                        pdfUrl: links["class-11/economics-indian/chapter-8.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "history-kehs1dd",
@@ -2357,42 +2362,42 @@ export const classes: ClassData[] = [
                 book: "Themes in World History",
                 icon: "🏛️",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Writing and City Life",
-                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "An Empire Across Three Continents",
-                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Nomadic Empires",
-                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "The Three Orders",
-                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Changing Cultural Traditions",
-                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Displacing Indigenous Peoples",
-                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Paths to Modernisation",
-                    pdfUrl: "/pdfs/class-11/history/themes-in-world-history/chapter-7.pdf"
-          }
-]
+                    {
+                        number: 1,
+                        title: "Writing and City Life",
+                        pdfUrl: links["class-11/history/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "An Empire Across Three Continents",
+                        pdfUrl: links["class-11/history/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Nomadic Empires",
+                        pdfUrl: links["class-11/history/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "The Three Orders",
+                        pdfUrl: links["class-11/history/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Changing Cultural Traditions",
+                        pdfUrl: links["class-11/history/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Displacing Indigenous Peoples",
+                        pdfUrl: links["class-11/history/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Paths to Modernisation",
+                        pdfUrl: links["class-11/history/chapter-7.pdf"] || ""
+                    }
+                ]
             },
             {
                 id: "political-science-theory-keps1dd",
@@ -2400,46 +2405,46 @@ export const classes: ClassData[] = [
                 book: "Political Theory",
                 icon: "⚖️",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Political Theory: An Introduction",
-                    pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Freedom",
-                    pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Equality",
-                    pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Social Justice",
-                    pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Rights",
-                    pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Citizenship",
-                    pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Nationalism",
-                    pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Secularism",
-                    pdfUrl: "/pdfs/class-11/political-science-theory/keps1dd/chapter-8.pdf"
-          }
+                    {
+                        number: 1,
+                        title: "Political Theory: An Introduction",
+                        pdfUrl: links["class-11/political-science-theory/keps1dd/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Freedom",
+                        pdfUrl: links["class-11/political-science-theory/keps1dd/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Equality",
+                        pdfUrl: links["class-11/political-science-theory/keps1dd/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Social Justice",
+                        pdfUrl: links["class-11/political-science-theory/keps1dd/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Rights",
+                        pdfUrl: links["class-11/political-science-theory/keps1dd/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Citizenship",
+                        pdfUrl: links["class-11/political-science-theory/keps1dd/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Nationalism",
+                        pdfUrl: links["class-11/political-science-theory/keps1dd/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Secularism",
+                        pdfUrl: links["class-11/political-science-theory/keps1dd/chapter-8.pdf"] || ""
+                    }
                 ]
             },
             {
@@ -2448,56 +2453,56 @@ export const classes: ClassData[] = [
                 book: "Indian Constitution at Work",
                 icon: "⚖️",
                 chapters: [
-          {
-                    number: 1,
-                    title: "Constitution: Why and How?",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-1.pdf"
-          },
-          {
-                    number: 2,
-                    title: "Rights in the Indian Constitution",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-2.pdf"
-          },
-          {
-                    number: 3,
-                    title: "Election and Representation",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-3.pdf"
-          },
-          {
-                    number: 4,
-                    title: "Executive",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-4.pdf"
-          },
-          {
-                    number: 5,
-                    title: "Legislature",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-5.pdf"
-          },
-          {
-                    number: 6,
-                    title: "Judiciary",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-6.pdf"
-          },
-          {
-                    number: 7,
-                    title: "Federalism",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-7.pdf"
-          },
-          {
-                    number: 8,
-                    title: "Local Governments",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-8.pdf"
-          },
-          {
-                    number: 9,
-                    title: "Constitution as a Living Document",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-9.pdf"
-          },
-          {
-                    number: 10,
-                    title: "The Philosophy of the Constitution",
-                    pdfUrl: "/pdfs/class-11/political-science-constitution/keps2dd/chapter-10.pdf"
-          }
+                    {
+                        number: 1,
+                        title: "Constitution: Why and How?",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-1.pdf"] || ""
+                    },
+                    {
+                        number: 2,
+                        title: "Rights in the Indian Constitution",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-2.pdf"] || ""
+                    },
+                    {
+                        number: 3,
+                        title: "Election and Representation",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-3.pdf"] || ""
+                    },
+                    {
+                        number: 4,
+                        title: "Executive",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-4.pdf"] || ""
+                    },
+                    {
+                        number: 5,
+                        title: "Legislature",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-5.pdf"] || ""
+                    },
+                    {
+                        number: 6,
+                        title: "Judiciary",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-6.pdf"] || ""
+                    },
+                    {
+                        number: 7,
+                        title: "Federalism",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-7.pdf"] || ""
+                    },
+                    {
+                        number: 8,
+                        title: "Local Governments",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-8.pdf"] || ""
+                    },
+                    {
+                        number: 9,
+                        title: "Constitution as a Living Document",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-9.pdf"] || ""
+                    },
+                    {
+                        number: 10,
+                        title: "The Philosophy of the Constitution",
+                        pdfUrl: links["class-11/political-science-constitution/keps2dd/chapter-10.pdf"] || ""
+                    }
                 ]
             },
             {
@@ -2506,8 +2511,8 @@ export const classes: ClassData[] = [
                 book: "Antral",
                 icon: "अ",
                 chapters: [
-                    { number: 1, title: "Story 1", pdfUrl: "/pdfs/class-11/hindi-antral/chapter-1.pdf" },
-                    { number: 2, title: "Story 2", pdfUrl: "/pdfs/class-11/hindi-antral/chapter-2.pdf" }
+                    { number: 1, title: "Story 1", pdfUrl: links["class-11/hindi-antral/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Story 2", pdfUrl: links["class-11/hindi-antral/chapter-2.pdf"] || "" }
                 ]
             },
             {
@@ -2516,18 +2521,18 @@ export const classes: ClassData[] = [
                 book: "Biotechnology",
                 icon: "🔬",
                 chapters: [
-                    { number: 1, title: "Chapter 1", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-1.pdf" },
-                    { number: 2, title: "Chapter 2", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-2.pdf" },
-                    { number: 3, title: "Chapter 3", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-3.pdf" },
-                    { number: 4, title: "Chapter 4", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-4.pdf" },
-                    { number: 5, title: "Chapter 5", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-5.pdf" },
-                    { number: 6, title: "Chapter 6", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-6.pdf" },
-                    { number: 7, title: "Chapter 7", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-7.pdf" },
-                    { number: 8, title: "Chapter 8", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-8.pdf" },
-                    { number: 9, title: "Chapter 9", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-9.pdf" },
-                    { number: 10, title: "Chapter 10", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-10.pdf" },
-                    { number: 11, title: "Chapter 11", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-11.pdf" },
-                    { number: 12, title: "Chapter 12", pdfUrl: "/pdfs/class-11/biotechnology/biotechnology/chapter-12.pdf" }
+                    { number: 1, title: "Chapter 1", pdfUrl: links["class-11/biotechnology/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Chapter 2", pdfUrl: links["class-11/biotechnology/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Chapter 3", pdfUrl: links["class-11/biotechnology/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Chapter 4", pdfUrl: links["class-11/biotechnology/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Chapter 5", pdfUrl: links["class-11/biotechnology/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Chapter 6", pdfUrl: links["class-11/biotechnology/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Chapter 7", pdfUrl: links["class-11/biotechnology/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Chapter 8", pdfUrl: links["class-11/biotechnology/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Chapter 9", pdfUrl: links["class-11/biotechnology/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Chapter 10", pdfUrl: links["class-11/biotechnology/chapter-10.pdf"] || "" },
+                    { number: 11, title: "Chapter 11", pdfUrl: links["class-11/biotechnology/chapter-11.pdf"] || "" },
+                    { number: 12, title: "Chapter 12", pdfUrl: links["class-11/biotechnology/chapter-12.pdf"] || "" }
                 ]
             }
         ]
@@ -2603,19 +2608,19 @@ export const classes: ClassData[] = [
                 book: "Flamingo",
                 icon: "📖",
                 chapters: [
-                    { number: 101, title: "Prose Chapter 1", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-101.pdf" },
-                    { number: 102, title: "Prose Chapter 2", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-102.pdf" },
-                    { number: 103, title: "Prose Chapter 3", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-103.pdf" },
-                    { number: 104, title: "Prose Chapter 4", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-104.pdf" },
-                    { number: 105, title: "Prose Chapter 5", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-105.pdf" },
-                    { number: 106, title: "Prose Chapter 6", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-106.pdf" },
-                    { number: 107, title: "Prose Chapter 7", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-107.pdf" },
-                    { number: 108, title: "Prose Chapter 8", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-108.pdf" },
-                    { number: 111, title: "Poetry Chapter 1", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-111.pdf" },
-                    { number: 112, title: "Poetry Chapter 2", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-112.pdf" },
-                    { number: 113, title: "Poetry Chapter 3", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-113.pdf" },
-                    { number: 114, title: "Poetry Chapter 4", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-114.pdf" },
-                    { number: 115, title: "Poetry Chapter 5", pdfUrl: "/pdfs/class-12/english/flamingo/chapter-115.pdf" },
+                    { number: 101, title: "Prose Chapter 1", pdfUrl: links["class-12/english/flamingo/chapter-101.pdf"] || "" },
+                    { number: 102, title: "Prose Chapter 2", pdfUrl: links["class-12/english/flamingo/chapter-102.pdf"] || "" },
+                    { number: 103, title: "Prose Chapter 3", pdfUrl: links["class-12/english/flamingo/chapter-103.pdf"] || "" },
+                    { number: 104, title: "Prose Chapter 4", pdfUrl: links["class-12/english/flamingo/chapter-104.pdf"] || "" },
+                    { number: 105, title: "Prose Chapter 5", pdfUrl: links["class-12/english/flamingo/chapter-105.pdf"] || "" },
+                    { number: 106, title: "Prose Chapter 6", pdfUrl: links["class-12/english/flamingo/chapter-106.pdf"] || "" },
+                    { number: 107, title: "Prose Chapter 7", pdfUrl: links["class-12/english/flamingo/chapter-107.pdf"] || "" },
+                    { number: 108, title: "Prose Chapter 8", pdfUrl: links["class-12/english/flamingo/chapter-108.pdf"] || "" },
+                    { number: 111, title: "Poetry Chapter 1", pdfUrl: links["class-12/english/flamingo/chapter-111.pdf"] || "" },
+                    { number: 112, title: "Poetry Chapter 2", pdfUrl: links["class-12/english/flamingo/chapter-112.pdf"] || "" },
+                    { number: 113, title: "Poetry Chapter 3", pdfUrl: links["class-12/english/flamingo/chapter-113.pdf"] || "" },
+                    { number: 114, title: "Poetry Chapter 4", pdfUrl: links["class-12/english/flamingo/chapter-114.pdf"] || "" },
+                    { number: 115, title: "Poetry Chapter 5", pdfUrl: links["class-12/english/flamingo/chapter-115.pdf"] || "" },
                 ]
             },
             {
@@ -2624,27 +2629,27 @@ export const classes: ClassData[] = [
                 book: "Kaleidoscope",
                 icon: "📖",
                 chapters: [
-                    { number: 101, title: "Short Stories Chapter 1", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-101.pdf" },
-                    { number: 102, title: "Short Stories Chapter 2", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-102.pdf" },
-                    { number: 103, title: "Short Stories Chapter 3", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-103.pdf" },
-                    { number: 104, title: "Short Stories Chapter 4", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-104.pdf" },
-                    { number: 105, title: "Short Stories Chapter 5", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-105.pdf" },
-                    { number: 111, title: "Poetry Chapter 1", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-111.pdf" },
-                    { number: 112, title: "Poetry Chapter 2", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-112.pdf" },
-                    { number: 113, title: "Poetry Chapter 3", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-113.pdf" },
-                    { number: 114, title: "Poetry Chapter 4", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-114.pdf" },
-                    { number: 115, title: "Poetry Chapter 5", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-115.pdf" },
-                    { number: 116, title: "Poetry Chapter 6", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-116.pdf" },
-                    { number: 117, title: "Poetry Chapter 7", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-117.pdf" },
-                    { number: 118, title: "Poetry Chapter 8", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-118.pdf" },
-                    { number: 121, title: "Non Fiction Chapter 1", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-121.pdf" },
-                    { number: 122, title: "Non Fiction Chapter 2", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-122.pdf" },
-                    { number: 123, title: "Non Fiction Chapter 3", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-123.pdf" },
-                    { number: 124, title: "Non Fiction Chapter 4", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-124.pdf" },
-                    { number: 125, title: "Non Fiction Chapter 5", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-125.pdf" },
-                    { number: 126, title: "Non Fiction Chapter 6", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-126.pdf" },
-                    { number: 131, title: "Drama Chapter 1", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-131.pdf" },
-                    { number: 132, title: "Drama Chapter 2", pdfUrl: "/pdfs/class-12/english/kaleidoscope/chapter-132.pdf" },
+                    { number: 101, title: "Short Stories Chapter 1", pdfUrl: links["class-12/english/kaleidoscope/chapter-101.pdf"] || "" },
+                    { number: 102, title: "Short Stories Chapter 2", pdfUrl: links["class-12/english/kaleidoscope/chapter-102.pdf"] || "" },
+                    { number: 103, title: "Short Stories Chapter 3", pdfUrl: links["class-12/english/kaleidoscope/chapter-103.pdf"] || "" },
+                    { number: 104, title: "Short Stories Chapter 4", pdfUrl: links["class-12/english/kaleidoscope/chapter-104.pdf"] || "" },
+                    { number: 105, title: "Short Stories Chapter 5", pdfUrl: links["class-12/english/kaleidoscope/chapter-105.pdf"] || "" },
+                    { number: 111, title: "Poetry Chapter 1", pdfUrl: links["class-12/english/kaleidoscope/chapter-111.pdf"] || "" },
+                    { number: 112, title: "Poetry Chapter 2", pdfUrl: links["class-12/english/kaleidoscope/chapter-112.pdf"] || "" },
+                    { number: 113, title: "Poetry Chapter 3", pdfUrl: links["class-12/english/kaleidoscope/chapter-113.pdf"] || "" },
+                    { number: 114, title: "Poetry Chapter 4", pdfUrl: links["class-12/english/kaleidoscope/chapter-114.pdf"] || "" },
+                    { number: 115, title: "Poetry Chapter 5", pdfUrl: links["class-12/english/kaleidoscope/chapter-115.pdf"] || "" },
+                    { number: 116, title: "Poetry Chapter 6", pdfUrl: links["class-12/english/kaleidoscope/chapter-116.pdf"] || "" },
+                    { number: 117, title: "Poetry Chapter 7", pdfUrl: links["class-12/english/kaleidoscope/chapter-117.pdf"] || "" },
+                    { number: 118, title: "Poetry Chapter 8", pdfUrl: links["class-12/english/kaleidoscope/chapter-118.pdf"] || "" },
+                    { number: 121, title: "Non Fiction Chapter 1", pdfUrl: links["class-12/english/kaleidoscope/chapter-121.pdf"] || "" },
+                    { number: 122, title: "Non Fiction Chapter 2", pdfUrl: links["class-12/english/kaleidoscope/chapter-122.pdf"] || "" },
+                    { number: 123, title: "Non Fiction Chapter 3", pdfUrl: links["class-12/english/kaleidoscope/chapter-123.pdf"] || "" },
+                    { number: 124, title: "Non Fiction Chapter 4", pdfUrl: links["class-12/english/kaleidoscope/chapter-124.pdf"] || "" },
+                    { number: 125, title: "Non Fiction Chapter 5", pdfUrl: links["class-12/english/kaleidoscope/chapter-125.pdf"] || "" },
+                    { number: 126, title: "Non Fiction Chapter 6", pdfUrl: links["class-12/english/kaleidoscope/chapter-126.pdf"] || "" },
+                    { number: 131, title: "Drama Chapter 1", pdfUrl: links["class-12/english/kaleidoscope/chapter-131.pdf"] || "" },
+                    { number: 132, title: "Drama Chapter 2", pdfUrl: links["class-12/english/kaleidoscope/chapter-132.pdf"] || "" },
                 ]
             },
             {
@@ -2653,12 +2658,12 @@ export const classes: ClassData[] = [
                 book: "Vistas",
                 icon: "📖",
                 chapters: [
-                    { number: 101, title: "Chapter 1", pdfUrl: "/pdfs/class-12/english/vistas/chapter-101.pdf" },
-                    { number: 102, title: "Chapter 2", pdfUrl: "/pdfs/class-12/english/vistas/chapter-102.pdf" },
-                    { number: 103, title: "Chapter 3", pdfUrl: "/pdfs/class-12/english/vistas/chapter-103.pdf" },
-                    { number: 104, title: "Chapter 4", pdfUrl: "/pdfs/class-12/english/vistas/chapter-104.pdf" },
-                    { number: 105, title: "Chapter 5", pdfUrl: "/pdfs/class-12/english/vistas/chapter-105.pdf" },
-                    { number: 106, title: "Chapter 6", pdfUrl: "/pdfs/class-12/english/vistas/chapter-106.pdf" },
+                    { number: 101, title: "Chapter 1", pdfUrl: links["class-12/english/vistas/chapter-101.pdf"] || "" },
+                    { number: 102, title: "Chapter 2", pdfUrl: links["class-12/english/vistas/chapter-102.pdf"] || "" },
+                    { number: 103, title: "Chapter 3", pdfUrl: links["class-12/english/vistas/chapter-103.pdf"] || "" },
+                    { number: 104, title: "Chapter 4", pdfUrl: links["class-12/english/vistas/chapter-104.pdf"] || "" },
+                    { number: 105, title: "Chapter 5", pdfUrl: links["class-12/english/vistas/chapter-105.pdf"] || "" },
+                    { number: 106, title: "Chapter 6", pdfUrl: links["class-12/english/vistas/chapter-106.pdf"] || "" },
                 ]
             },
 
@@ -2748,10 +2753,10 @@ export const classes: ClassData[] = [
                 book: "Accountancy - Partnership Accounts",
                 icon: "📊",
                 chapters: [
-                    { number: 1, title: "Accounting for Partnership: Basic Concepts", pdfUrl: "/pdfs/class-12/accountancy/accountancy-i/chapter-1.pdf" },
-                    { number: 2, title: "Reconstitution of a Partnership Firm –", pdfUrl: "/pdfs/class-12/accountancy/accountancy-i/chapter-2.pdf" },
-                    { number: 3, title: "Reconstitution of a Partnership Firm –", pdfUrl: "/pdfs/class-12/accountancy/accountancy-i/chapter-3.pdf" },
-                    { number: 4, title: "Dissolution of Partnership Firm", pdfUrl: "/pdfs/class-12/accountancy/accountancy-i/chapter-4.pdf" },
+                    { number: 1, title: "Accounting for Partnership: Basic Concepts", pdfUrl: links["class-12/accountancy/accountancy-i/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Reconstitution of a Partnership Firm", pdfUrl: links["class-12/accountancy/accountancy-i/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Reconstitution of a Partnership Firm", pdfUrl: links["class-12/accountancy/accountancy-i/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Dissolution of Partnership Firm", pdfUrl: links["class-12/accountancy/accountancy-i/chapter-4.pdf"] || "" },
                 ]
             },
             {
@@ -2760,12 +2765,12 @@ export const classes: ClassData[] = [
                 book: "Accountancy - Company Accounts and Analysis of Financial Statements",
                 icon: "📊",
                 chapters: [
-                    { number: 1, title: "Accounting for Share Capital", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-1.pdf" },
-                    { number: 2, title: "Issue and Redemption of Debentures", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-2.pdf" },
-                    { number: 3, title: "144 Accountancy : Company Accounts and Analysis of Financial Statements", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-3.pdf" },
-                    { number: 4, title: "Analysis of Financial Statements 171", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-4.pdf" },
-                    { number: 5, title: "Accounting Ratios", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-5.pdf" },
-                    { number: 6, title: "Cash Flow Statement", pdfUrl: "/pdfs/class-12/accountancy/accountancy-ii/chapter-6.pdf" },
+                    { number: 1, title: "Accounting for Share Capital", pdfUrl: links["class-12/accountancy/accountancy-ii/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Issue and Redemption of Debentures", pdfUrl: links["class-12/accountancy/accountancy-ii/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Financial Statements of a Company", pdfUrl: links["class-12/accountancy/accountancy-ii/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Analysis of Financial Statements", pdfUrl: links["class-12/accountancy/accountancy-ii/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Accounting Ratios", pdfUrl: links["class-12/accountancy/accountancy-ii/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Cash Flow Statement", pdfUrl: links["class-12/accountancy/accountancy-ii/chapter-6.pdf"] || "" },
                 ]
             },
             {
@@ -2774,9 +2779,9 @@ export const classes: ClassData[] = [
                 book: "Antral",
                 icon: "📚",
                 chapters: [
-                    { number: 1, title: "Chapter-1", pdfUrl: "/pdfs/class-12/hindi/antra/chapter-1.pdf" },
-                    { number: 2, title: "Chapter-2", pdfUrl: "/pdfs/class-12/hindi/antra/chapter-2.pdf" },
-                    { number: 3, title: "Chapter-3", pdfUrl: "/pdfs/class-12/hindi/antra/chapter-3.pdf" },
+                    { number: 1, title: "Chapter-1", pdfUrl: links["class-12/hindi/antra/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Chapter-2", pdfUrl: links["class-12/hindi/antra/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Chapter-3", pdfUrl: links["class-12/hindi/antra/chapter-3.pdf"] || "" },
                 ]
             },
             {
@@ -2785,21 +2790,21 @@ export const classes: ClassData[] = [
                 book: "Aroh",
                 icon: "📚",
                 chapters: [
-                    { number: 1, title: "Chapter-1", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-1.pdf" },
-                    { number: 2, title: "Chapter-2", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-2.pdf" },
-                    { number: 3, title: "Chapter-3", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-3.pdf" },
-                    { number: 4, title: "Chapter-4", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-4.pdf" },
-                    { number: 5, title: "Chapter-5", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-5.pdf" },
-                    { number: 6, title: "Chapter-6", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-6.pdf" },
-                    { number: 7, title: "Chapter-7", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-7.pdf" },
-                    { number: 8, title: "Chapter-8", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-8.pdf" },
-                    { number: 9, title: "Chapter-9", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-9.pdf" },
-                    { number: 10, title: "Chapter-10", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-10.pdf" },
-                    { number: 11, title: "Chapter-11", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-11.pdf" },
-                    { number: 12, title: "Chapter-12", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-12.pdf" },
-                    { number: 13, title: "Chapter-13", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-13.pdf" },
-                    { number: 14, title: "Chapter-14", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-14.pdf" },
-                    { number: 15, title: "Chapter-15", pdfUrl: "/pdfs/class-12/hindi/aroh/chapter-15.pdf" },
+                    { number: 1, title: "Chapter-1", pdfUrl: links["class-12/hindi/aroh/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Chapter-2", pdfUrl: links["class-12/hindi/aroh/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Chapter-3", pdfUrl: links["class-12/hindi/aroh/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Chapter-4", pdfUrl: links["class-12/hindi/aroh/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Chapter-5", pdfUrl: links["class-12/hindi/aroh/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Chapter-6", pdfUrl: links["class-12/hindi/aroh/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Chapter-7", pdfUrl: links["class-12/hindi/aroh/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Chapter-8", pdfUrl: links["class-12/hindi/aroh/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Chapter-9", pdfUrl: links["class-12/hindi/aroh/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Chapter-10", pdfUrl: links["class-12/hindi/aroh/chapter-10.pdf"] || "" },
+                    { number: 11, title: "Chapter-11", pdfUrl: links["class-12/hindi/aroh/chapter-11.pdf"] || "" },
+                    { number: 12, title: "Chapter-12", pdfUrl: links["class-12/hindi/aroh/chapter-12.pdf"] || "" },
+                    { number: 13, title: "Chapter-13", pdfUrl: links["class-12/hindi/aroh/chapter-13.pdf"] || "" },
+                    { number: 14, title: "Chapter-14", pdfUrl: links["class-12/hindi/aroh/chapter-14.pdf"] || "" },
+                    { number: 15, title: "Chapter-15", pdfUrl: links["class-12/hindi/aroh/chapter-15.pdf"] || "" },
                 ]
             },
             {
@@ -2808,23 +2813,23 @@ export const classes: ClassData[] = [
                 book: "Antra",
                 icon: "📚",
                 chapters: [
-                    { number: 1, title: "Kavita 1", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-1.pdf" },
-                    { number: 2, title: "Kavita 2", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-2.pdf" },
-                    { number: 3, title: "Kavita 3", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-3.pdf" },
-                    { number: 4, title: "Kavita 4", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-4.pdf" },
-                    { number: 5, title: "Kavita 5", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-5.pdf" },
-                    { number: 6, title: "Kavita 6", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-6.pdf" },
-                    { number: 7, title: "Kavita 7", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-7.pdf" },
-                    { number: 8, title: "Kavita 8", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-8.pdf" },
-                    { number: 9, title: "Kavita 9", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-9.pdf" },
-                    { number: 10, title: "Story 10", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-10.pdf" },
-                    { number: 11, title: "Story 11", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-11.pdf" },
-                    { number: 12, title: "Story 12", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-12.pdf" },
-                    { number: 13, title: "Story 13", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-13.pdf" },
-                    { number: 14, title: "Story 14", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-14.pdf" },
-                    { number: 15, title: "Story 15", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-15.pdf" },
-                    { number: 16, title: "Story 16", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-16.pdf" },
-                    { number: 17, title: "Story 17", pdfUrl: "/pdfs/class-12/hindi/antral/chapter-17.pdf" },
+                    { number: 1, title: "Kavita 1", pdfUrl: links["class-12/hindi/antral/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Kavita 2", pdfUrl: links["class-12/hindi/antral/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Kavita 3", pdfUrl: links["class-12/hindi/antral/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Kavita 4", pdfUrl: links["class-12/hindi/antral/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Kavita 5", pdfUrl: links["class-12/hindi/antral/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Kavita 6", pdfUrl: links["class-12/hindi/antral/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Kavita 7", pdfUrl: links["class-12/hindi/antral/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Kavita 8", pdfUrl: links["class-12/hindi/antral/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Kavita 9", pdfUrl: links["class-12/hindi/antral/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Story 10", pdfUrl: links["class-12/hindi/antral/chapter-10.pdf"] || "" },
+                    { number: 11, title: "Story 11", pdfUrl: links["class-12/hindi/antral/chapter-11.pdf"] || "" },
+                    { number: 12, title: "Story 12", pdfUrl: links["class-12/hindi/antral/chapter-12.pdf"] || "" },
+                    { number: 13, title: "Story 13", pdfUrl: links["class-12/hindi/antral/chapter-13.pdf"] || "" },
+                    { number: 14, title: "Story 14", pdfUrl: links["class-12/hindi/antral/chapter-14.pdf"] || "" },
+                    { number: 15, title: "Story 15", pdfUrl: links["class-12/hindi/antral/chapter-15.pdf"] || "" },
+                    { number: 16, title: "Story 16", pdfUrl: links["class-12/hindi/antral/chapter-16.pdf"] || "" },
+                    { number: 17, title: "Story 17", pdfUrl: links["class-12/hindi/antral/chapter-17.pdf"] || "" },
                 ]
             },
             {
@@ -2833,9 +2838,9 @@ export const classes: ClassData[] = [
                 book: "Vitan",
                 icon: "📚",
                 chapters: [
-                    { number: 1, title: "Chapter-1", pdfUrl: "/pdfs/class-12/hindi/vitan/chapter-1.pdf" },
-                    { number: 2, title: "Chapter-2", pdfUrl: "/pdfs/class-12/hindi/vitan/chapter-2.pdf" },
-                    { number: 3, title: "Chapter-3", pdfUrl: "/pdfs/class-12/hindi/vitan/chapter-3.pdf" },
+                    { number: 1, title: "Chapter-1", pdfUrl: links["class-12/hindi/vitan/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Chapter-2", pdfUrl: links["class-12/hindi/vitan/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Chapter-3", pdfUrl: links["class-12/hindi/vitan/chapter-3.pdf"] || "" },
                 ]
             },
             {
@@ -2844,18 +2849,18 @@ export const classes: ClassData[] = [
                 book: "Themes in Indian History",
                 icon: "🏛️",
                 chapters: [
-                    { number: 1, title: "Bricks, Beads and Bones", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-i/chapter-101.pdf" },
-                    { number: 2, title: "Kings, Farmers and Towns", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-i/chapter-102.pdf" },
-                    { number: 3, title: "Kinship, Caste and Class", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-i/chapter-103.pdf" },
-                    { number: 4, title: "Thinkers, Beliefs and Buildings", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-i/chapter-104.pdf" },
-                    { number: 5, title: "Through the Eyes of Travellers", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-ii/chapter-201.pdf" },
-                    { number: 6, title: "Bhakti-Sufi Traditions", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-ii/chapter-202.pdf" },
-                    { number: 7, title: "An Imperial Capital: Vijayanagara", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-ii/chapter-203.pdf" },
-                    { number: 8, title: "Peasants, Zamindars and the State", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-ii/chapter-204.pdf" },
-                    { number: 9, title: "Colonialism and the Countryside", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-iii/chapter-301.pdf" },
-                    { number: 10, title: "Rebels and the Raj", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-iii/chapter-302.pdf" },
-                    { number: 11, title: "Mahatma Gandhi and the Nationalist Movement", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-iii/chapter-303.pdf" },
-                    { number: 12, title: "Framing the Constitution", pdfUrl: "/pdfs/class-12/history/themes-in-indian-history-part-iii/chapter-304.pdf" },
+                    { number: 1, title: "Bricks, Beads and Bones", pdfUrl: links["class-12/history/themes-in-indian-history-part-i/chapter-101.pdf"] || "" },
+                    { number: 2, title: "Kings, Farmers and Towns", pdfUrl: links["class-12/history/themes-in-indian-history-part-i/chapter-102.pdf"] || "" },
+                    { number: 3, title: "Kinship, Caste and Class", pdfUrl: links["class-12/history/themes-in-indian-history-part-i/chapter-103.pdf"] || "" },
+                    { number: 4, title: "Thinkers, Beliefs and Buildings", pdfUrl: links["class-12/history/themes-in-indian-history-part-i/chapter-104.pdf"] || "" },
+                    { number: 5, title: "Through the Eyes of Travellers", pdfUrl: links["class-12/history/themes-in-indian-history-part-ii/chapter-201.pdf"] || "" },
+                    { number: 6, title: "Bhakti-Sufi Traditions", pdfUrl: links["class-12/history/themes-in-indian-history-part-ii/chapter-202.pdf"] || "" },
+                    { number: 7, title: "An Imperial Capital: Vijayanagara", pdfUrl: links["class-12/history/themes-in-indian-history-part-ii/chapter-203.pdf"] || "" },
+                    { number: 8, title: "Peasants, Zamindars and the State", pdfUrl: links["class-12/history/themes-in-indian-history-part-ii/chapter-204.pdf"] || "" },
+                    { number: 9, title: "Colonialism and the Countryside", pdfUrl: links["class-12/history/themes-in-indian-history-part-iii/chapter-301.pdf"] || "" },
+                    { number: 10, title: "Rebels and the Raj", pdfUrl: links["class-12/history/themes-in-indian-history-part-iii/chapter-302.pdf"] || "" },
+                    { number: 11, title: "Mahatma Gandhi and the Nationalist Movement", pdfUrl: links["class-12/history/themes-in-indian-history-part-iii/chapter-303.pdf"] || "" },
+                    { number: 12, title: "Framing the Constitution", pdfUrl: links["class-12/history/themes-in-indian-history-part-iii/chapter-304.pdf"] || "" },
                 ]
             },
             {
@@ -2864,14 +2869,14 @@ export const classes: ClassData[] = [
                 book: "Fundamentals of Human Geography",
                 icon: "🌍",
                 chapters: [
-                    { number: 101, title: "Human Geography Nature and Scope", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-101.pdf" },
-                    { number: 102, title: "The World Population Distribution, Density and Growth", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-102.pdf" },
-                    { number: 103, title: "Human Development", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-103.pdf" },
-                    { number: 104, title: "Primary Activities", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-104.pdf" },
-                    { number: 105, title: "Secondary Activities", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-105.pdf" },
-                    { number: 106, title: "Tertiary and Quaternary Activities", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-106.pdf" },
-                    { number: 107, title: "Transport and Communication", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-107.pdf" },
-                    { number: 108, title: "International Trade", pdfUrl: "/pdfs/class-12/geography/fundamentals-of-human-geography/chapter-108.pdf" },
+                    { number: 101, title: "Human Geography Nature and Scope", pdfUrl: links["class-12/geography/fundamentals-of-human-geography/chapter-101.pdf"] || "" },
+                    { number: 102, title: "The World Population Distribution, Density and Growth", pdfUrl: links["class-12/geography/fundamentals-of-human-geography/chapter-102.pdf"] || "" },
+                    { number: 103, title: "Human Development", pdfUrl: links["class-12/geography/fundamentals-of-human-geography/chapter-103.pdf"] || "" },
+                    { number: 104, title: "Primary Activities", pdfUrl: links["class-12/geography/fundamentals-of-human-geography/chapter-104.pdf"] || "" },
+                    { number: 105, title: "Secondary Activities", pdfUrl: links["class-12/geography/fundamentals-of-human-geography/chapter-105.pdf"] || "" },
+                    { number: 106, title: "Tertiary and Quaternary Activities", pdfUrl: links["class-12/geography/fundamentals-of-human-geography/chapter-106.pdf"] || "" },
+                    { number: 107, title: "Transport and Communication", pdfUrl: links["class-12/geography/fundamentals-of-human-geography/chapter-107.pdf"] || "" },
+                    { number: 108, title: "International Trade", pdfUrl: links["class-12/geography/fundamentals-of-human-geography/chapter-108.pdf"] || "" },
                 ]
             },
             {
@@ -2880,15 +2885,15 @@ export const classes: ClassData[] = [
                 book: "India People and Economy",
                 icon: "🌍",
                 chapters: [
-                    { number: 201, title: "Population: Distribution, Density, Growth and Composition", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-201.pdf" },
-                    { number: 202, title: "Human Settlements", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-202.pdf" },
-                    { number: 203, title: "Land Resources and Agriculture", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-203.pdf" },
-                    { number: 204, title: "Water Resources", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-204.pdf" },
-                    { number: 205, title: "Mineral and Energy Resources", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-205.pdf" },
-                    { number: 206, title: "Planning and Sustainable Development in Indian Context", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-206.pdf" },
-                    { number: 207, title: "Transport and Communication", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-207.pdf" },
-                    { number: 208, title: "International Trade", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-208.pdf" },
-                    { number: 209, title: "Geographical Perspective on Selected Issues and Problems", pdfUrl: "/pdfs/class-12/geography/india-people-and-economy/chapter-209.pdf" },
+                    { number: 201, title: "Population: Distribution, Density, Growth and Composition", pdfUrl: links["class-12/geography/india-people-and-economy/chapter-201.pdf"] || "" },
+                    { number: 202, title: "Human Settlements", pdfUrl: links["class-12/geography/india-people-and-economy/chapter-202.pdf"] || "" },
+                    { number: 203, title: "Land Resources and Agriculture", pdfUrl: links["class-12/geography/india-people-and-economy/chapter-203.pdf"] || "" },
+                    { number: 204, title: "Water Resources", pdfUrl: links["class-12/geography/india-people-and-economy/chapter-204.pdf"] || "" },
+                    { number: 205, title: "Mineral and Energy Resources", pdfUrl: links["class-12/geography/india-people-and-economy/chapter-205.pdf"] || "" },
+                    { number: 206, title: "Planning and Sustainable Development in Indian Context", pdfUrl: links["class-12/geography/india-people-and-economy/chapter-206.pdf"] || "" },
+                    { number: 207, title: "Transport and Communication", pdfUrl: links["class-12/geography/india-people-and-economy/chapter-207.pdf"] || "" },
+                    { number: 208, title: "International Trade", pdfUrl: links["class-12/geography/india-people-and-economy/chapter-208.pdf"] || "" },
+                    { number: 209, title: "Geographical Perspective on Selected Issues and Problems", pdfUrl: links["class-12/geography/india-people-and-economy/chapter-209.pdf"] || "" },
                 ]
             },
             {
@@ -2897,10 +2902,10 @@ export const classes: ClassData[] = [
                 book: "Practical Work in Geography Part II",
                 icon: "🌍",
                 chapters: [
-                    { number: 301, title: "Data - Its Source and Compilation", pdfUrl: "/pdfs/class-12/geography/practical-work-in-geography-part-ii/chapter-301.pdf" },
-                    { number: 302, title: "Data Processing", pdfUrl: "/pdfs/class-12/geography/practical-work-in-geography-part-ii/chapter-302.pdf" },
-                    { number: 303, title: "Graphical Representation of Data", pdfUrl: "/pdfs/class-12/geography/practical-work-in-geography-part-ii/chapter-303.pdf" },
-                    { number: 304, title: "Use of Computer in Data Processing and Mapping", pdfUrl: "/pdfs/class-12/geography/practical-work-in-geography-part-ii/chapter-304.pdf" },
+                    { number: 301, title: "Data - Its Source and Compilation", pdfUrl: links["class-12/geography/practical-work-in-geography-part-ii/chapter-301.pdf"] || "" },
+                    { number: 302, title: "Data Processing", pdfUrl: links["class-12/geography/practical-work-in-geography-part-ii/chapter-302.pdf"] || "" },
+                    { number: 303, title: "Graphical Representation of Data", pdfUrl: links["class-12/geography/practical-work-in-geography-part-ii/chapter-303.pdf"] || "" },
+                    { number: 304, title: "Use of Computer in Data Processing and Mapping", pdfUrl: links["class-12/geography/practical-work-in-geography-part-ii/chapter-304.pdf"] || "" },
                 ]
             },
             {
@@ -2909,13 +2914,13 @@ export const classes: ClassData[] = [
                 book: "Psychology",
                 icon: "🧠",
                 chapters: [
-                    { number: 101, title: "Variations in Psychological Attributes", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-101.pdf" },
-                    { number: 102, title: "Self and Personality", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-102.pdf" },
-                    { number: 103, title: "Meeting Life Challenges", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-103.pdf" },
-                    { number: 104, title: "Psychological Disorders", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-104.pdf" },
-                    { number: 105, title: "Therapeutic Approaches", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-105.pdf" },
-                    { number: 106, title: "Attitude and Social Cognition", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-106.pdf" },
-                    { number: 107, title: "Social Influence and Group Processes", pdfUrl: "/pdfs/class-12/psychology/psychology/chapter-107.pdf" },
+                    { number: 101, title: "Variations in Psychological Attributes", pdfUrl: links["class-12/psychology/chapter-101.pdf"] || "" },
+                    { number: 102, title: "Self and Personality", pdfUrl: links["class-12/psychology/chapter-102.pdf"] || "" },
+                    { number: 103, title: "Meeting Life Challenges", pdfUrl: links["class-12/psychology/chapter-103.pdf"] || "" },
+                    { number: 104, title: "Psychological Disorders", pdfUrl: links["class-12/psychology/chapter-104.pdf"] || "" },
+                    { number: 105, title: "Therapeutic Approaches", pdfUrl: links["class-12/psychology/chapter-105.pdf"] || "" },
+                    { number: 106, title: "Attitude and Social Cognition", pdfUrl: links["class-12/psychology/chapter-106.pdf"] || "" },
+                    { number: 107, title: "Social Influence and Group Processes", pdfUrl: links["class-12/psychology/chapter-107.pdf"] || "" },
                 ]
             },
             {
@@ -2924,13 +2929,13 @@ export const classes: ClassData[] = [
                 book: "Indian Society",
                 icon: "🧑‍🤝‍🧑",
                 chapters: [
-                    { number: 101, title: "Introducing Indian Society", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-101.pdf" },
-                    { number: 102, title: "The Demographic Structure of the Indian Society", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-102.pdf" },
-                    { number: 103, title: "Social Institutions: Continuity and Change", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-103.pdf" },
-                    { number: 104, title: "The Market as a Social Institution", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-104.pdf" },
-                    { number: 105, title: "Patterns of Social Inequality and Exclusion", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-105.pdf" },
-                    { number: 106, title: "The Challenges of Cultural Diversity", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-106.pdf" },
-                    { number: 107, title: "Chapter 107", pdfUrl: "/pdfs/class-12/sociology/indian-society/chapter-107.pdf" },
+                    { number: 101, title: "Introducing Indian Society", pdfUrl: links["class-12/sociology/indian-society/chapter-101.pdf"] || "" },
+                    { number: 102, title: "The Demographic Structure of the Indian Society", pdfUrl: links["class-12/sociology/indian-society/chapter-102.pdf"] || "" },
+                    { number: 103, title: "Social Institutions: Continuity and Change", pdfUrl: links["class-12/sociology/indian-society/chapter-103.pdf"] || "" },
+                    { number: 104, title: "The Market as a Social Institution", pdfUrl: links["class-12/sociology/indian-society/chapter-104.pdf"] || "" },
+                    { number: 105, title: "Patterns of Social Inequality and Exclusion", pdfUrl: links["class-12/sociology/indian-society/chapter-105.pdf"] || "" },
+                    { number: 106, title: "The Challenges of Cultural Diversity", pdfUrl: links["class-12/sociology/indian-society/chapter-106.pdf"] || "" },
+                    { number: 107, title: "Chapter 107", pdfUrl: links["class-12/sociology/indian-society/chapter-107.pdf"] || "" },
                 ]
             },
             {
@@ -2939,14 +2944,14 @@ export const classes: ClassData[] = [
                 book: "Social Change and Development in India",
                 icon: "🧑‍🤝‍🧑",
                 chapters: [
-                    { number: 201, title: "Structural Change", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-201.pdf" },
-                    { number: 202, title: "Cultural Change", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-202.pdf" },
-                    { number: 203, title: "The Story of Indian Democracy", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-203.pdf" },
-                    { number: 204, title: "Change and Development in Rural Society", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-204.pdf" },
-                    { number: 205, title: "Change and Development in Industrial Society", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-205.pdf" },
-                    { number: 206, title: "Social Movements", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-206.pdf" },
-                    { number: 207, title: "Chapter 207", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-207.pdf" },
-                    { number: 208, title: "Chapter 208", pdfUrl: "/pdfs/class-12/sociology/social-change-and-development-in-india/chapter-208.pdf" },
+                    { number: 201, title: "Structural Change", pdfUrl: links["class-12/sociology/social-change-and-development-in-india/chapter-201.pdf"] || "" },
+                    { number: 202, title: "Cultural Change", pdfUrl: links["class-12/sociology/social-change-and-development-in-india/chapter-202.pdf"] || "" },
+                    { number: 203, title: "The Story of Indian Democracy", pdfUrl: links["class-12/sociology/social-change-and-development-in-india/chapter-203.pdf"] || "" },
+                    { number: 204, title: "Change and Development in Rural Society", pdfUrl: links["class-12/sociology/social-change-and-development-in-india/chapter-204.pdf"] || "" },
+                    { number: 205, title: "Change and Development in Industrial Society", pdfUrl: links["class-12/sociology/social-change-and-development-in-india/chapter-205.pdf"] || "" },
+                    { number: 206, title: "Social Movements", pdfUrl: links["class-12/sociology/social-change-and-development-in-india/chapter-206.pdf"] || "" },
+                    { number: 207, title: "Chapter 207", pdfUrl: links["class-12/sociology/social-change-and-development-in-india/chapter-207.pdf"] || "" },
+                    { number: 208, title: "Chapter 208", pdfUrl: links["class-12/sociology/social-change-and-development-in-india/chapter-208.pdf"] || "" },
                 ]
             },
             {
@@ -2955,13 +2960,13 @@ export const classes: ClassData[] = [
                 book: "Contemporary World Politics",
                 icon: "🗳️",
                 chapters: [
-                    { number: 101, title: "The End of Bipolarity", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-101.pdf" },
-                    { number: 102, title: "Contemporary Centres of Power", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-102.pdf" },
-                    { number: 103, title: "Contemporary South Asia", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-103.pdf" },
-                    { number: 104, title: "International Organisations", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-104.pdf" },
-                    { number: 105, title: "Security in the Contemporary World", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-105.pdf" },
-                    { number: 106, title: "Environment and Natural Resources", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-106.pdf" },
-                    { number: 107, title: "Globalisation", pdfUrl: "/pdfs/class-12/political-science/contemporary-world-politics/chapter-107.pdf" }
+                    { number: 101, title: "The End of Bipolarity", pdfUrl: links["class-12/political-science/contemporary-world-politics/chapter-101.pdf"] || "" },
+                    { number: 102, title: "Contemporary Centres of Power", pdfUrl: links["class-12/political-science/contemporary-world-politics/chapter-102.pdf"] || "" },
+                    { number: 103, title: "Contemporary South Asia", pdfUrl: links["class-12/political-science/contemporary-world-politics/chapter-103.pdf"] || "" },
+                    { number: 104, title: "International Organisations", pdfUrl: links["class-12/political-science/contemporary-world-politics/chapter-104.pdf"] || "" },
+                    { number: 105, title: "Security in the Contemporary World", pdfUrl: links["class-12/political-science/contemporary-world-politics/chapter-105.pdf"] || "" },
+                    { number: 106, title: "Environment and Natural Resources", pdfUrl: links["class-12/political-science/contemporary-world-politics/chapter-106.pdf"] || "" },
+                    { number: 107, title: "Globalisation", pdfUrl: links["class-12/political-science/contemporary-world-politics/chapter-107.pdf"] || "" }
                 ]
             },
             {
@@ -2970,14 +2975,14 @@ export const classes: ClassData[] = [
                 book: "Politics in India Since Independence",
                 icon: "🗳️",
                 chapters: [
-                    { number: 201, title: "Challenges of Nation Building", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-201.pdf" },
-                    { number: 202, title: "Era of One-party Dominance", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-202.pdf" },
-                    { number: 203, title: "Politics of Planned Development", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-203.pdf" },
-                    { number: 204, title: "India's External Relations", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-204.pdf" },
-                    { number: 205, title: "Challenges to and Restoration of the Congress System", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-205.pdf" },
-                    { number: 206, title: "The Crisis of Democratic Order", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-206.pdf" },
-                    { number: 207, title: "Regional Aspirations", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-207.pdf" },
-                    { number: 208, title: "Recent Developments in Indian Politics", pdfUrl: "/pdfs/class-12/political-science/politics-in-india-since-independence/chapter-208.pdf" }
+                    { number: 201, title: "Challenges of Nation Building", pdfUrl: links["class-12/political-science/politics-in-india-since-independence/chapter-201.pdf"] || "" },
+                    { number: 202, title: "Era of One-party Dominance", pdfUrl: links["class-12/political-science/politics-in-india-since-independence/chapter-202.pdf"] || "" },
+                    { number: 203, title: "Politics of Planned Development", pdfUrl: links["class-12/political-science/politics-in-india-since-independence/chapter-203.pdf"] || "" },
+                    { number: 204, title: "India's External Relations", pdfUrl: links["class-12/political-science/politics-in-india-since-independence/chapter-204.pdf"] || "" },
+                    { number: 205, title: "Challenges to and Restoration of the Congress System", pdfUrl: links["class-12/political-science/politics-in-india-since-independence/chapter-205.pdf"] || "" },
+                    { number: 206, title: "The Crisis of Democratic Order", pdfUrl: links["class-12/political-science/politics-in-india-since-independence/chapter-206.pdf"] || "" },
+                    { number: 207, title: "Regional Aspirations", pdfUrl: links["class-12/political-science/politics-in-india-since-independence/chapter-207.pdf"] || "" },
+                    { number: 208, title: "Recent Developments in Indian Politics", pdfUrl: links["class-12/political-science/politics-in-india-since-independence/chapter-208.pdf"] || "" }
                 ]
             },
             {
@@ -2986,12 +2991,12 @@ export const classes: ClassData[] = [
                 book: "Introductory Macroeconomics",
                 icon: "📈",
                 chapters: [
-                    { number: 101, title: "Introduction", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-101.pdf" },
-                    { number: 102, title: "National Income Accounting", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-102.pdf" },
-                    { number: 103, title: "Money and Banking", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-103.pdf" },
-                    { number: 104, title: "Determination of Income and Employment", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-104.pdf" },
-                    { number: 105, title: "Government Budget and the Economy", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-105.pdf" },
-                    { number: 106, title: "Open Economy Macroeconomics", pdfUrl: "/pdfs/class-12/economics/introductory-macroeconomics/chapter-106.pdf" },
+                    { number: 101, title: "Introduction", pdfUrl: links["class-12/economics/introductory-macroeconomics/chapter-101.pdf"] || "" },
+                    { number: 102, title: "National Income Accounting", pdfUrl: links["class-12/economics/introductory-macroeconomics/chapter-102.pdf"] || "" },
+                    { number: 103, title: "Money and Banking", pdfUrl: links["class-12/economics/introductory-macroeconomics/chapter-103.pdf"] || "" },
+                    { number: 104, title: "Determination of Income and Employment", pdfUrl: links["class-12/economics/introductory-macroeconomics/chapter-104.pdf"] || "" },
+                    { number: 105, title: "Government Budget and the Economy", pdfUrl: links["class-12/economics/introductory-macroeconomics/chapter-105.pdf"] || "" },
+                    { number: 106, title: "Open Economy Macroeconomics", pdfUrl: links["class-12/economics/introductory-macroeconomics/chapter-106.pdf"] || "" },
                 ]
             },
             {
@@ -3000,11 +3005,11 @@ export const classes: ClassData[] = [
                 book: "Introductory Microeconomics",
                 icon: "📈",
                 chapters: [
-                    { number: 201, title: "Introduction", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-201.pdf" },
-                    { number: 202, title: "Theory of Consumer Behaviour", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-202.pdf" },
-                    { number: 203, title: "Production and Costs", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-203.pdf" },
-                    { number: 204, title: "The Theory of the Firm under Perfect Competition", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-204.pdf" },
-                    { number: 205, title: "Market Equilibrium", pdfUrl: "/pdfs/class-12/economics/introductory-microeconomics/chapter-205.pdf" },
+                    { number: 201, title: "Introduction", pdfUrl: links["class-12/economics/introductory-microeconomics/chapter-201.pdf"] || "" },
+                    { number: 202, title: "Theory of Consumer Behaviour", pdfUrl: links["class-12/economics/introductory-microeconomics/chapter-202.pdf"] || "" },
+                    { number: 203, title: "Production and Costs", pdfUrl: links["class-12/economics/introductory-microeconomics/chapter-203.pdf"] || "" },
+                    { number: 204, title: "The Theory of the Firm under Perfect Competition", pdfUrl: links["class-12/economics/introductory-microeconomics/chapter-204.pdf"] || "" },
+                    { number: 205, title: "Market Equilibrium", pdfUrl: links["class-12/economics/introductory-microeconomics/chapter-205.pdf"] || "" },
                 ]
             },
             {
@@ -3013,17 +3018,17 @@ export const classes: ClassData[] = [
                 book: "Business Studies",
                 icon: "💼",
                 chapters: [
-                    { number: 1, title: "Nature and Significance of Management", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-1.pdf" },
-                    { number: 2, title: "Principles of Management", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-2.pdf" },
-                    { number: 3, title: "Business Environment", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-3.pdf" },
-                    { number: 4, title: "Planning", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-4.pdf" },
-                    { number: 5, title: "Organising", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-5.pdf" },
-                    { number: 6, title: "Staffing", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-6.pdf" },
-                    { number: 7, title: "Directing", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-7.pdf" },
-                    { number: 8, title: "Controlling", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-8.pdf" },
-                    { number: 9, title: "Financial Management", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-9.pdf" },
-                    { number: 10, title: "Financial Markets", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-10.pdf" },
-                    { number: 11, title: "Marketing", pdfUrl: "/pdfs/class-12/business-studies/business-studies/chapter-11.pdf" },
+                    { number: 1, title: "Nature and Significance of Management", pdfUrl: links["class-12/business-studies/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Principles of Management", pdfUrl: links["class-12/business-studies/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Business Environment", pdfUrl: links["class-12/business-studies/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Planning", pdfUrl: links["class-12/business-studies/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Organising", pdfUrl: links["class-12/business-studies/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Staffing", pdfUrl: links["class-12/business-studies/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Directing", pdfUrl: links["class-12/business-studies/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Controlling", pdfUrl: links["class-12/business-studies/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Financial Management", pdfUrl: links["class-12/business-studies/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Marketing", pdfUrl: links["class-12/business-studies/chapter-10.pdf"] || "" },
+                    { number: 11, title: "Consumer Protection", pdfUrl: links["class-12/business-studies/chapter-11.pdf"] || "" },
                 ]
             },
             {
@@ -3032,14 +3037,14 @@ export const classes: ClassData[] = [
                 book: "An Introduction to Indian Art Part II",
                 icon: "🎨",
                 chapters: [
-                    { number: 101, title: "The Manuscript Painting Tradition", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-101.pdf" },
-                    { number: 102, title: "The Rajasthani School of Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-102.pdf" },
-                    { number: 103, title: "The Mughal School of Miniature Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-103.pdf" },
-                    { number: 104, title: "The Deccani Schools of Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-104.pdf" },
-                    { number: 105, title: "The Pahari School of Miniature Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-105.pdf" },
-                    { number: 106, title: "The Bengal School of Painting", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-106.pdf" },
-                    { number: 107, title: "The Modern Indian Art", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-107.pdf" },
-                    { number: 108, title: "The Living Art Traditions of India", pdfUrl: "/pdfs/class-12/fine-arts/an-introduction-to-indian-art-part-ii/chapter-108.pdf" },
+                    { number: 101, title: "The Manuscript Painting Tradition", pdfUrl: links["class-12/fine-arts/chapter-101.pdf"] || "" },
+                    { number: 102, title: "The Rajasthani School of Painting", pdfUrl: links["class-12/fine-arts/chapter-102.pdf"] || "" },
+                    { number: 103, title: "The Mughal School of Miniature Painting", pdfUrl: links["class-12/fine-arts/chapter-103.pdf"] || "" },
+                    { number: 104, title: "The Deccani Schools of Painting", pdfUrl: links["class-12/fine-arts/chapter-104.pdf"] || "" },
+                    { number: 105, title: "The Pahari School of Miniature Painting", pdfUrl: links["class-12/fine-arts/chapter-105.pdf"] || "" },
+                    { number: 106, title: "The Bengal School of Painting", pdfUrl: links["class-12/fine-arts/chapter-106.pdf"] || "" },
+                    { number: 107, title: "The Modern Indian Art", pdfUrl: links["class-12/fine-arts/chapter-107.pdf"] || "" },
+                    { number: 108, title: "The Living Art Traditions of India", pdfUrl: links["class-12/fine-arts/chapter-108.pdf"] || "" },
                 ]
             },
             {
@@ -3048,13 +3053,13 @@ export const classes: ClassData[] = [
                 book: "Informatics Practices",
                 icon: "💻",
                 chapters: [
-                    { number: 101, title: "Querying and SQL Functions", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-101.pdf" },
-                    { number: 102, title: "Data Handling using Pandas - I", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-102.pdf" },
-                    { number: 103, title: "Data Handling using Pandas - II", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-103.pdf" },
-                    { number: 104, title: "Plotting Data using Matplotlib", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-104.pdf" },
-                    { number: 105, title: "Internet and Web", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-105.pdf" },
-                    { number: 106, title: "Societal Impacts", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-106.pdf" },
-                    { number: 107, title: "Project Based Learning", pdfUrl: "/pdfs/class-12/informatics-practices/informatics-practices/chapter-107.pdf" },
+                    { number: 101, title: "Querying and SQL Functions", pdfUrl: links["class-12/informatics-practices/chapter-101.pdf"] || "" },
+                    { number: 102, title: "Data Handling using Pandas - I", pdfUrl: links["class-12/informatics-practices/chapter-102.pdf"] || "" },
+                    { number: 103, title: "Data Handling using Pandas - II", pdfUrl: links["class-12/informatics-practices/chapter-103.pdf"] || "" },
+                    { number: 104, title: "Plotting Data using Matplotlib", pdfUrl: links["class-12/informatics-practices/chapter-104.pdf"] || "" },
+                    { number: 105, title: "Internet and Web", pdfUrl: links["class-12/informatics-practices/chapter-105.pdf"] || "" },
+                    { number: 106, title: "Societal Impacts", pdfUrl: links["class-12/informatics-practices/chapter-106.pdf"] || "" },
+                    { number: 107, title: "Project Based Learning", pdfUrl: links["class-12/informatics-practices/chapter-107.pdf"] || "" },
                 ]
             },
             {
@@ -3063,19 +3068,19 @@ export const classes: ClassData[] = [
                 book: "Biotechnology",
                 icon: "🔬",
                 chapters: [
-                    { number: 1, title: "Chapter 1", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-1.pdf" },
-                    { number: 2, title: "Chapter 2", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-2.pdf" },
-                    { number: 3, title: "Chapter 3", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-3.pdf" },
-                    { number: 4, title: "Chapter 4", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-4.pdf" },
-                    { number: 5, title: "Chapter 5", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-5.pdf" },
-                    { number: 6, title: "Chapter 6", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-6.pdf" },
-                    { number: 7, title: "Chapter 7", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-7.pdf" },
-                    { number: 8, title: "Chapter 8", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-8.pdf" },
-                    { number: 9, title: "Chapter 9", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-9.pdf" },
-                    { number: 10, title: "Chapter 10", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-10.pdf" },
-                    { number: 11, title: "Chapter 11", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-11.pdf" },
-                    { number: 12, title: "Chapter 12", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-12.pdf" },
-                    { number: 13, title: "Chapter 13", pdfUrl: "/pdfs/class-12/biotechnology/biotechnology/chapter-13.pdf" },
+                    { number: 1, title: "An Overview of Recombinant DNA Technology", pdfUrl: links["class-12/biotechnology/chapter-1.pdf"] || "" },
+                    { number: 2, title: "Host–Vector System", pdfUrl: links["class-12/biotechnology/chapter-2.pdf"] || "" },
+                    { number: 3, title: "Gene Cloning", pdfUrl: links["class-12/biotechnology/chapter-3.pdf"] || "" },
+                    { number: 4, title: "Applications of Recombinant DNA Technology", pdfUrl: links["class-12/biotechnology/chapter-4.pdf"] || "" },
+                    { number: 5, title: "Genome Technology and Engineering", pdfUrl: links["class-12/biotechnology/chapter-5.pdf"] || "" },
+                    { number: 6, title: "Microbial Culture", pdfUrl: links["class-12/biotechnology/chapter-6.pdf"] || "" },
+                    { number: 7, title: "Plant Tissue Culture", pdfUrl: links["class-12/biotechnology/chapter-7.pdf"] || "" },
+                    { number: 8, title: "Animal Cell Culture", pdfUrl: links["class-12/biotechnology/chapter-8.pdf"] || "" },
+                    { number: 9, title: "Stem Cell Culture and Organ Culture", pdfUrl: links["class-12/biotechnology/chapter-9.pdf"] || "" },
+                    { number: 10, title: "Bioprocessing and Biomanufacturing", pdfUrl: links["class-12/biotechnology/chapter-10.pdf"] || "" },
+                    { number: 11, title: "Bioremediation", pdfUrl: links["class-12/biotechnology/chapter-11.pdf"] || "" },
+                    { number: 12, title: "Recent Innovations in Biotechnology", pdfUrl: links["class-12/biotechnology/chapter-12.pdf"] || "" },
+                    { number: 13, title: "Entrepreneurship", pdfUrl: links["class-12/biotechnology/chapter-13.pdf"] || "" },
                 ]
             }
         ]
