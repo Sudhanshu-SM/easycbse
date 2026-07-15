@@ -12,6 +12,12 @@ const check = (name, fn) => checks.push({ name, fn });
 
 // --- checks ---
 
+check("branded 404 page exists", () => {
+    const html = read("404.html");
+    assert.match(html, /404 - Page Not Found/);
+    assert.match(html, /Go to Homepage/);
+});
+
 check("sitemap.xml lists all 137 pages", () => {
     const xml = read("sitemap.xml");
     const urlCount = (xml.match(/<url>/g) || []).length;
