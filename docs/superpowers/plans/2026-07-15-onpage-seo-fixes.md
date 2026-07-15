@@ -665,6 +665,8 @@ import type { MetadataRoute } from "next";
 import { classes } from "@/data/books";
 import { SITE_URL } from "@/lib/seo";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
     const entries: MetadataRoute.Sitemap = [
         { url: SITE_URL, changeFrequency: "weekly", priority: 1 },
@@ -698,6 +700,8 @@ Create `app/robots.ts`:
 import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/seo";
 
+export const dynamic = "force-static";
+
 export default function robots(): MetadataRoute.Robots {
     return {
         rules: {
@@ -708,6 +712,12 @@ export default function robots(): MetadataRoute.Robots {
     };
 }
 ```
+
+Note: `export const dynamic = "force-static"` is required on both files —
+without it, `next build` fails with `Error: export const dynamic =
+"force-static"/export const revalidate not configured on route
+"/robots.txt" with "output: export"` (and the same for `/sitemap.xml`).
+Discovered by actually running the build, not documented up front.
 
 - [ ] **Step 4: Run the build and verify script, confirm it PASSES (green)**
 

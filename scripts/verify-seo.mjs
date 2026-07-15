@@ -12,6 +12,19 @@ const check = (name, fn) => checks.push({ name, fn });
 
 // --- checks ---
 
+check("sitemap.xml lists all 137 pages", () => {
+    const xml = read("sitemap.xml");
+    const urlCount = (xml.match(/<url>/g) || []).length;
+    assert.equal(urlCount, 137);
+    assert.match(xml, /<loc>https:\/\/www\.easycbse\.com<\/loc>/);
+});
+
+check("robots.txt allows all crawlers and points to the sitemap", () => {
+    const txt = read("robots.txt");
+    assert.match(txt, /Allow: \//);
+    assert.match(txt, /Sitemap: https:\/\/www\.easycbse\.com\/sitemap\.xml/);
+});
+
 check("class and subject pages emit BreadcrumbList JSON-LD", () => {
     const classHtml = read("class/10.html");
     assert.match(classHtml, /"@type":"BreadcrumbList"/);
