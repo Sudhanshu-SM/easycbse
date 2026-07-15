@@ -43,7 +43,7 @@ export default async function ClassPage({ params }: PageProps) {
                 {/* Header */}
                 <div className={`class-card class-${classData.id} p-8 md:p-12 mb-8 text-white text-center`}>
                     <h1 className="text-4xl md:text-5xl font-bold mb-2">
-                        {classData.name}
+                        {`CBSE ${classData.name} NCERT Books`}
                     </h1>
 
                 </div>

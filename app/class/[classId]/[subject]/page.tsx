@@ -58,8 +58,7 @@ export default async function SubjectPage({ params }: PageProps) {
                     <div className="flex items-center gap-4 mb-4">
                         <div className="text-5xl">{subject.icon}</div>
                         <div>
-                            <h1 className="text-2xl md:text-3xl font-bold">{subject.name}</h1>
-                            <p className="text-text-secondary">{classData.name}</p>
+                            <h1 className="text-2xl md:text-3xl font-bold">{`CBSE ${classData.name} ${subject.name} NCERT Book PDF`}</h1>
                         </div>
                     </div>
                     <div className="flex flex-wrap items-center gap-4 text-sm">

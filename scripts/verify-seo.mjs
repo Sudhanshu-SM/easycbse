@@ -12,6 +12,12 @@ const check = (name, fn) => checks.push({ name, fn });
 
 // --- checks ---
 
+check("home, class, and subject H1s carry the full keyword phrase", () => {
+    assert.match(read("index.html"), /<h1[^>]*>\s*📚 CBSE NCERT Books PDF/);
+    assert.match(read("class/10.html"), /<h1[^>]*>\s*CBSE Class 10 NCERT Books\s*<\/h1>/);
+    assert.match(read("class/10/math.html"), /<h1[^>]*>CBSE Class 10 Mathematics NCERT Book PDF<\/h1>/);
+});
+
 check("home title mentions CBSE", () => {
     const html = read("index.html");
     assert.match(html, /<title>CBSE NCERT Books PDF - Free Download Class 1 to 12 \| EasyCBSE<\/title>/);

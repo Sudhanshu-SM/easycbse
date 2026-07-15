@@ -400,9 +400,16 @@ to:
 
 ```tsx
                     <h1 className="text-4xl md:text-5xl font-bold mb-2">
-                        CBSE {classData.name} NCERT Books
+                        {`CBSE ${classData.name} NCERT Books`}
                     </h1>
 ```
+
+Note: use a single template-literal string, not mixed JSX children
+(`CBSE {classData.name} NCERT Books`) — React SSR inserts `<!-- -->`
+comment markers between separate text/expression children, which is
+harmless for SEO but breaks exact-string assertions like the ones in
+`scripts/verify-seo.mjs`. A single interpolated string avoids that
+entirely.
 
 - [ ] **Step 4: Update the subject page H1 and drop the now-redundant class-name line**
 
@@ -419,7 +426,7 @@ to:
 
 ```tsx
                         <div>
-                            <h1 className="text-2xl md:text-3xl font-bold">CBSE {classData.name} {subject.name} NCERT Book PDF</h1>
+                            <h1 className="text-2xl md:text-3xl font-bold">{`CBSE ${classData.name} ${subject.name} NCERT Book PDF`}</h1>
                         </div>
 ```
 

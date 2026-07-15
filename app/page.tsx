@@ -8,7 +8,7 @@ export default function Home() {
       <section className="bg-primary text-white py-10 md:py-14">
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 animate-fadeInUp">
-            📚 NCERT Books PDF
+            📚 CBSE NCERT Books PDF
           </h1>
           <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
             Free download of all NCERT textbooks from Class 1 to 12.
