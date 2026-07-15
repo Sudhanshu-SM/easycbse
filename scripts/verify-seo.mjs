@@ -12,6 +12,16 @@ const check = (name, fn) => checks.push({ name, fn });
 
 // --- checks ---
 
+check("class and subject pages emit BreadcrumbList JSON-LD", () => {
+    const classHtml = read("class/10.html");
+    assert.match(classHtml, /"@type":"BreadcrumbList"/);
+    assert.match(classHtml, /"name":"Class 10"/);
+
+    const subjectHtml = read("class/10/math.html");
+    assert.match(subjectHtml, /"@type":"BreadcrumbList"/);
+    assert.match(subjectHtml, /"name":"Mathematics"/);
+});
+
 check("home, class, and subject H1s carry the full keyword phrase", () => {
     assert.match(read("index.html"), /<h1[^>]*>\s*📚 CBSE NCERT Books PDF/);
     assert.match(read("class/10.html"), /<h1[^>]*>\s*CBSE Class 10 NCERT Books\s*<\/h1>/);

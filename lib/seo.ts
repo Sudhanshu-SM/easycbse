@@ -29,3 +29,16 @@ export function buildSubjectMetadata(classData: ClassData, subject: Subject): Me
         alternates: { canonical: absoluteUrl(`/class/${classData.id}/${subject.id}`) },
     };
 }
+
+export function breadcrumbJsonLd(items: { name: string; url: string }[]) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: items.map((item, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: item.name,
+            item: item.url,
+        })),
+    };
+}

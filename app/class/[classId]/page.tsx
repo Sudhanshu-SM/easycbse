@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { classes, getClassById } from "@/data/books";
-import { buildClassMetadata } from "@/lib/seo";
+import { absoluteUrl, breadcrumbJsonLd, buildClassMetadata } from "@/lib/seo";
 
 // Generate static paths for all classes
 export function generateStaticParams() {
@@ -30,9 +30,18 @@ export default async function ClassPage({ params }: PageProps) {
         notFound();
     }
 
+    const breadcrumb = breadcrumbJsonLd([
+        { name: "Home", url: absoluteUrl("/") },
+        { name: classData.name, url: absoluteUrl(`/class/${classData.id}`) },
+    ]);
+
     return (
         <div className="min-h-screen py-8">
             <div className="max-w-7xl mx-auto px-4">
+                <script
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+                />
                 {/* Breadcrumb */}
                 <nav className="breadcrumb">
                     <Link href="/">Home</Link>
