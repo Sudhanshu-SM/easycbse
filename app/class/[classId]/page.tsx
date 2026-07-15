@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { classes, getClassById } from "@/data/books";
+import { buildClassMetadata } from "@/lib/seo";
 
 // Generate static paths for all classes
 export function generateStaticParams() {
@@ -11,6 +13,13 @@ export function generateStaticParams() {
 
 interface PageProps {
     params: Promise<{ classId: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { classId } = await params;
+    const classData = getClassById(parseInt(classId));
+    if (!classData) return {};
+    return buildClassMetadata(classData);
 }
 
 export default async function ClassPage({ params }: PageProps) {

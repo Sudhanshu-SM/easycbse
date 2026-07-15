@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import type { Metadata } from "next";
 import { classes, getClassById, getSubject } from "@/data/books";
+import { buildSubjectMetadata } from "@/lib/seo";
 
 // Generate static paths for all class/subject combinations
 export function generateStaticParams() {
@@ -20,6 +22,14 @@ export function generateStaticParams() {
 
 interface PageProps {
     params: Promise<{ classId: string; subject: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { classId, subject: subjectId } = await params;
+    const classData = getClassById(parseInt(classId));
+    const subject = classData ? getSubject(parseInt(classId), subjectId) : undefined;
+    if (!classData || !subject) return {};
+    return buildSubjectMetadata(classData, subject);
 }
 
 export default async function SubjectPage({ params }: PageProps) {

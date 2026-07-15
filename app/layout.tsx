@@ -3,13 +3,16 @@ import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
+import { SITE_URL } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "NCERT Books PDF - Free Download Class 1 to 12",
-  description: "Download free NCERT textbook PDFs for Class 1 to 12. Access all subjects including Maths, Science, English, Hindi, Social Science and more.",
+  metadataBase: new URL(SITE_URL),
+  title: "CBSE NCERT Books PDF - Free Download Class 1 to 12 | EasyCBSE",
+  description: "Download free NCERT textbook PDFs for CBSE Class 1 to 12. Access all subjects including Maths, Science, English, Hindi, Social Science and more.",
   keywords: "NCERT, PDF, textbooks, Class 1-12, free download, CBSE, education, India",
+  alternates: { canonical: SITE_URL },
 };
 
 export default function RootLayout({
