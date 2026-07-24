@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Fredoka } from "next/font/google";
 import Script from "next/script";
-// @ts-expect-error CSS import handled by Next.js
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import TopMarquee from "@/components/TopMarquee";
