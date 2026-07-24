@@ -1,0 +1,14 @@
+.split-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.split-item {
+  display: inline-block;
+  will-change: transform, opacity;
+}
+
+.split-text{
+  font-weight:600;
+}

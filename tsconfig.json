@@ -30,5 +30,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "functionarchive(useless)"]
+  "exclude": ["node_modules", "functionarchive(useless)", "ui-ux-pro-max-skill"]
 }

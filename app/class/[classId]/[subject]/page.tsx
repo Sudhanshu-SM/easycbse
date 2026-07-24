@@ -2,12 +2,16 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { classes, getClassById, getSubject } from "@/data/books";
-import { absoluteUrl, breadcrumbJsonLd, buildSubjectMetadata } from "@/lib/seo";
+import SubjectIcon from "@/components/SubjectIcon";
+import SubjectHero from "@/components/SubjectHero";
+import ChapterDownloadButton from "@/components/ChapterDownloadButton";
+import BlurFade from "@/components/magicui/blur-fade";
+import TypingWithCursor from "@/components/magicui/typing-with-cursor";
+import NumberTicker from "@/components/magicui/number-ticker";
+import type { Subject } from "@/data/books";
 
-// Generate static paths for all class/subject combinations
 export function generateStaticParams() {
     const paths: { classId: string; subject: string }[] = [];
-
     for (const classData of classes) {
         for (const subject of classData.subjects) {
             paths.push({
@@ -16,20 +20,95 @@ export function generateStaticParams() {
             });
         }
     }
-
     return paths;
+}
+
+const siteUrl = "https://www.easycbse.com";
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+    const { classId, subject: subjectId } = await params;
+    const classData = getClassById(parseInt(classId));
+    const subject = getSubject(parseInt(classId), subjectId);
+    if (!classData || !subject) return {};
+
+    const title = `Class ${classData.id} ${subject.name} NCERT Book PDF (Free Download)`;
+    const canonical = `${siteUrl}/class/${classData.id}/${subject.id}`;
+
+    return {
+        title,
+        description: `Download ad-free Class ${classData.id} ${subject.name} NCERT textbook PDF. ${subject.book} — free Google Drive link, no sign-up required.`,
+        alternates: { canonical },
+        openGraph: {
+            title,
+            description: `Download ad-free Class ${classData.id} ${subject.name} NCERT textbook PDF. ${subject.book} — free, no sign-up.`,
+            url: `/class/${classData.id}/${subject.id}`,
+            images: [{ url: "/og-preview.png", width: 1200, height: 630 }],
+        },
+        twitter: {
+            card: "summary_large_image",
+            title,
+            description: `Download free Class ${classData.id} ${subject.name} NCERT PDF. ${subject.book} — ad-free, instant download.`,
+            images: ["/og-preview.png"],
+        },
+    };
 }
 
 interface PageProps {
     params: Promise<{ classId: string; subject: string }>;
 }
 
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-    const { classId, subject: subjectId } = await params;
-    const classData = getClassById(parseInt(classId));
-    const subject = classData ? getSubject(parseInt(classId), subjectId) : undefined;
-    if (!classData || !subject) return {};
-    return buildSubjectMetadata(classData, subject);
+const coreSubjectNames = new Set([
+    "English", "Hindi", "Mathematics", "Math", "Science",
+    "Physics", "Chemistry", "Biology",
+    "Social Science", "History", "Geography", "Political Science", "Economics",
+    "EVS",
+]);
+
+function isCoreSubject(name: string): boolean {
+    return coreSubjectNames.has(name);
+}
+
+const fallbackPastels = [
+    "hover:bg-[#FFEAD2]",
+    "hover:bg-[#E2F0D9]",
+    "hover:bg-[#E8DFF5]",
+    "hover:bg-[#D8F3DC]",
+    "hover:bg-[#FCF6BD]",
+    "hover:bg-[#F3C4FB]",
+];
+
+interface SubjectGroup {
+    name: string;
+    icon: string;
+    ids: string[];
+    books: string;
+    totalChapters: number;
+}
+
+function deduplicateSubjects(subjects: Subject[]): SubjectGroup[] {
+    const groups = new Map<string, { name: string; icon: string; ids: string[]; books: string[]; totalChapters: number }>();
+
+    for (const s of subjects) {
+        const existing = groups.get(s.name);
+        if (existing) {
+            existing.ids.push(s.id);
+            existing.books.push(s.book);
+            existing.totalChapters += s.chapters.length;
+        } else {
+            groups.set(s.name, {
+                name: s.name,
+                icon: s.icon,
+                ids: [s.id],
+                books: [s.book],
+                totalChapters: s.chapters.length,
+            });
+        }
+    }
+
+    return Array.from(groups.values()).map((g) => ({
+        ...g,
+        books: g.books.join(", "),
+    }));
 }
 
 export default async function SubjectPage({ params }: PageProps) {
@@ -41,116 +120,138 @@ export default async function SubjectPage({ params }: PageProps) {
         notFound();
     }
 
-    const breadcrumb = breadcrumbJsonLd([
-        { name: "Home", url: absoluteUrl("/") },
-        { name: classData.name, url: absoluteUrl(`/class/${classData.id}`) },
-        { name: subject.name, url: absoluteUrl(`/class/${classData.id}/${subject.id}`) },
-    ]);
+    const otherGroups = deduplicateSubjects(
+        classData.subjects.filter((s) => s.id !== subject.id)
+    );
 
     return (
-        <div className="min-h-screen py-8">
-            <div className="max-w-4xl mx-auto px-4">
-                <script
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
-                />
-                {/* Breadcrumb */}
-                <nav className="breadcrumb">
-                    <Link href="/">Home</Link>
-                    <span>/</span>
-                    <Link href={`/class/${classData.id}`}>{classData.name}</Link>
-                    <span>/</span>
-                    <span className="text-text">{subject.name}</span>
-                </nav>
+        <div className="relative min-h-screen bg-[#FAF9F5]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "LearningResource",
+                        name: `Class ${classData.id} ${subject.name} NCERT Textbook`,
+                        description: `Download ad-free Class ${classData.id} ${subject.name} NCERT textbook PDF. ${subject.book}`,
+                        educationalLevel: `Class ${classData.id}`,
+                        educationalAlignment: `${classData.name}`,
+                        isAccessibleForFree: true,
+                        inLanguage: "en",
+                        url: `${siteUrl}/class/${classData.id}/${subject.id}`,
+                        author: {
+                            "@type": "Organization",
+                            name: "NCERT",
+                        },
+                        provider: {
+                            "@type": "EducationalOrganization",
+                            name: "EasyCBSE",
+                            url: siteUrl,
+                        },
+                        offers: {
+                            "@type": "Offer",
+                            price: "0",
+                            priceCurrency: "INR",
+                            availability: "https://schema.org/InStock",
+                        },
+                        numberOfPages: subject.chapters.length * 15,
+                        hasPart: subject.chapters.map((ch) => ({
+                            "@type": "Chapter",
+                            name: `Chapter ${ch.number}: ${ch.title}`,
+                            url: ch.pdfUrl,
+                            position: ch.number,
+                        })),
+                    }),
+                }}
+            />
+            <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgba(42,15,20,0.04)_1px,transparent_1px),linear-gradient(to_bottom,rgba(42,15,20,0.04)_1px,transparent_1px)] bg-[size:4.5rem_4.5rem]" />
+            <div className="relative mx-auto max-w-7xl px-4 py-8 md:px-6 md:py-12">
+                <SubjectHero classData={classData} subject={subject} />
 
-                {/* Header */}
-                <div className="bg-white rounded-2xl p-6 md:p-8 mb-8 shadow-lg">
-                    <div className="flex items-center gap-4 mb-4">
-                        <div className="text-5xl">{subject.icon}</div>
-                        <div>
-                            <h1 className="text-2xl md:text-3xl font-bold">{`CBSE ${classData.name} ${subject.name} NCERT Book PDF`}</h1>
-                        </div>
-                    </div>
-                    <div className="flex flex-wrap items-center gap-4 text-sm">
-                        <span className="bg-primary/10 text-primary px-3 py-1 rounded-full">
-                            📖 {subject.book}
-                        </span>
-                        <span className="bg-accent/10 text-accent px-3 py-1 rounded-full">
-                            📑 {subject.chapters.length} Chapters
-                        </span>
+                <div className="flex w-full items-baseline justify-between border-b border-[#2A0F14]/10 py-5 mb-8 select-none">
+                    <h2 className="font-heading text-xl font-bold tracking-tight text-[#2A0F14] md:text-2xl">
+                        <TypingWithCursor text="Chapters" speed={35} cursorStyle="|" showCursor={true} />
+                    </h2>
+                    <div className="inline-flex items-baseline gap-1 font-body text-sm font-bold tracking-tight text-[#2A0F14]/90 md:text-base">
+                        <NumberTicker value={subject.chapters.length} className="font-bold text-[#2A0F14]/90 tracking-tight text-sm md:text-base" />
+                        <span className="font-body font-bold tracking-tight">chapters</span>
                     </div>
                 </div>
 
-                {/* Chapters List */}
-                <h2 className="text-xl font-bold mb-4">Chapters</h2>
-                <div className="space-y-3">
-                    {subject.chapters.map((chapter, idx) => (
+                <div className="rounded-2xl border border-[#2A0F14]/10 bg-white divide-y divide-[#2A0F14]/5">
+                    {subject.chapters.map((chapter) => (
                         <div
                             key={chapter.number}
-                            id={`chapter-${chapter.number}`}
-                            className="chapter-item animate-fadeInUp"
-                            style={{ animationDelay: `${idx * 30}ms` }}
+                            className="flex items-center gap-4 px-5 py-4 md:px-6"
                         >
-                            <div className="flex items-center gap-4">
-                                <div className="w-10 h-10 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center text-sm">
-                                    {chapter.number}
-                                </div>
-                                <div>
-                                    <h3 className="font-medium">{chapter.title}</h3>
-                                    <p className="text-xs text-text-secondary">Chapter {chapter.number}</p>
-                                </div>
+                            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#2A0F14]/5 font-heading text-sm font-bold text-[#544145]">
+                                {String(chapter.number).padStart(2, "0")}
+                            </span>
+                            <div className="min-w-0 flex-1">
+                                <p className="font-body text-[14px] font-medium tracking-normal leading-relaxed text-[#544145]">
+                                    Chapter {chapter.number}
+                                </p>
+                                <h3 className="font-heading text-base font-semibold text-[#2A0F14]">
+                                    {chapter.title}
+                                </h3>
                             </div>
-                            <a
-                                href={chapter.pdfUrl}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="download-btn"
-                            >
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-                                </svg>
-                                <span className="hidden sm:inline">Download PDF</span>
-                                <span className="sm:hidden">PDF</span>
-                            </a>
+                            <ChapterDownloadButton href={chapter.pdfUrl} />
                         </div>
                     ))}
                 </div>
 
-                {/* Download All */}
-                <div className="mt-8 p-6 bg-gradient-to-r from-primary to-primary-light rounded-2xl text-white text-center">
-                    <h3 className="text-lg font-bold mb-2">📥 Download Complete Book</h3>
-                    <p className="text-sm opacity-90 mb-4">
-                        Get the full {subject.book} textbook in one file
-                    </p>
-                    <a
-                        href={subject.chapters[0]?.pdfUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-block bg-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-all shadow-md"
-                        style={{ color: '#000000' }}
-                    >
-                        Download Full Book
-                    </a>
-                </div>
-
-                {/* Other Subjects */}
-                <div className="mt-12">
-                    <h3 className="text-lg font-semibold mb-4 text-text-secondary">Other Subjects in {classData.name}</h3>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                        {classData.subjects
-                            .filter((s) => s.id !== subject.id)
-                            .map((s) => (
-                                <Link
-                                    key={s.id}
-                                    href={`/class/${classData.id}/${s.id}`}
-                                    className="bg-white p-4 rounded-lg text-center hover:shadow-md transition-all"
-                                >
-                                    <div className="text-2xl mb-1">{s.icon}</div>
-                                    <div className="text-sm font-medium">{s.name}</div>
-                                </Link>
-                            ))}
+                {otherGroups.length > 0 && (
+                    <div className="mt-12">
+                        <h3 className="mb-5 font-heading text-xl font-bold text-[#2A0F14]">
+                            Other Subjects in {classData.name}
+                        </h3>
+                        <div className="other-subjects-group grid grid-cols-1 gap-4 md:grid-cols-3 lg:grid-cols-4">
+                            {otherGroups.map((group, index) => {
+                                const core = isCoreSubject(group.name);
+                                const hoverColor = fallbackPastels[index % fallbackPastels.length];
+                                return (
+                                    <BlurFade
+                                        key={group.ids[0]}
+                                        delay={0.1 + index * 0.05}
+                                        blur="0px"
+                                        className={`other-subjects-card overflow-hidden rounded-2xl border-2 border-[#2A0F14] bg-[#FAF9F5] shadow-[4px_4px_0px_#2A0F14] transition-all duration-300 ease-out hover:translate-y-[-4px] hover:shadow-[6px_6px_0px_#2A0F14] active:translate-y-0 ${hoverColor} ${core ? "md:col-span-2" : ""}`}
+                                    >
+                                    <Link
+                                        href={`/class/${classData.id}/${group.ids[0]}`}
+                                        className="block p-6 cursor-pointer"
+                                    >
+                                        <div className="flex items-center gap-4">
+                                            <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#2A0F14]/5 text-[#2A0F14] md:h-11 md:w-11">
+                                                <SubjectIcon subjectId={group.ids[0]} className="w-[18px] h-[18px]" />
+                                            </div>
+                                            <div className="flex flex-col">
+                                                <h4 className="font-heading font-bold text-base text-[#2A0F14]">
+                                                    {group.name}
+                                                </h4>
+                                                <span className="font-body font-medium text-[14px] text-[#544145]">
+                                                    {group.books} &middot; {group.totalChapters} chapters
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                    </BlurFade>
+                                );
+                            })}
+                        </div>
+                        <style>{`
+                            .other-subjects-group:hover > .other-subjects-card:not(:hover) {
+                                filter: blur(4px) !important;
+                                transform: scale(0.97) !important;
+                                opacity: 0.7 !important;
+                            }
+                            .other-subjects-card:hover {
+                                transform: scale(1.05) !important;
+                                filter: blur(0px) !important;
+                                opacity: 1 !important;
+                            }
+                        `}</style>
                     </div>
-                </div>
+                )}
             </div>
         </div>
     );

@@ -550,7 +550,7 @@ export const classes: ClassData[] = [
             {
                 id: "sanskrit",
                 name: "Sanskrit",
-                book: "Ruchira I",
+                book: "दीपकम्",
                 icon: "🕉️",
                 chapters: [
                     { number: 1, title: "Chapter 1", pdfUrl: pdf(6, "sanskrit", 1) },
@@ -800,7 +800,7 @@ export const classes: ClassData[] = [
             {
                 id: "sanskrit",
                 name: "Sanskrit",
-                book: "Ruchira III",
+                book: "दीपकम्",
                 icon: "🕉️",
                 chapters: [
                     { number: 1, title: "Chapter 1", pdfUrl: pdf(8, "sanskrit", 1) },
@@ -913,24 +913,6 @@ export const classes: ClassData[] = [
                     { number: 10, title: "Chp-10", pdfUrl: links["class-9/hindi-ganga/chapter-10.pdf"] || "" },
                     { number: 11, title: "Chp-11", pdfUrl: links["class-9/hindi-ganga/chapter-11.pdf"] || "" },
                     { number: 12, title: "Chp-12", pdfUrl: links["class-9/hindi-ganga/chapter-12.pdf"] || "" },
-                ]
-            },
-            {
-                id: "hindi-reva",
-                name: "Hindi",
-                book: "Reva",
-                icon: "हिं",
-                chapters: [
-                    { number: 1, title: "Chp-1", pdfUrl: links["class-9/hindi-reva/chapter-1.pdf"] || "" },
-                    { number: 2, title: "Chp-2", pdfUrl: links["class-9/hindi-reva/chapter-2.pdf"] || "" },
-                    { number: 3, title: "Chp-3", pdfUrl: links["class-9/hindi-reva/chapter-3.pdf"] || "" },
-                    { number: 4, title: "Chp-4", pdfUrl: links["class-9/hindi-reva/chapter-4.pdf"] || "" },
-                    { number: 5, title: "Chp-5", pdfUrl: links["class-9/hindi-reva/chapter-5.pdf"] || "" },
-                    { number: 6, title: "Chp-6", pdfUrl: links["class-9/hindi-reva/chapter-6.pdf"] || "" },
-                    { number: 7, title: "Chp-7", pdfUrl: links["class-9/hindi-reva/chapter-7.pdf"] || "" },
-                    { number: 8, title: "Chp-8", pdfUrl: links["class-9/hindi-reva/chapter-8.pdf"] || "" },
-                    { number: 9, title: "Chp-9", pdfUrl: links["class-9/hindi-reva/chapter-9.pdf"] || "" },
-                    { number: 10, title: "Chp-10", pdfUrl: links["class-9/hindi-reva/chapter-10.pdf"] || "" },
                 ]
             },
             {

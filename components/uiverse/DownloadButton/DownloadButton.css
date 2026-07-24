@@ -1,0 +1,129 @@
+.download-button {
+  --font-color: #ffffff;
+  --bg-color-sub: rgba(255, 255, 255, 0.16);
+  --bg-color: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  --main-color: #ffffff;
+
+  position: relative;
+  min-width: 170px;
+  min-height: 48px;
+  padding: 0;
+
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+
+  border: 0;
+  border-radius: 12px;
+
+  background: var(--bg-color);
+
+  overflow: hidden;
+
+  box-shadow: 0 12px 24px rgba(255, 107, 53, 0.22);
+
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.download-button:hover {
+  background: var(--bg-color);
+  box-shadow: 0 16px 30px rgba(255, 107, 53, 0.28);
+}
+
+.download-button:active {
+  transform: translateY(1px);
+}
+
+.download-button:disabled,
+.download-button--disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.download-button__text,
+.download-button__icon {
+  transition: all 0.3s ease;
+}
+
+.download-button__text {
+  width: 100%;
+  text-align: center;
+
+  color: var(--font-color);
+
+  font-weight: 800;
+
+  transform: translateX(-10px);
+}
+
+.download-button__icon {
+  position: absolute;
+
+  right: 0;
+
+  width: 48px;
+
+  height: 100%;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: var(--bg-color-sub);
+}
+
+.download-button__svg {
+  width: 20px;
+  fill: var(--main-color);
+}
+
+.download-button:hover .download-button__text {
+  color: transparent;
+}
+
+.download-button:hover .download-button__icon {
+  width: 100%;
+}
+
+.download-button:hover .download-button__svg {
+  transform: scale(1.15);
+  animation: dl-bounce 0.9s ease infinite;
+}
+
+@keyframes dl-bounce {
+  0%, 100% { transform: scale(1.15) translateY(0); }
+  50% { transform: scale(1.15) translateY(4px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .download-button:hover .download-button__svg {
+    animation: none;
+  }
+}
+
+.download-button__svg {
+  transition: transform 0.3s ease;
+}
+
+.download-button--light {
+  --font-color: #1e3a5f;
+  --bg-color-sub: rgba(30, 58, 95, 0.08);
+  --bg-color: #ffffff;
+  --main-color: #1e3a5f;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.16);
+}
+
+.download-button--light:hover {
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 640px) {
+  .download-button {
+    width: 100%;
+  }
+}
