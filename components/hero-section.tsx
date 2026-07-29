@@ -54,7 +54,9 @@ export default function HeroSection() {
         {/* LEFT COLUMN */}
         <div className="flex w-full max-w-2xl flex-col space-y-5 lg:col-span-7">
           <h1 className="font-heading text-3xl sm:text-4xl md:text-6xl text-[#2A0F14] leading-[1.25] sm:leading-[1.15] tracking-tight">
+            <span className="sr-only">CBSE NCERT Books PDF — Free Download for Class 1 to 12</span>
             <motion.span
+              aria-hidden="true"
               variants={typewriterContainer}
               initial="hidden"
               animate="visible"
@@ -68,7 +70,7 @@ export default function HeroSection() {
               ))}
             </motion.span>
 
-            <span className="inline-block align-middle h-auto">
+            <span aria-hidden="true" className="inline-block align-middle h-auto">
               <AnimatePresence>
                 {isTypewriterDone && (
                   <motion.span

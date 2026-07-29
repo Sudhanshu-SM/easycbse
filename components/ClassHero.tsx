@@ -68,8 +68,11 @@ export default function ClassHero({ classData }: { classData: ClassData }) {
           </p>
         </div>
         <h1 className="font-heading text-4xl font-extrabold leading-none text-white md:text-5xl lg:text-6xl tracking-tight flex items-baseline gap-x-2">
-          <span>Class</span>
-          <NumberTicker value={classData.id} className="text-white font-extrabold tracking-tight" />
+          <span className="sr-only">{`CBSE Class ${classData.id} NCERT Books PDF — Free Download, All Subjects`}</span>
+          <span aria-hidden="true" className="flex items-baseline gap-x-2">
+            <span>Class</span>
+            <NumberTicker value={classData.id} className="text-white font-extrabold tracking-tight" />
+          </span>
         </h1>
         <div className="min-h-[48px] max-w-2xl font-body font-medium text-[14px] text-white/95 leading-relaxed">
           <TypingAnimation

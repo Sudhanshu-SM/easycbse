@@ -15,7 +15,9 @@ export default function TypingWithCursor({
   cursorStyle = "|",
   showCursor = true,
 }: TypingWithCursorProps) {
-  const [displayed, setDisplayed] = useState("");
+  // Server-render the full text so it is visible to crawlers and without JS;
+  // the typing effect restarts from empty once hydrated.
+  const [displayed, setDisplayed] = useState(text);
   const [done, setDone] = useState(false);
 
   useEffect(() => {

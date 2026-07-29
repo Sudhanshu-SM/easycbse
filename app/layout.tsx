@@ -16,11 +16,11 @@ const siteUrl = "https://www.easycbse.com";
 
 export const metadata: Metadata = {
   title: {
-    default: "EasyCBSE — Ad-Free NCERT PDF Downloads for Class 1-12",
+    default: "CBSE NCERT Books PDF - Free Download Class 1 to 12 | EasyCBSE",
     template: "%s | EasyCBSE",
   },
-  description: "Download ad-free NCERT textbook PDFs for Classes 1 to 12 via Google Drive. Access clean, beautifully typeset CBSE NCERT books for all subjects — instant, no sign-up required.",
-  keywords: "NCERT PDF download, ad-free NCERT textbooks, CBSE NCERT books Google Drive, Class 1-12 NCERT PDFs, EasyCBSE NCERT textbooks, free NCERT download",
+  description: "Download free NCERT textbook PDFs for CBSE Class 1 to 12. All subjects including Maths, Science, English, Hindi, Social Science and more — ad-free, instant, no sign-up required.",
+  keywords: "NCERT, PDF, textbooks, Class 1-12, free download, CBSE, NCERT books, CBSE NCERT PDF, education, India",
   metadataBase: new URL(siteUrl),
   alternates: {
     canonical: "/",
@@ -29,15 +29,13 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "EasyCBSE",
-    title: "EasyCBSE — Ad-Free NCERT PDF Downloads for Class 1-12",
-    description: "Download ad-free NCERT textbook PDFs for Classes 1 to 12 via Google Drive. Access clean CBSE NCERT books for all subjects — instant, no sign-up.",
-    images: [{ url: "/og-preview.png", width: 1200, height: 630 }],
+    title: "CBSE NCERT Books PDF - Free Download Class 1 to 12 | EasyCBSE",
+    description: "Download free NCERT textbook PDFs for CBSE Class 1 to 12. All subjects — ad-free, instant, no sign-up.",
   },
   twitter: {
-    card: "summary_large_image",
-    title: "EasyCBSE — Ad-Free NCERT PDF Downloads for Class 1-12",
-    description: "Download ad-free NCERT textbook PDFs for Classes 1 to 12. Clean CBSE NCERT books — instant, no sign-up.",
-    images: ["/og-preview.png"],
+    card: "summary",
+    title: "CBSE NCERT Books PDF - Free Download Class 1 to 12 | EasyCBSE",
+    description: "Download free NCERT textbook PDFs for CBSE Class 1 to 12. All subjects — ad-free, instant, no sign-up.",
   },
   robots: {
     index: true,
@@ -94,15 +92,9 @@ export default function RootLayout({
               url: siteUrl,
               description:
                 "Download ad-free NCERT textbook PDFs for Classes 1 to 12 via Google Drive. Clean CBSE NCERT books for all subjects — instant, no sign-up required.",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: `${siteUrl}/search?q={search_term_string}`,
-                "query-input": "required name=search_term_string",
-              },
               mainEntity: {
                 "@type": "EducationalOrganization",
                 name: "EasyCBSE",
-                logo: `${siteUrl}/logo.png`,
                 description:
                   "Providing organized, ad-free educational tools and core curriculum study resources for school students.",
               },

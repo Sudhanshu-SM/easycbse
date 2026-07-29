@@ -91,7 +91,8 @@ export default function SubjectHero({
             <span className="text-white">{subject.name}</span>
           </nav>
           <h1 className="font-heading text-3xl font-bold leading-tight text-white md:text-5xl">
-            {subject.name}
+            <span className="sr-only">{`CBSE Class ${classData.id} ${subject.name} NCERT Book PDF — Free Download`}</span>
+            <span aria-hidden="true">{subject.name}</span>
           </h1>
           <div className="mt-4 flex flex-wrap gap-3">
             <span className="inline-flex items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 font-body text-[14px] font-medium tracking-normal text-orange-50/90 backdrop-blur-sm">

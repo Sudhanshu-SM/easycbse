@@ -18,10 +18,10 @@ check("branded 404 page exists", () => {
     assert.match(html, /Go to Homepage/);
 });
 
-check("sitemap.xml lists all 137 pages", () => {
+check("sitemap.xml lists all 136 pages", () => {
     const xml = read("sitemap.xml");
     const urlCount = (xml.match(/<url>/g) || []).length;
-    assert.equal(urlCount, 137);
+    assert.equal(urlCount, 136);
     assert.match(xml, /<loc>https:\/\/www\.easycbse\.com<\/loc>/);
 });
 
@@ -42,9 +42,17 @@ check("class and subject pages emit BreadcrumbList JSON-LD", () => {
 });
 
 check("home, class, and subject H1s carry the full keyword phrase", () => {
-    assert.match(read("index.html"), /<h1[^>]*>\s*📚 CBSE NCERT Books PDF/);
-    assert.match(read("class/10.html"), /<h1[^>]*>\s*CBSE Class 10 NCERT Books\s*<\/h1>/);
-    assert.match(read("class/10/math.html"), /<h1[^>]*>CBSE Class 10 Mathematics NCERT Book PDF<\/h1>/);
+    // Keyword phrase lives in an sr-only span inside each h1; animated
+    // visuals are aria-hidden alongside it.
+    assert.match(read("index.html"), /<h1[^>]*><span class="sr-only">CBSE NCERT Books PDF — Free Download for Class 1 to 12<\/span>/);
+    assert.match(read("class/10.html"), /<h1[^>]*><span class="sr-only">CBSE Class 10 NCERT Books PDF — Free Download, All Subjects<\/span>/);
+    assert.match(read("class/10/math.html"), /<h1[^>]*><span class="sr-only">CBSE Class 10 Mathematics NCERT Book PDF — Free Download<\/span>/);
+});
+
+check("hero numbers and typed copy are server-rendered (no empty placeholders)", () => {
+    const classHtml = read("class/10.html");
+    assert.doesNotMatch(classHtml, /Class 0/);
+    assert.match(classHtml, /The absolute legendary Board Exam year/);
 });
 
 check("home title mentions CBSE", () => {
@@ -54,14 +62,14 @@ check("home title mentions CBSE", () => {
 
 check("class 10 page has unique title, description, canonical", () => {
     const html = read("class/10.html");
-    assert.match(html, /<title>Class 10 NCERT Books PDF \| CBSE Free Download - EasyCBSE<\/title>/);
-    assert.match(html, /name="description" content="Download free NCERT textbook PDFs for CBSE Class 10\./);
+    assert.match(html, /<title>CBSE Class 10 NCERT Books PDF \(Free Download\) — All Subjects \| EasyCBSE<\/title>/);
+    assert.match(html, /name="description" content="Download free NCERT textbook PDFs for CBSE Class 10/);
     assert.match(html, /rel="canonical" href="https:\/\/www\.easycbse\.com\/class\/10"/);
 });
 
 check("class 10 math page has unique title, description, canonical", () => {
     const html = read("class/10/math.html");
-    assert.match(html, /<title>Class 10 Mathematics NCERT Book PDF \| CBSE Free Download - EasyCBSE<\/title>/);
+    assert.match(html, /<title>CBSE Class 10 Mathematics NCERT Book PDF \(Free Download\) \| EasyCBSE<\/title>/);
     assert.match(html, /name="description" content="Download the CBSE Class 10 Mathematics NCERT textbook PDF/);
     assert.match(html, /rel="canonical" href="https:\/\/www\.easycbse\.com\/class\/10\/math"/);
 });

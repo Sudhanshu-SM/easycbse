@@ -13,10 +13,13 @@ export default function TypingAnimation({
   className,
   duration = 50,
 }: TypingAnimationProps) {
-  const [displayed, setDisplayed] = useState("");
+  // Server-render the full text so it is visible to crawlers and without JS;
+  // the typing effect restarts from empty once hydrated.
+  const [displayed, setDisplayed] = useState(text);
 
   useEffect(() => {
     let i = 0;
+    setDisplayed("");
     const interval = setInterval(() => {
       i++;
       setDisplayed(text.slice(0, i));

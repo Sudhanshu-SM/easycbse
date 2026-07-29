@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { classes, getClassById, getSubject } from "@/data/books";
+import { absoluteUrl, breadcrumbJsonLd } from "@/lib/seo";
 import SubjectIcon from "@/components/SubjectIcon";
 import SubjectHero from "@/components/SubjectHero";
 import ChapterDownloadButton from "@/components/ChapterDownloadButton";
@@ -31,24 +32,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     const subject = getSubject(parseInt(classId), subjectId);
     if (!classData || !subject) return {};
 
-    const title = `Class ${classData.id} ${subject.name} NCERT Book PDF (Free Download)`;
+    const title = `CBSE Class ${classData.id} ${subject.name} NCERT Book PDF (Free Download)`;
     const canonical = `${siteUrl}/class/${classData.id}/${subject.id}`;
 
     return {
         title,
-        description: `Download ad-free Class ${classData.id} ${subject.name} NCERT textbook PDF. ${subject.book} — free Google Drive link, no sign-up required.`,
+        description: `Download the CBSE Class ${classData.id} ${subject.name} NCERT textbook PDF for free. ${subject.book} — all ${subject.chapters.length} chapters, ad-free, no sign-up required.`,
         alternates: { canonical },
         openGraph: {
             title,
-            description: `Download ad-free Class ${classData.id} ${subject.name} NCERT textbook PDF. ${subject.book} — free, no sign-up.`,
+            description: `Download the CBSE Class ${classData.id} ${subject.name} NCERT textbook PDF for free. ${subject.book} — ad-free, no sign-up.`,
             url: `/class/${classData.id}/${subject.id}`,
-            images: [{ url: "/og-preview.png", width: 1200, height: 630 }],
         },
         twitter: {
-            card: "summary_large_image",
+            card: "summary",
             title,
-            description: `Download free Class ${classData.id} ${subject.name} NCERT PDF. ${subject.book} — ad-free, instant download.`,
-            images: ["/og-preview.png"],
+            description: `Download the free CBSE Class ${classData.id} ${subject.name} NCERT PDF. ${subject.book} — ad-free, instant download.`,
         },
     };
 }
@@ -124,8 +123,18 @@ export default async function SubjectPage({ params }: PageProps) {
         classData.subjects.filter((s) => s.id !== subject.id)
     );
 
+    const breadcrumb = breadcrumbJsonLd([
+        { name: "Home", url: absoluteUrl("/") },
+        { name: classData.name, url: absoluteUrl(`/class/${classData.id}`) },
+        { name: subject.name, url: absoluteUrl(`/class/${classData.id}/${subject.id}`) },
+    ]);
+
     return (
         <div className="relative min-h-screen bg-[#FAF9F5]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { classes, getClassById } from "@/data/books";
+import { absoluteUrl, breadcrumbJsonLd } from "@/lib/seo";
 import SubjectIcon from "@/components/SubjectIcon";
 import ClassHero from "@/components/ClassHero";
 import BlurFade from "@/components/magicui/blur-fade";
@@ -25,23 +26,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
     const ordinal = ["th","st","nd","rd"];
     const suffix = ordinal[classData.id] || ordinal[0];
-    const title = `Class ${classData.id} NCERT Books PDF (Free Download) — All Subjects`;
+    const title = `CBSE Class ${classData.id} NCERT Books PDF (Free Download) — All Subjects`;
 
     return {
         title,
-        description: `Download ad-free NCERT textbook PDFs for Class ${classData.id}${suffix} (${classData.name}). Access CBSE NCERT books for all subjects via Google Drive — instant, no sign-up required.`,
+        description: `Download free NCERT textbook PDFs for CBSE Class ${classData.id}${suffix} (${classData.name}). Access CBSE NCERT books for all subjects — ad-free, instant, no sign-up required.`,
         alternates: { canonical: `${siteUrl}/class/${classData.id}` },
         openGraph: {
             title,
-            description: `Download ad-free NCERT textbook PDFs for Class ${classData.id}${suffix} (${classData.name}). Access CBSE NCERT books for all subjects — instant, no sign-up.`,
+            description: `Download free NCERT textbook PDFs for CBSE Class ${classData.id}${suffix} (${classData.name}). All subjects — ad-free, instant, no sign-up.`,
             url: `/class/${classData.id}`,
-            images: [{ url: "/og-preview.png", width: 1200, height: 630 }],
         },
         twitter: {
-            card: "summary_large_image",
+            card: "summary",
             title,
-            description: `Download ad-free NCERT PDFs for Class ${classData.id}${suffix}. CBSE NCERT books for all subjects — instant, no sign-up.`,
-            images: ["/og-preview.png"],
+            description: `Download free NCERT PDFs for CBSE Class ${classData.id}${suffix}. All subjects — ad-free, instant, no sign-up.`,
         },
     };
 }
@@ -54,8 +53,17 @@ export default async function ClassPage({ params }: PageProps) {
         notFound();
     }
 
+    const breadcrumb = breadcrumbJsonLd([
+        { name: "Home", url: absoluteUrl("/") },
+        { name: classData.name, url: absoluteUrl(`/class/${classData.id}`) },
+    ]);
+
     return (
         <div className="relative min-h-screen bg-[#FAF9F5]">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }}
+            />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
