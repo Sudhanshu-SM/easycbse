@@ -43,6 +43,12 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  // Bing Webmaster Tools site verification. Don't remove — verification is
+  // rechecked periodically, not just once. Google's equivalent is the
+  // public/googlec79d8cce0ab59a7b.html file.
+  verification: {
+    other: { "msvalidate.01": "D7D74CE2C96CBBA6D9A8A51F00B539AB" },
+  },
   icons: {
     icon: [{ url: "/favicon.svg", href: "/favicon.svg" }],
   },
