@@ -53,3 +53,8 @@ credentials.json
 data/books_old.ts
 *.py
 *.txt
+
+# SEO files that must stay tracked despite *.txt above
+!app/llms.txt/
+!app/llms.txt/**
+!public/*.txt
