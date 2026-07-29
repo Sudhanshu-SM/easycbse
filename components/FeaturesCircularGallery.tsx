@@ -76,9 +76,9 @@ export default function SmoothDragCircularGallery() {
 
       <div className="text-center max-w-3xl mx-auto mb-12 pointer-events-none">
       <div className="w-full flex justify-center items-center select-none mb-2">
-        <h2 className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased text-center animate-glow-pulse">
+        <p className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased text-center animate-glow-pulse">
           FEATURES ARCHITECTURE
-        </h2>
+        </p>
       </div>
         <h2 className="font-heading font-extrabold text-3xl sm:text-5xl text-[#2A0F14] mb-4">Everything you need, nothing you don&apos;t.</h2>
         <p className="font-body text-[#2A0F14]/70 text-base sm:text-lg">EasyCBSE keeps the study surface simple while making the important learning actions easy to reach.</p>

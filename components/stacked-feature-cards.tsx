@@ -80,9 +80,9 @@ export default function StackedFeatureCards() {
         <div className="relative z-10 mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-8 lg:gap-12 lg:grid-cols-12 px-6">
           {/* LEFT TEXT */}
           <div className="flex w-full flex-col space-y-5 lg:col-span-5">
-            <h2 className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased animate-glow-pulse">
+            <p className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased animate-glow-pulse">
               Why EasyCBSE
-            </h2>
+            </p>
             <h2 className="font-heading text-3xl font-bold leading-tight text-[#2A0F14] md:text-4xl">
               A reading experience built for focus.
             </h2>

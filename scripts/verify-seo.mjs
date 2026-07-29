@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Verifies on-page SEO output in the static export (out/). Extend the
 // checks below as new pages/signals are added in later tasks.
-import { readFileSync } from "node:fs";
+import { readFileSync, existsSync } from "node:fs";
 import { strict as assert } from "node:assert";
 
 const OUT = "out";
@@ -72,6 +72,35 @@ check("class 10 math page has unique title, description, canonical", () => {
     assert.match(html, /<title>CBSE Class 10 Mathematics NCERT Book PDF \(Free Download\) \| EasyCBSE<\/title>/);
     assert.match(html, /name="description" content="Download the CBSE Class 10 Mathematics NCERT textbook PDF/);
     assert.match(html, /rel="canonical" href="https:\/\/www\.easycbse\.com\/class\/10\/math"/);
+});
+
+check("llms.txt exists and lists the full catalog", () => {
+    const txt = read("llms.txt");
+    assert.match(txt, /^# EasyCBSE/);
+    assert.match(txt, /https:\/\/www\.easycbse\.com\/class\/10\b/);
+    assert.match(txt, /Class 10 Mathematics/);
+    const linkCount = (txt.match(/\]\(https:\/\//g) || []).length;
+    assert.ok(linkCount >= 130, `expected >=130 links, got ${linkCount}`);
+});
+
+check("class and subject pages have visible FAQs with FAQPage JSON-LD", () => {
+    for (const page of ["class/10.html", "class/10/math.html"]) {
+        const html = read(page);
+        assert.match(html, /"@type":"FAQPage"/);
+        assert.match(html, /Frequently Asked Questions/);
+        assert.match(html, /free/i);
+    }
+});
+
+check("og-preview.png exists and pages reference it", () => {
+    assert.ok(existsSync(`${OUT}/og-preview.png`), "out/og-preview.png missing");
+    assert.match(read("index.html"), /property="og:image"[^>]*og-preview\.png|og-preview\.png[^>]*property="og:image"/);
+    assert.match(read("class/10/math.html"), /og-preview\.png/);
+});
+
+check("decorative eyebrow labels are not h2 headings", () => {
+    assert.doesNotMatch(read("index.html"), /<h2[^>]*>\s*FEATURES ARCHITECTURE/);
+    assert.doesNotMatch(read("index.html"), /<h2[^>]*>\s*STUDENT UTILITIES/);
 });
 
 // --- run ---

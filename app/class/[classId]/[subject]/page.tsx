@@ -5,6 +5,7 @@ import { classes, getClassById, getSubject } from "@/data/books";
 import { absoluteUrl, breadcrumbJsonLd } from "@/lib/seo";
 import SubjectIcon from "@/components/SubjectIcon";
 import SubjectHero from "@/components/SubjectHero";
+import FaqSection from "@/components/FaqSection";
 import ChapterDownloadButton from "@/components/ChapterDownloadButton";
 import BlurFade from "@/components/magicui/blur-fade";
 import TypingWithCursor from "@/components/magicui/typing-with-cursor";
@@ -43,11 +44,13 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
             title,
             description: `Download the CBSE Class ${classData.id} ${subject.name} NCERT textbook PDF for free. ${subject.book} — ad-free, no sign-up.`,
             url: `/class/${classData.id}/${subject.id}`,
+            images: [{ url: "/og-preview.png", width: 1200, height: 630 }],
         },
         twitter: {
-            card: "summary",
+            card: "summary_large_image",
             title,
             description: `Download the free CBSE Class ${classData.id} ${subject.name} NCERT PDF. ${subject.book} — ad-free, instant download.`,
+            images: ["/og-preview.png"],
         },
     };
 }
@@ -128,6 +131,25 @@ export default async function SubjectPage({ params }: PageProps) {
         { name: classData.name, url: absoluteUrl(`/class/${classData.id}`) },
         { name: subject.name, url: absoluteUrl(`/class/${classData.id}/${subject.id}`) },
     ]);
+
+    const faqs = [
+        {
+            q: `Which book does CBSE prescribe for Class ${classData.id} ${subject.name}?`,
+            a: `CBSE follows the NCERT textbook "${subject.book}" for Class ${classData.id} ${subject.name}. You can download it free on this page.`,
+        },
+        {
+            q: `How many chapters are in the Class ${classData.id} ${subject.name} NCERT book?`,
+            a: `${subject.book} has ${subject.chapters.length} chapters. Each chapter can be downloaded as a separate PDF from the chapter list on this page.`,
+        },
+        {
+            q: `Is the Class ${classData.id} ${subject.name} NCERT PDF free to download?`,
+            a: `Yes. The complete Class ${classData.id} ${subject.name} NCERT book PDF is free on EasyCBSE — ad-free and no sign-up required.`,
+        },
+        {
+            q: `Can I download the full ${subject.name} book in one file?`,
+            a: `Yes. Use the "Download Full Book" button at the top of this page to get the complete ${subject.book} PDF in a single file.`,
+        },
+    ];
 
     return (
         <div className="relative min-h-screen bg-[#FAF9F5]">
@@ -261,6 +283,8 @@ export default async function SubjectPage({ params }: PageProps) {
                         `}</style>
                     </div>
                 )}
+
+                <FaqSection items={faqs} />
             </div>
         </div>
     );

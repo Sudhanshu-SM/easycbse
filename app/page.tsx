@@ -81,9 +81,9 @@ function SectionHeading({
 }) {
   return (
     <div className="mx-auto mb-8 md:mb-10 max-w-3xl text-center">
-      <h2 className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased mb-4 animate-glow-pulse">
+      <p className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased mb-4 animate-glow-pulse">
         {eyebrow}
-      </h2>
+      </p>
       <h2 className="font-heading text-3xl font-bold leading-tight text-[#2A0F14] md:text-4xl">
         {title}
       </h2>
@@ -118,9 +118,9 @@ export default function Home() {
           <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
             <div className="flex flex-col justify-center">
               <FadeUp>
-                <h2 className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased mb-3 animate-glow-pulse">
+                <p className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased mb-3 animate-glow-pulse">
                   Study Resources
-                </h2>
+                </p>
                 <h2 className="font-heading text-3xl font-extrabold leading-tight tracking-tight text-[#2A0F14] sm:text-5xl">
                   Resources designed for focused study.
                 </h2>
@@ -183,9 +183,9 @@ export default function Home() {
               </div>
               <div className="relative z-10 w-full h-full flex flex-col items-center gap-8 p-8 text-center md:flex-row md:justify-between md:p-14 md:text-left">
                 <div className="max-w-xl">
-                  <h2 className="text-orange-50/70 font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased mb-3 animate-glow-pulse">
+                  <p className="text-orange-50/70 font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased mb-3 animate-glow-pulse">
                     Start learning
-                  </h2>
+                  </p>
                   <h2 className="font-heading text-2xl font-bold leading-tight text-white md:text-4xl">
                     Your next textbook is one click away.
                   </h2>

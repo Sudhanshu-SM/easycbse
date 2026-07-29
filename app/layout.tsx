@@ -31,11 +31,13 @@ export const metadata: Metadata = {
     siteName: "EasyCBSE",
     title: "CBSE NCERT Books PDF - Free Download Class 1 to 12 | EasyCBSE",
     description: "Download free NCERT textbook PDFs for CBSE Class 1 to 12. All subjects — ad-free, instant, no sign-up.",
+    images: [{ url: "/og-preview.png", width: 1200, height: 630 }],
   },
   twitter: {
-    card: "summary",
+    card: "summary_large_image",
     title: "CBSE NCERT Books PDF - Free Download Class 1 to 12 | EasyCBSE",
     description: "Download free NCERT textbook PDFs for CBSE Class 1 to 12. All subjects — ad-free, instant, no sign-up.",
+    images: ["/og-preview.png"],
   },
   robots: {
     index: true,

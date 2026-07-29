@@ -40,9 +40,9 @@ export default function WhyEasyCBSE() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 sm:px-12 md:px-20 lg:grid-cols-5 lg:items-start">
         <div className="flex flex-col space-y-4 lg:col-span-2">
           <div className="w-full flex items-center select-none mb-2">
-            <h2 className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased animate-glow-pulse">
+            <p className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased animate-glow-pulse">
               WHY EASYCBSE
-            </h2>
+            </p>
           </div>
           <h2 className="font-heading text-3xl font-extrabold leading-[1.15] tracking-tight text-[#2A0F14] sm:text-5xl">
             A calmer way to prepare for CBSE exams.

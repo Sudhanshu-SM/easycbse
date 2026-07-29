@@ -33,9 +33,9 @@ export default function StudentUtilities() {
       <div className="mx-auto flex max-w-7xl flex-col items-center">
         <div className="mx-auto mb-14 max-w-3xl text-center">
         <div className="w-full flex justify-center items-center select-none mb-2">
-          <h2 className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased text-center animate-glow-pulse">
+          <p className="text-[#2A0F14] font-heading font-black text-xs sm:text-sm tracking-[0.2em] uppercase antialiased text-center animate-glow-pulse">
             STUDENT UTILITIES
-          </h2>
+          </p>
         </div>
           <h2 className="font-heading text-3xl font-extrabold leading-tight tracking-tight text-[#2A0F14] sm:text-5xl">
             Built for efficient exam preparation.
